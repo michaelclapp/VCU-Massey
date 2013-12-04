@@ -1,0 +1,143 @@
+@import "compass/css3"
+@import "_variables"
+
+[id*='col-']
+  float: left
+  overflow: hidden
+  width: 214px
+  height: auto
+  margin-right: 10px
+  border: 1px solid #cccccc
+  +border-radius(12px)
+  h3
+    background: url('../imgs/layout/3col-top.jpg')
+  ul
+    float: left
+    margin: 0 !important
+    padding: 0px
+    li
+      float: left
+      margin: 0
+      padding: 0
+      background: none !important
+      a
+        float: left
+        width: 145px
+        padding: 0 2px
+        color: #666666
+        font-size: 11px
+        font-weight: normal
+        line-height: 1.2
+        &:hover, &:focus
+          border: 0
+          background: #f8b800
+          color: #000000
+      img
+        float: left
+        width: 40px
+        height: 40px
+        padding: 0 6px 10px 0
+  p a
+    float: left
+    display: block
+    width: 100%
+    margin: 10px auto
+    text-align: center
+    text-transform: uppercase
+    &:hover, &:focus
+      color: #333333 !important
+      border: 0
+      background: none
+#col-a
+  h3
+    width: 228px
+    height: 59px
+    background-position: 0 0
+    text-indent: -9999px
+  p a
+    color: red
+#col-b
+  h3
+    width: 228px
+    height: 59px
+    background-position: 460px 0
+    text-indent: -9999px
+#col-c
+  margin-right: 0
+  background: #666666
+  h3
+    width: 228px
+    height: 59px
+    background-position: 230px 0
+    text-indent: -9999px
+  .news-date
+    float: left
+    width: 40px
+    height: 40px
+    padding-bottom: 14px
+    background: url('../imgs/layout/icon-calendar-bg.gif') 0 0 no-repeat
+    text-align: center
+    font-size: 11px
+    span
+      float: left
+      width: 40px
+      text-align: center
+      &.day
+        font-size: 15px
+        font-weight: bold
+        line-height: 16px
+  ul li a
+    width: 150px
+    border: 0
+    color: #ffffff
+  p a
+    display: block
+    float: left
+    width: 100%
+    margin: 0 0 10px 0
+    border: 0
+    color: #fbba00
+    &:hover, &:focus
+      color: #ffffff !important
+#sidebar
+  ul#intro-nav
+    margin: 15px 0 0 20px
+    li
+      position: relative
+      height: 90px
+      margin: 0 0 20px 0
+      background: url('../imgs/layout/intro-nav.gif') 0 0 no-repeat
+      &.begin
+        background-position: 0 25px
+        &:hover
+          background-position: -234px 25px
+      &.discover
+        background-position: 0 -110px
+        &:hover
+          background-position: -234px -110px
+      &.give
+        background-position: 0 -240px
+        &:hover
+          background-position: -234px -240px
+      span.link
+        display: block
+        text-indent: -9999px !important
+      span.nav-info
+        position: absolute
+        bottom: 0
+        padding-left: 25px
+        &:hover
+          color: #666666
+      a
+        border: 0
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+#rufio
+  width: 100%
+  margin: 0
+  padding: 0
+  background: url('../imgs/layout/header-gradient.jpg') repeat-x //fallback
+  +background-image(linear-gradient($header-bg1, $header-bg2))
+  a
+    border: 0
+    text-decoration: none
+    &:hover, &:focus
+      border: 0
+      text-decoration: none
+  .wrapper
+    position: relative
+    width: 998px
+    height: 175px
+    margin: 0 auto
+    background: url('../imgs/layout/logo.jpg') top center no-repeat
+    h1 a
+      float: left
+      width: 354px
+      height: 73px
+      margin: 30px 0 0 0
+      background: url('../imgs/layout/massey.png') no-repeat
+      text-indent: -9999px
+      &:hover, &:focus
+        border: 0
+        text-decoration: none
+    .right
+      float: right
+      width: 229px
+      a.ncicc-link
+        display: block
+        float: left
+        width: 229px
+        height: 46px
+        margin: 20px 0 10px 
+        background: url('../imgs/layout/ncicc-link.gif') no-repeat 0 0
+        text-indent: -9999px
+    #header-links
+      position: absolute
+      left: 50%
+      width: 151px 
+      margin: 90px 0 0 -73px
+      ul#util-nav
+        float: left
+        margin: 0 auto
+
+//SEARCH
+#search
+  position: relative
+  height: 43px
+form#sitesearch
+  display: block
+  position: relative
+  float: left
+  z-index: 3000
+  margin: 0
+  padding: 0
+  background: transparent url(../imgs/layout/search-bg.gif) 0 0 no-repeat
+  label
+    display: none
+  input.field
+    float: left
+    color: #9f9f9f
+    width: 145px
+    height: 20px
+    margin: 3px 0 0 0
+    border: 0
+    padding: 0 4px 0 22px
+    background: none
+    font: normal 11px Verdana, Helvetica, sans-serif
+    voice-family: "\"}\""
+    voice-family: inherit
+#search input.field:focus
+  float: left
+  width: 145px
+  height: 20px
+  margin: 3px 0 0 0
+  padding: 0 4px 0 22px
+  border: 0
+  background: none
+  color: #9f9f9f
+  font: normal 11px Verdana, Helvetica, sans-serif
+  voice-family: "\"}\""
+  voice-family: inherit
+html > body form#sitesearch input.field, #search input.field:focus
+  float: left
+  margin: 3px 0 0 0
+  padding: 0 4px 0 22px
+  height: 20px
+  width: 145px
+#search_btn
+  overflow: hidden
+  width: 46px
+  height: 26px
+  margin: 0 0 0 10px
+  border: 0
+  padding: 0
+  background: transparent url(../imgs/layout/search-btn.gif) 0 0 no-repeat
+  &:hover
+    overflow: hidden
+    width: 46px
+    height: 26px
+    margin: 0 0 0 10px
+    border: 0
+    padding: 0
+    background: transparent url(../imgs/layout/search-btn.gif) 0 0 no-repeat    
+    background-position: 0 -26px
+    cursor: pointer
+  &:active, &:focus
+    background-position: 0 -26px
+    cursor: pointer

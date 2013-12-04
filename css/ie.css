@@ -1,0 +1,16 @@
+form#sitesearch input.field, #search input.field:focus { margin: 6px 0 0 0; }
+
+html > body form#sitesearch input.field, #search input.field:focus { margin: 6px 0 0 0; }
+
+#rufio nav ul li { display: inline-block; width: 136px !important; height: 40px; border-left: 1px solid white; }
+#rufio nav ul li:first-child { border: none; }
+#rufio nav ul li a { display: inline-block; width: 136px !important; height: 29px; padding-top: 10px; text-align: center; }
+#rufio nav ul li ul { display: none !important; }
+#rufio nav ul li span { height: 40px !important; }
+
+#header-links { width: 155px !important; }
+
+.flexslider .slides img { width: 708px !important; height: 363px !important; }
+.flexslider .slides span { width: 667px !important; }
+
+.footer-col { min-height: 170px !important; }
