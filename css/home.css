@@ -1,8 +1,7 @@
 #home-news img { margin: 0; }
 #home-news a.pdf:after, #home-news a.excel:after, #home-news a.word:after { content: ""; }
 
-[id*='col-'] { float: left; overflow: hidden; width: 214px; height: auto; margin-right: 10px; border: 1px solid #cccccc; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
-[id*='col-'] h3 { background: url("../imgs/layout/3col-top.jpg"); }
+[id*='col-'] { float: left; overflow: hidden; width: 220px; height: auto; margin-right: 10px; border: 1px solid #cccccc; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
 [id*='col-'] ul { float: left; margin: 0 !important; padding: 0px; }
 [id*='col-'] ul li { float: left; margin: 0; padding: 0; background: none !important; }
 [id*='col-'] ul li a { float: left; width: 145px; padding: 0 2px; color: #666666; font-size: 11px; font-weight: normal; line-height: 1.2; }
@@ -11,13 +10,13 @@
 [id*='col-'] p a { float: left; display: block; width: 100%; margin: 10px auto; text-align: center; text-transform: uppercase; }
 [id*='col-'] p a:hover, [id*='col-'] p a:focus { color: #333333 !important; border: 0; background: none; }
 
-#col-a h3 { width: 228px; height: 59px; background-position: 0 0; text-indent: -9999px; }
+#col-a h3 { width: 228px; height: 59px; background: url("../imgs/layout/home-news-a2.png") no-repeat left top; text-indent: -9999px; }
 #col-a p a { color: red; }
 
-#col-b h3 { width: 228px; height: 59px; background-position: 460px 0; text-indent: -9999px; }
+#col-b h3 { width: 228px; height: 59px; background: url("../imgs/layout/home-news-b2.png") no-repeat left top; text-indent: -9999px; }
 
 #col-c { margin-right: 0; background: #666666; }
-#col-c h3 { width: 228px; height: 59px; background-position: 230px 0; text-indent: -9999px; }
+#col-c h3 { width: 228px; height: 59px; background: url("../imgs/layout/home-news-c2.png") no-repeat left top; text-indent: -9999px; }
 #col-c .news-date { float: left; width: 40px; height: 40px; padding-bottom: 14px; background: url("../imgs/layout/icon-calendar-bg.gif") 0 0 no-repeat; text-align: center; font-size: 11px; }
 #col-c .news-date span { float: left; width: 40px; text-align: center; }
 #col-c .news-date span.day { font-size: 15px; font-weight: bold; line-height: 16px; }
