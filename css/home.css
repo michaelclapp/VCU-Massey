@@ -1,3 +1,6 @@
+#home-news img { margin: 0; }
+#home-news a.pdf:after, #home-news a.excel:after, #home-news a.word:after { content: ""; }
+
 [id*='col-'] { float: left; overflow: hidden; width: 214px; height: auto; margin-right: 10px; border: 1px solid #cccccc; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; }
 [id*='col-'] h3 { background: url("../imgs/layout/3col-top.jpg"); }
 [id*='col-'] ul { float: left; margin: 0 !important; padding: 0px; }

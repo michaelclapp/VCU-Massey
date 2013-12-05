@@ -1,3 +1,5 @@
+strong
+  font-weight: bold
 a
   &:link, &:visited, &:active
     border-bottom: 1px solid #fff
@@ -16,6 +18,19 @@ a
     color: #1d68a0
     font-weight: bold
     text-decoration: none
+  &.pdf, &.excel, &.word
+    position: relative
+    padding: 0 15px 0 0
+    &:after
+      position: absolute
+      top: 1px
+      right: 0
+  &.pdf:after
+    content: url('../imgs/layout/icons/icon-pdf.gif')
+  &.excel:after
+    content: url('../imgs/layout/icons/icon-excel.gif')
+  &.word:after
+    content: url('../imgs/layout/icons/icon-word.gif')
 
 #content
   p, li

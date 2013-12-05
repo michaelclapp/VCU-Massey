@@ -1,6 +1,12 @@
 @import "compass/css3"
 @import "_variables"
-
+#home-news
+  img
+    margin: 0
+  a
+    &.pdf, &.excel, &.word
+      &:after
+        content: ""
 [id*='col-']
   float: left
   overflow: hidden
@@ -130,14 +136,3 @@
           color: #666666
       a
         border: 0
-
-
-
-
-
-
-
-
-
-
-

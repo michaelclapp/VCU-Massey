@@ -14,16 +14,25 @@ body { min-width: 1100px; margin: 0; padding: 0; background-image: -webkit-gradi
 
 #container { width: 998px; margin: 0 auto; padding-top: 22px; background: white; text-align: left; }
 
-#sidebar { float: left; width: 251px; }
+#sidebar { position: relative; float: left; width: 251px; padding-bottom: 350px; }
 
 .content-respond { float: none !important; width: 100% !important; padding: 10px 20px; }
 
 #content { float: right; width: 709px; min-height: 700px; }
 #content .gutter { float: left; padding: 0 40px 3.5em 0; }
+#content img { margin: 10px; }
+#content .photo-left img { margin: 0; }
+
+strong { font-weight: bold; }
 
 a:link, a:visited, a:active { border-bottom: 1px solid white; padding-bottom: 0.1em; color: #1d68a0; font-weight: bold; text-decoration: none; }
 a:hover { border-bottom: 1px solid #444444; padding-bottom: 0.1em; background: whitesmoke; color: #121212; }
 a:active, a:focus { padding-bottom: 0.1em; border-bottom: 1px solid #dbd8c2; color: #1d68a0; font-weight: bold; text-decoration: none; }
+a.pdf, a.excel, a.word { position: relative; padding: 0 15px 0 0; }
+a.pdf:after, a.excel:after, a.word:after { position: absolute; top: 1px; right: 0; }
+a.pdf:after { content: url("../imgs/layout/icons/icon-pdf.gif"); }
+a.excel:after { content: url("../imgs/layout/icons/icon-excel.gif"); }
+a.word:after { content: url("../imgs/layout/icons/icon-word.gif"); }
 
 #content p, #content li { margin-top: 0; margin-bottom: 1.5em; font-size: 1.2em; line-height: 1.6em; }
 #content h3, #content h4, #content h5 { font-family: Helvetica, Arial, sans-serif; }
@@ -414,6 +423,9 @@ body.tab-7 ul#main-nav li.nav_giving { background-position: -822px -80px; }
 #sidebar ul#quicklinks li.t-1, #sidebar ul#quicklinks li.t-2, #sidebar ul#quicklinks li.t-3, #sidebar ul#quicklinks li.t-4, #sidebar ul#quicklinks li.t-5, #sidebar ul#quicklinks li.t-6, #sidebar ul#quicklinks li.t-7, #sidebar ul#quicklinks li.t-8 { _position: fixed; }
 #sidebar ul#quicklinks li:hover { background-position: -226px 0; }
 
+/*-- Sam's hot fix for indented 4th level nav -- */
+#sidebar ul.multilevel-linkul-1 a { width: 175px; padding-left: 60px; }
+
 /*-- Sidebar -- Quicklinks Navigation -- */
 div#breadcrumb-nav { display: block; margin: 0; padding: 0 0 12px 0; color: #999999; }
 div#breadcrumb-nav p { margin: 0; padding: 0; font-size: 11px; }
@@ -433,7 +445,7 @@ div#breadcrumb-nav a.current { color: #3674a4; font-weight: 700; }
 #content .flexslider .slides > li span h3 { float: left; width: 200px; margin: 0 20px 0 0; color: #ffcd00; font-size: 24px; font-weight: 100; line-height: 1; text-align: right; }
 #content .flexslider .slides > li span p { float: left; width: 389px; margin: 0; padding: 0; font-size: 12px; font-weight: 100; line-height: 1.4; }
 #content .flexslider .slides > li span p a { border: 0; color: #ffcd00; }
-#content .flexslider .slides img { width: 100%; display: block; }
+#content .flexslider .slides img { width: 100%; display: block; margin: 0; }
 #content .flexslider .slides ul { margin: 0 !important; }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
