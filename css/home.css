@@ -10,13 +10,14 @@
 [id*='col-'] p a { float: left; display: block; width: 100%; margin: 10px auto; text-align: center; text-transform: uppercase; }
 [id*='col-'] p a:hover, [id*='col-'] p a:focus { color: #333333 !important; border: 0; background: none; }
 
-#col-a h3 { width: 228px; height: 59px; background: url("../imgs/layout/home-news-a2.png") no-repeat left top; text-indent: -9999px; }
+[id*='col-'] h3 { width: 228px; height: 59px; background: url("../imgs/layout/home-news.png") no-repeat left top; text-indent: -9999px; }
+
 #col-a p a { color: red; }
 
-#col-b h3 { width: 228px; height: 59px; background: url("../imgs/layout/home-news-b2.png") no-repeat left top; text-indent: -9999px; }
+#col-b h3 { background-position: 0 -59px; }
 
 #col-c { margin-right: 0; background: #666666; }
-#col-c h3 { width: 228px; height: 59px; background: url("../imgs/layout/home-news-c2.png") no-repeat left top; text-indent: -9999px; }
+#col-c h3 { background-position: 0 -118px; }
 #col-c .news-date { float: left; width: 40px; height: 40px; padding-bottom: 14px; background: url("../imgs/layout/icon-calendar-bg.gif") 0 0 no-repeat; text-align: center; font-size: 11px; }
 #col-c .news-date span { float: left; width: 40px; text-align: center; }
 #col-c .news-date span.day { font-size: 15px; font-weight: bold; line-height: 16px; }
