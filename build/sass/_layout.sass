@@ -1,0 +1,920 @@
+div#anchorlinks
+  display: block
+  clear: both
+  margin-bottom: 2em
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 0
+      border: 0
+      padding: 0
+      background: none
+      font-style: italic
+      a
+        margin-right: 14px
+        font-style: italic
+        list-style: none
+        text-decoration: none
+
+// Blue italic text
+.blue-italic
+  color: #336699
+  font-style: italic
+
+// Events page (content format)
+#events
+  dl
+    margin: 0
+    border-bottom: 1px solid #c7c7c7
+    padding: 25px 0 20px 0
+    list-style: none
+  dt
+    margin: 0
+    padding: 0 0 .25em 0
+    color: #ff3300
+    font-size: 12px
+    font-weight: 700
+  dd
+    margin: 0
+    line-height: 1.6em
+    font-size: 14px
+    &.event_title
+      margin: 0
+      padding: 0
+      font-size: 15px
+      font-weight: 700
+
+// A-Z list (Types of Cancer)
+#content
+  div#az-nav
+    display: block
+    clear: both
+    width: auto
+    padding-bottom: 1.5em
+    ul
+      display: block
+      margin: 0
+      padding: 0
+      background: none
+      list-style: none
+      li
+        display: inline
+        float: left
+        margin: 0 10px 0 0
+        background: none
+        padding: 0
+        list-style: none
+        a
+          border: 0
+          padding: 4px
+          color: #ff3300
+          font-size: 15px
+          text-decoration: none
+          &:hover
+            border-bottom: 1px solid #444
+            background: #eee
+            color: #121212
+          &.current
+            border-bottom: 1px solid #99b2cc
+            color: #336699
+  .az-content h3
+    border-bottom: 1px solid #3674a4
+    padding-bottom: 5px
+    color: #ff3300 !important
+    font-size: 18px !important
+
+// Tables default blue border
+
+
+
+// Images
+img
+  border: 0
+  background: none
+
+.imgright
+  float: right
+  margin: 0 0 1.25em 1em
+  border: 0
+  padding: 0
+  background: #fff
+
+.imgleft
+  float: left
+  margin: 0 1.5em 0.75em 0
+  border: 0
+  padding: 0
+  background: #fff
+
+// image link, hide border
+
+a.imglink
+  border: 0
+  background: none
+  text-decoration: none
+
+// Main Photo (at top of content area in pages)
+
+div.main-photo img
+  clear: both
+  padding-bottom: 10px
+
+// inset photo area (for photos that are left/right to content)
+
+.banner img
+  margin: 0 0 10px !important
+
+.photo-right
+  float: right
+  width: auto
+  margin: 0 0 15px 20px
+  padding: 3px
+  background: #fff
+
+.photo-left
+  float: left
+  width: auto
+  margin: 0 20px 15px 0
+  padding: 3px
+  background: #fff
+
+.w204
+  width: 204px
+
+// vertical img with 204px width
+
+.w340
+  width: 340px
+
+// horizontal img with 340px width
+
+// captions area
+
+#content p.caption
+  width: inherit
+  margin-top: 5px
+  margin-bottom: 0
+  padding: 0 0 0 .2em
+  color: #121212
+  font-size: 11px
+
+// Miscellaneous
+.clearfix:after
+  display: block
+  visibility: hidden
+  clear: both
+  height: 0
+  content: "."
+ 
+.clear
+  clear: both
+
+.floatleft
+  float: left
+
+.floatright
+  float: right
+
+.inline
+  display: inline
+
+em
+  font-style: italic
+
+// Jump to content - for screen readers
+
+#jumptocontent
+  position: absolute
+  top: -1000px
+
+// anchor link lists
+
+div#anchorlinks
+  display: block
+  clear: both
+  margin-bottom: 2em
+
+//Updates November, 2010 (mahuff)
+// 2-column layout in content area (create right-hand sidebar)
+
+#content-left-col
+  display: inline
+  float: left
+  width: 60%
+
+#content-right-col
+  display: inline
+  float: right
+  width: 30%
+  padding: 20px
+  background: #eee
+  line-height: 1.75em
+  h3
+    margin-bottom: 3px
+    border-bottom: 1px solid #c7c7c7
+    padding-bottom: 3px
+    font-size: 14px
+  p
+    padding: 0
+    background: none
+    font-size: 12px
+    list-style: disc
+    line-height: 1.5em
+  ul
+    li
+      margin-left: 16px
+      padding: 0
+      background: none
+      font-size: 12px
+      line-height: 1.5em
+      list-style: disc
+      //line-height:1.2;
+      line-height: 1.4
+
+// 2-column row layout in content area (create equal width 2-column rows)
+
+.two-column-row
+  display: block
+  float: left
+  width: 100%
+  padding: 0 0 1.5em 0
+  .row-left-col
+    display: inline
+    float: left
+    width: 300px
+  .row-right-col
+    display: inline
+    float: right
+    width: 300px
+
+// Calendar (events rules)
+p.event_item
+  margin: 0
+  border-top-color: #999
+  border-top-style: dashed
+  border-top-width: 1px
+  padding-top: 7px
+  padding-bottom: 7px
+
+// Types of cancer, list index
+#content #CancerList h2
+  margin: 0 0 0.5em 0
+  border-top: 1px solid #c7c7c7
+  padding: 5px 0 0 0
+  color: #ff3300
+  font-family: Helvetica, Arial, sans-serif
+  font-size: 24px
+  font-weight: bold
+
+#CancerListIndex
+  ul
+    float: left
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      float: left
+      margin: 0 6px 0 0
+      padding: 0
+      background: none
+  a
+    display: block
+    width: 25px
+    height: 20px
+    border: solid 1px #ccc
+    padding-top: 2px
+    text-align: center
+    &:hover
+      background-color: #666
+      color: #fff
+      text-decoration: none
+
+#content
+  #CancerList
+    ul
+      margin: 0 0 2em 1.5em
+      padding: 0
+    p
+      margin: 0
+      padding: 0
+      font-weight: bold
+      &.toplink
+        padding-bottom: 3em
+  form.standard
+    float: left
+    margin: 0
+    font-size: 1.0em
+    fieldset
+      display: block
+      width: 660px
+      margin: 0
+      border: 0
+      padding: 10px 10px 10px 0
+    ol
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        padding: 0 0 10px 0
+        list-style: none
+    li
+      li
+        padding: 0 0 0 20px
+        font-size: 1em
+      p
+        margin-top: 4px
+        font-size: 1em
+        line-height: 1.4em        
+    legend
+      margin: 0 0 10px 0
+      padding: 0
+      color: #222
+      font-weight: bold
+    label
+      display: block
+      padding-bottom: 3px
+      color: #666
+      font-weight: 700
+      line-height: 1.4em
+    fieldset
+      input, textarea
+        padding: 5px
+        color: #666
+      select
+        width: 224px
+        margin-bottom: 3px
+        padding: 5px
+        color: #666
+      &.submit
+        margin-top: 35px
+        padding: 0px !important
+    p
+      margin: 5px 0
+      padding: 0
+      font-size: 1.2em
+    input.attachment
+      margin: 0
+      border: 0
+      padding: 0
+    label.error
+      width: 250px
+      padding-left: 10px
+      color: #fff
+      font-style: italic
+
+// Forms
+// Standard form rules
+
+// forms errors
+
+label.error
+  color: #fff
+  font-style: italic
+
+#content form
+  &.standard
+    div.error
+      display: none
+    input, textarea, select
+      margin-bottom: 3px
+      border: 1px solid #44839d
+      padding: 2px
+    input
+      &.checkbox
+        border: 0
+      &:focus
+        border: 1px dotted #44839d
+        background: #fffae5
+    select:focus, textarea:focus
+      border: 1px dotted #44839d
+      background: #fffae5
+    input
+      &.submit:focus
+        background: none
+        border: 0
+        outline: none
+      &.error
+        border: 1px dotted red
+        background: #ffdddd
+    textarea.error, select.error
+      border: 1px dotted red
+      background: #ffdddd
+    input.submit
+      width: 104px
+      height: 30px
+      margin: 0
+      border: 0
+      padding: 0
+      background: url('../imgs/layout/btn-submit.gif')
+      cursor: pointer
+  &.border
+    margin-bottom: 2em
+    border-bottom: 1px solid #c7c7c7
+    padding-bottom: 2em
+  &.standard
+    label
+      display: block
+      line-height: 1.8
+      cursor: pointer
+      span
+        color: #b40000
+      &.error
+        width: 250px
+        padding-left: 10px
+    legend
+      color: #173b4a
+      font-size: 11px
+      font-weight: bold
+
+// submit btns
+
+// grey border below search input area
+
+// More form rules
+form.cmxform label
+  color: #173b4a
+  font-size: 11px
+  font-weight: bold
+
+#content form.standard label.error, label.error
+  color: #b40000
+  font-style: italic
+
+#content
+  div.error
+    display: none
+  input
+    width: auto
+    margin-bottom: 3px
+    border: 1px solid #44839d
+    padding: 2px
+
+// input width
+textarea, select
+  width: auto
+  margin-bottom: 3px
+  border: 1px solid #44839d
+  padding: 2px
+
+#content input:focus, select:focus, textarea:focus
+  border: 1px dotted #44839d
+  background: #fffae5
+
+#content input.error, textarea.error, select.error
+  border: 1px dotted red
+  background: #ffdddd
+
+// required field text
+
+#content
+  form.standard
+    ol li label.required, label span.requried, p.required
+      color: #ff3300
+    .checkboxes label
+      display: inline
+    li
+      &.radio label, &.checkbox label
+        display: inline
+    .checkboxes input
+      width: 20px
+  .entry-detail
+    width: 650px
+    padding-top: .5em
+    font-size: 12px
+    line-height: 1.6em
+    li, p
+      font-size: 12px
+      line-height: 1.6em
+    img
+      float: left
+      margin: 0 1em 0 0
+    h3.first
+      margin-bottom: 0
+      padding-bottom: 0
+    h4
+      clear: both
+      width: 100%
+      margin: 1.5em 0 .5em 0
+      padding: 6px
+      background-color: #eee
+    ul
+      margin-bottom: 0
+      padding-bottom: 0
+
+// checkboxes container
+
+// Detail page layout (Find an expert, doctor, media expert, Massey Member)
+
+//#content .entry-list table {width: 650px; }
+
+// Community Calendar layout (vcu calendar feed formatting)
+table#cal_xml_feed
+  margin: 0 0 30px 0
+  border: 0
+  padding: 0
+  background: none
+  th
+    margin: 0 0 30px 0
+    border: 0
+    padding: 0
+    background: none
+  td
+    margin: 0 0 30px 0
+    border: 0
+    padding: 6px 6px 8px
+    background: none
+
+//CSS ID for table that hold list of events
+
+#cal_xml_feed
+  width: 100%
+  margin: 0
+  padding: 0
+  tr.cal_head
+    margin-top: 20px
+    font-size: 1em
+  td.cal_date
+    border-bottom: #B0C4DE dotted 1px
+    color: #666666
+    font-weight: bold
+  tr.cal_info
+    font-size: 1.1em
+    &:hover
+      background: #F0F8FF
+  td
+    &.cal_title a
+      display: block
+      width: 100%
+      border: 0
+      line-height: 1.2em
+      text-align: left
+      text-indent: 3px
+      &:hover
+        border: 0
+        background: #fff
+    &.cal_location
+      color: #666
+      text-align: right
+      font-size: 11px
+    &.cal_time
+      color: #666
+      text-align: left
+      font-size: 11px
+  span.cal_ongoing
+    font-size: 1.2em
+
+//CSS class for the table row that holds the date of the event
+
+//CSS class for the table cell that holds the date of the event
+
+//CSS class for the table row that holds the time, title, and location of the event
+
+//You can add a hover style so that the event is highlighted on a mouseover
+
+//CSS class for the table cell that holds the title of the event
+
+//CSS class for the table cell that holds the location of the event
+
+//CSS class for the table cell that holds the time of the event
+
+//CSS span class that describes ongoing events
+
+// Calendar detail
+
+table#cal_xml_detail
+  border-top: 1px solid #b0c4de
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 11px
+  line-height: 1.4
+
+// Massey CSS updates 6/14/2011
+
+// Note: Add these to MAIN.CSS for Cancer Dictionary list styles
+
+// Types of cancer, list index for cancer dictionary
+
+#content #CancerList
+  width: 650px
+  h2
+    margin: 25px 0 0.5em 0
+    border-bottom: 2px solid #c7c7c7
+    padding: 6px 0 6px 0
+    color: #ff3300
+    font-family: Helvetica, Arial, sans-serif
+    font-size: 24px
+    font-weight: bold
+  h3
+    margin-bottom: 0
+    padding-bottom: 3px
+    font-size: 14px
+  p
+    margin-top: 0
+    border-bottom: 1px dotted #c7c7c7
+    padding-top: 0
+    padding-bottom: 6px
+    font-size: 13px
+    font-weight: normal
+#CancerListIndex
+  ul
+    float: left
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      float: left
+      margin: 0
+      margin-right: 6px
+      padding: 0
+      background: none
+  a
+    display: block
+    width: 25px
+    height: 20px
+    padding-top: 2px
+    border: solid 1px #ccc
+    text-align: center
+    &:hover
+      background-color: #666
+      color: #fff
+      text-decoration: none
+
+#content
+  #CancerList
+    ul
+      margin: 0 0 2em 1.5em
+      padding: 0
+    p.toplink
+      padding-bottom: 3em
+  table
+    &.photo-left
+      float: left
+      clear: right
+      margin: 0 1.5em .75em 0 !important
+      border: 0
+      padding: 0 !important
+      background: none
+    &.photo-right
+      float: right
+      clear: left
+      margin: 0 0 1em 1.5em
+      border: 0
+      padding: 0
+      background: none
+    &.photo-left td, &.photo-right td
+      margin: 0!important
+      border: 0
+      padding: 0 !important
+      background: 0
+    &.photo-left p, &.photo-right p
+      display: inline
+      margin: 0
+      padding: 0
+      color: #444 !important
+      font-size: 11px !important
+
+// Note: Add this to MAIN.CSS for Photo Table Captions styles
+
+// Photos with caption (tables)
+// Note: Replace the following code in NAVIGATION.CSS for Xtra Header Nav and Main Nav
+
+// Xtra Header Navigation (RSS, E-mail, NCI-CC links)
+ul#util-nav
+  li
+    display: block
+    float: left
+    height: 25px
+    margin-right: .25em
+    list-style: none
+    a
+      display: block
+      float: left
+      margin-right: .25em
+      color: #404040
+      // IE6
+      _display: inline
+    &.nav-alert
+      background: none
+    a
+      &.facebook-link
+        width: 25px
+        height: 25px
+        border: 0
+        padding-top: 0
+        background: url('../imgs/layout/util-nav-icons.png') 0 0 no-repeat
+        text-decoration: none
+        text-indent: -9999px
+        &:hover, &:visited
+          width: 25px
+          height: 25px
+          border: 0
+          padding-top: 0
+          background: url('../imgs/layout/util-nav-icons.png') 0 0 no-repeat
+          text-decoration: none
+          text-indent: -9999px
+        &:hover
+          background-position: 0 -30px
+      &.twitter-link
+        text-indent: -9999px
+        background: url('../imgs/layout/util-nav-icons.png') -30px 0 no-repeat
+        text-decoration: none
+        width: 25px
+        height: 25px
+        padding-top: 0
+        border: 0
+        &:hover, &:visited
+          width: 25px
+          height: 25px
+          padding-top: 0
+          border: 0
+          background: url('../imgs/layout/util-nav-icons.png') -30px 0 no-repeat
+          text-decoration: none
+          text-indent: -9999px
+        &:hover
+          background-position: -30px -30px
+      &.youtube-link
+        width: 25px
+        height: 25px
+        border: 0
+        padding-top: 0
+        background: url('../imgs/layout/util-nav-icons.png') -60px 0 no-repeat
+        text-decoration: none
+        text-indent: -9999px
+        &:hover, &:visited
+          width: 25px
+          height: 25px
+          padding-top: 0
+          border: 0
+          background: url('../imgs/layout/util-nav-icons.png') -60px 0 no-repeat
+          text-decoration: none
+          text-indent: -9999px
+        &:hover
+          background-position: -60px -30px
+      &.rss-link
+        width: 25px
+        height: 25px
+        border: 0
+        padding-top: 0
+        background: url('../imgs/layout/util-nav-icons.png') -90px 0 no-repeat
+        text-decoration: none
+        text-indent: -9999px
+        &:hover, &:visited
+          width: 25px
+          height: 25px
+          border: 0
+          padding-top: 0
+          background: url('../imgs/layout/util-nav-icons.png') -90px 0 no-repeat
+          text-decoration: none
+          text-indent: -9999px
+        &:hover
+          background-position: -90px -30px
+      &.email-link
+        width: 25px
+        height: 25px
+        padding-top: 0
+        border: 0
+        background: url('../imgs/layout/util-nav-icons.png') -120px 0 no-repeat
+        text-decoration: none
+        text-indent: -9999px
+        &:hover, &:visited
+          width: 25px
+          height: 25px
+          border: 0
+          padding-top: 0
+          background: url('../imgs/layout/util-nav-icons.png') -120px 0 no-repeat
+          text-decoration: none
+          text-indent: -9999px
+        &:hover
+          background-position: -120px -30px
+
+#search-wrapper
+  width: 661px
+  margin: 0
+  padding: 0
+  word-wrap: -ms-word-wrap
+  table-layout: fixed
+  background: #fff
+  #content
+    display: block
+    float: none
+    background: #fff
+    .gutter
+      display: block
+      float: none
+      background: #fff
+  table
+    blockquote.g table td.s
+      table-layout: fixed
+      width: 500px
+      word-wrap: -ms-word-wrap
+    table
+      width: 100px
+      margin-left: 0
+      padding-left: 0
+      text-align: left
+      tr
+        text-align: left
+    border: 0 !important
+    tr, td
+      border: 0 !important
+
+div.searchbox
+  float: left
+  width: 610px
+  margin: 0 0 20px 0
+  border: 1px solid #cac9c0
+  padding: 20px
+  background: #e0dfd8
+form.vcusearch
+  width: 580px
+  margin: 0 auto
+
+#search-wrapper
+  form.vcusearch input
+    &.go
+      border: 0 !important
+    &.field
+      float: left
+      width: 350px
+      margin-top: 2px
+      margin-right: 5px
+      padding: 4px
+  table! td.s, p.g! span.one, blockquote!
+  .b
+    font-weight: bold
+
+.b a
+  font-weight: bold
+
+#search-wrapper
+  p, blockquote
+    margin: 0
+    padding: 0
+  table
+    margin: 0
+    padding: 0
+    font-size: 11px !important
+    line-height: 1.6
+    td
+      margin: 0
+      padding: 0
+      font-size: 11px !important
+      line-height: 1.6
+  p.g
+    margin: 0
+    padding: 0
+    font-size: 13px
+  div.n
+    text-align: left
+  width: 640px
+  h3
+    display: block
+    width: 612px
+  .gutter
+    width: 600px
+    background: none !important
+  table table
+    width: 100px
+    margin-left: 0
+    padding-left: 0
+    text-align: left
+    tr
+      text-align: left
+  h3.hdr-web
+    margin: 0
+    padding: 15px 0 5px 0
+  table.results-txt
+    width: 100%
+    margin: 0
+    padding: 0
+  hr.result-page-nav
+    width: 100%
+    height: 1px
+    margin-bottom: 5px
+    border: 0
+    background: #c7c7c7 !important
+#content
+  #CancerList ul
+    margin: 0
+    padding: 0
+    li
+      background: none
+      list-style-type: none
+      margin: 0
+      padding: 0px 0 12px 0
+  #clearbutton, #filterbutton
+    width: 70px
+    cursor: pointer
+.highlight
+  background-color: yellow
+#content #CancerList ul li h3
+  color: #369
+.well
+  overflow: hidden
+  float: left
+  width: 640px
+  margin: 10px 0
+  padding: 10px
+  border: 1px solid #cccccc
+  background-color: #f8f8f8
+  +border-radius(8px)
