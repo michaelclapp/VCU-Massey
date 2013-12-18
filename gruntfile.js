@@ -85,11 +85,12 @@ module.exports = function(grunt) {
           {from: '../imgs/layout/util-nav-icons.png', to: '<t4 type="media" id="35692" formatter="path/*"/>'},
           {from: '../imgs/layout/footer.jpg', to: '<t4 type="media" id="36471" formatter="path/*"/>'},
           {from: '../imgs/layout/footer-icons.png', to: '<t4 type="media" id="36477" formatter="path/*"/>'},
+          {from: '../imgs/layout/pencil.gif', to: '<t4 type="media" id="42708" formatter="path/*"/>'},
           //from home.sass
           {from: '../imgs/layout/home-news.png', to: '<t4 type="media" id="41588" formatter="path/*"/>'},
           {from: '../imgs/layout/icon-calendar-bg.gif', to: '<t4 type="media" id="35675" formatter="path/*"/>'},
           {from: '../imgs/layout/intro-nav.gif', to: '<t4 type="media" id="35665" formatter="path/*"/>'},
-          //
+          //from flexslider.sass
           {from: '../imgs/layout/caption-bg.png', to: '<t4 type="media" id="36478" formatter="path/*"/>'},
           {from: '../imgs/layout/slide-nav2.png', to: '<t4 type="media" id="42038" formatter="path/*"/>'},
          
