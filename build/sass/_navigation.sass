@@ -1,9 +1,3 @@
-/* CSS Document 
- *Site: VCU Massey Cancer Center - Navigation
- *Updated: 12/2/2010
-
-/*--NAVIGATION --*/
-
 // Xtra Header Navigation (RSS, E-mail, NCI-CC links)
 #rufio nav ul
   position: absolute
@@ -129,9 +123,8 @@
     padding: 8px 0 8px 15px
     color: #666
     font-family: Helvetica, Arial, sans-serif
-    font-size: 1.2em
-    font-weight: normal
-    line-height: 1.5em
+    @include font-size(1)
+    font-weight: 200
     &:hover
       background: none
       color: #010101
@@ -150,12 +143,10 @@
           padding-left: 38px
       ul li
         background: none
-        font-size: 1em
         a
           display: block
           width: 188px
           padding-left: 50px
-          line-height: 1.2
     ul li a
       width: 205px
       padding-left: 30px
@@ -177,12 +168,12 @@
       display: block
       width: 150px
       margin: 5px 0
-      padding: 9px 20px 9px 40px
+      padding: 5px 20px 5px 40px
       border: 1px solid #cccccc
       background: url('../imgs/layout/icons/quicklinks.png') no-repeat left top
       text-decoration: none
       color: #444444
-      font-size: 12px
+      @include font-size(1)
       font-weight: normal
       +box-shadow(2px 2px 5px #cccccc)
       &:hover
