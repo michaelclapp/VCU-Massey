@@ -72,7 +72,7 @@ table.lightborder td { border-right: 1px solid #d9d9d9; border-bottom: 1px solid
 
 td li { font-size: 1em; }
 
-#vcuIdentityWrapper { display: block; width: 100%; margin: 0; background-color: #f8b801; background-image: url(http://identity.vcu.edu/widgets/branding/gold/responsive/images/body-bg.gif); }
+#vcuIdentityWrapper { display: block; width: 100%; margin: 0; background-color: purple; }
 #vcuIdentityWrapper header { overflow: hidden; width: 100%; max-width: 960px; height: 60px; margin: 0 auto; padding: 0; background: #f8b801; }
 #vcuIdentityWrapper header#vcuIdentity { overflow: hidden; width: 960px; height: 60px; margin: 0 auto; padding: 0; }
 #vcuIdentityWrapper header#vcuIdentity h1 { float: left; width: 100%; text-align: center; }
