@@ -1,5 +1,6 @@
 html
-	background: $gray-bg url('../imgs/layout/background.jpg') repeat-y center center
+	background: #9D9D9D url('../imgs/layout/footer.jpg') repeat-y center center //fallback	
+	+background-image(linear-gradient(left, #9C9C9C, #CCCCCC, #9C9C9C))
 	font-size: 100.1%
 body
 	min-width: 1100px
@@ -24,7 +25,6 @@ body
 	position: relative
 	float: left
 	width: 251px
-	padding-bottom: 350px
 .content-respond
 	float: none !important
 	width: 100% !important
@@ -44,8 +44,3 @@ body
 			float: left
 	.photo-left img
 		margin: 0
-
-#notneeded
-	width: 100%
-	height: 100%
-	background: pink
