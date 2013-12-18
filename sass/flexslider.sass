@@ -118,7 +118,17 @@ html[xmlns] .slides
 // Direction Nav
 
 .flex-direction-nav
-  height: 0
+  display: block
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 9997
+  float: left
+  width: 70px
+  height: 38px
+  background: url('../imgs/layout/caption-bg.png') //fall-back
+  background: rgba(0,0,0,.7)
+  +border-radius(0 0 0 10px)
   a
     display: block
     position: absolute
@@ -129,7 +139,8 @@ html[xmlns] .slides
     height: 27px
     margin: 0
     border: 0
-    background: url("../imgs/layout/slide-nav.png")
+    background: url("../imgs/layout/slide-nav2.png")
+    opacity: 0.5
     cursor: pointer
     text-indent: -9999px
     +transition(all .3s ease)
@@ -141,10 +152,8 @@ html[xmlns] .slides
 .flexslider:hover
   .flex-prev
     right: 32px
-    opacity: 0.7
   .flex-next
     right: 5px
-    opacity: 0.7
     &:hover
       opacity: 1
   .flex-prev:hover

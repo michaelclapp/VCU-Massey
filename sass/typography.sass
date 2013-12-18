@@ -20,18 +20,35 @@ a
     text-decoration: none
   &.pdf, &.excel, &.word
     position: relative
-    padding: 0 15px 0 0
+    padding: 0 1px 0 0
     &:after
       position: absolute
       top: 1px
       right: 0
   &.pdf:after
-    content: url('../imgs/layout/icons/icon-pdf.gif')
+    display: inline-block
+    position: relative
+    content: ""
+    width: 12px
+    height: 12px
+    margin-left: 2px
+    background: url('../imgs/layout/icons/icon-pdf.gif')
   &.excel:after
-    content: url('../imgs/layout/icons/icon-excel.gif')
+    display: inline-block
+    position: relative
+    content: ""
+    width: 12px
+    height: 12px
+    margin-left: 2px
+    background: url('../imgs/layout/icons/icon-excel.gif')
   &.word:after
-    content: url('../imgs/layout/icons/icon-word.gif')
-
+    display: inline-block
+    position: relative
+    content: ""
+    width: 12px
+    height: 12px
+    margin-left: 2px
+    background: url('../imgs/layout/icons/icon-word.gif')
 #content
   p, li
     margin-top: 0
