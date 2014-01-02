@@ -90,8 +90,9 @@ mark
 
 // Correct font family set oddly in Safari 5 and Chrome.
 code, kbd, pre, samp
-  font-family: monospace, serif
-  font-size: 1em
+  font:
+    family: monospace, serif
+    size: 1em
 
 // Improve readability of pre-formatted text in all browsers.
 pre
@@ -141,9 +142,9 @@ figure
 
 // Define consistent border, margin, and padding.
 fieldset
-  border: 1px solid #c0c0c0
   margin: 0 2px
   padding: 0.35em 0.625em 0.75em
+  border: 1px solid #c0c0c0
 
 legend
   // Correct `color` not being inherited in IE 8/9.
@@ -232,10 +233,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0
   padding: 0
   outline: 0
-  font-family: inherit
-  font-size: 100%
-  font-style: inherit
-  font-weight: inherit
+  font:
+    family: inherit
+    size: 100%
+    style: inherit
+    weight: inherit
   vertical-align: baseline
 
 // remember to define focus styles!

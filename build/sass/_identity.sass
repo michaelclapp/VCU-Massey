@@ -2,8 +2,9 @@
 	display: block
 	width: 100%
 	margin: 0
-	background-color: $identity-bg
-	background-image: url('../imgs/layout/vcu-identity/body-bg.gif')
+	background:
+		color: $identity-bg
+		image: url('../imgs/layout/vcu-identity/body-bg.gif')
 	header
 		overflow: hidden
 		width: 100%
@@ -28,8 +29,9 @@
 					height: 60px
 					margin: 0 auto
 					background: url('../imgs/layout/vcu-identity/vcubrand.gif') no-repeat center center
-					text-align: center
-					text-indent: -9999px
+					text:
+						align: center
+						indent: -9999px
 	a
 		&:hover, &:focus
 			border: 0

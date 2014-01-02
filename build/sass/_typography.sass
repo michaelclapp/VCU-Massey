@@ -59,8 +59,9 @@ a
 		height: 20px
 		margin: 4px 0 0 2px
 		background: url('../imgs/layout/pencil.gif') no-repeat
-		text-align: left
-		text-indent: -9999px
+		text:
+			align: left
+			indent: -9999px
 		&:hover, &:focus
 			border-bottom: 1px solid $white
 #content
@@ -75,9 +76,10 @@ a
 		margin: $pad-sm 0
 		padding: 0
 		color: #707070
-		font-family: Helvetica, Arial, sans-serif
 		@include font-size(1.667) // 20px/30px
-		font-weight: bold
+		font:
+			family: Helvetica, Arial, sans-serif
+			weight: bold
 		a
 			&:link, &:active, &:visited
 				border: 0
@@ -92,25 +94,29 @@ a
 		&.title
 			margin: $pad-sm 0
 			color: #ff3300
-			font-family: $sans-serif
-			font-size: 24px
-			font-weight: bold
+			font:
+				family: $sans-serif
+				size: 24px
+				weight: bold
 	h3
 		margin: 0 0 1em 0
 		color: #555
-		font-size: 16px
-		font-weight: bold
+		font:
+			size: 16px
+			weight: bold
 	h4
 		margin: 5px 0
 		padding: 0
 		border-bottom: 1px solid #c8c8c8
 		color: #555
-		font-size: 16px
-		font-weight: bold
+		font:
+			size: 16px
+			weight: bold
 	h5
 		margin: 5px 0
-		font-size: 14px
-		font-weight: bold
+		font:
+			size: 14px
+			weight: bold
 	p
 		margin: 0 0 10px
 		@include font-size(1)
@@ -147,8 +153,9 @@ a
 	dt
 		margin: 0
 		padding: 0
-		font-size: 1.2em
-		font-weight: bold
+		font:
+			size: 1.2em
+			weight: bold
 	dd
 		margin: 0 0 1.5em 0
 		padding: 0
@@ -163,8 +170,9 @@ a
 		font-size: 1.1em
 	p.toplink
 		margin-top: .5em
-		font-size: 1.1em
-		font-weight: 700
+		font:
+			size: 1.1em
+			weight: 700
 table
 	width: 100%
 	margin: 0 0 20px
