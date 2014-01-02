@@ -14,21 +14,18 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['build/js/*.js'],
-        tasks: ['uglify', 'copy:js']
+        tasks: ['uglify', 'copy']
       },
       css: {
         files: ['build/sass/*.sass'],
-        tasks: ['compass', 'cmq', 'uncss', 'copy', 'replace']
+        tasks: ['compass:dist', 'cmq', 'uncss', 'copy', 'replace']
       }
     },
 
     compass: {
       dist: {
         options: {
-          sassDir: 'build/sass',
-          cssDir: 'assets/css',
-          config: 'config.rb',
-          outputStyle: 'compressed'
+          config: 'config.rb'
         }
       }
     },
@@ -50,7 +47,7 @@ module.exports = function(grunt) {
       },
       imgs: {
         cwd: 'build/imgs/',
-        src: '**/*',
+        src: '*',
         dest: 'assets/imgs/',
         expand: true
       },
@@ -59,11 +56,17 @@ module.exports = function(grunt) {
         src: '*/**',
         dest: 't4/',
         expand: true
+      },
+      bower: {
+        cwd: 'bower_components',
+        src: '*/**',
+        dest: 'assets/lib',
+        expand: true
       }
     },
     replace: {
       images: {
-        src: ['t4/css/*.css'],
+        src: ['t4/css/global.css', 't4/css/home.css'],
         overwrite: true,
         replacements: [
           {from: '../imgs/layout/background.jpg', to: '<t4 type="media" id="35702" formatter="path/*"/>'},
@@ -80,7 +83,7 @@ module.exports = function(grunt) {
           {from: '../imgs/layout/search-bg.gif', to: '<t4 type="media" id="35701" formatter="path/*"/>'},
           {from: '../imgs/layout/search-btn.gif', to: '<t4 type="media" id="35699" formatter="path/*"/>'},
           {from: '../imgs/layout/nav-bar.png', to: '<t4 type="media" id="36545" formatter="path/*"/>'},
-          {from: '../imgs/layout/icons/quicklinks.png', to: '<t4 type="media" id="42671" formatter="path/*"/>'},
+          {from: '../imgs/layout/icons/quicklinks.png', to: '<t4 type="media" id="42989" formatter="path/*"/>'},
           {from: '../imgs/layout/btn-submit.gif', to: '<t4 type="media" id="35693" formatter="path/*"/>'},
           {from: '../imgs/layout/util-nav-icons.png', to: '<t4 type="media" id="35692" formatter="path/*"/>'},
           {from: '../imgs/layout/footer.jpg', to: '<t4 type="media" id="36471" formatter="path/*"/>'},
@@ -100,12 +103,12 @@ module.exports = function(grunt) {
     },
     uncss: {
       dist: {
+        files: {
+          'assets/css/global.css': ['*.html']
+        },
         options: {
           compress: true,
           ignore: ['a.pdf', 'a.pdf:after', 'a.excel', 'a.excel:after', 'a.word', 'a.word:after', '#rufio nav ul ul.dip']
-        },
-        files: {
-          'assets/css/global.css': ['index.html']
         }
       }
     },
@@ -124,6 +127,56 @@ module.exports = function(grunt) {
         }
       }
     },
+    bower: {
+      install:{
+      }
+    },
+    'sails-linker': {
+      modern: {
+        options: {
+          startTag: '<!--MODERNIZR-->',
+          endTag: '<!--MODERNIZR END-->',
+          fileTmpl: '<script src="%s"></script>',
+          appRoot: ''
+        },
+        files: {
+          '*.html': ['assets/lib/modernizr/modernizr.js']
+        }
+      },
+      jquery: {
+        options: {
+          startTag: '<!--JQUERY-->',
+          endTag: '<!--JQUERY END-->',
+          fileTmpl: '<script src="%s"></script>',
+          appRoot: ''
+        },
+        files: {
+          '*.html': ['assets/lib/jquery/jquery.min.js']
+        }
+      },
+      js : {
+        options: {
+          startTag: '<!--GLOBAL:JS-->',
+          endTag: '<!--GLOBAL:JS END-->',
+          fileTmpl: '<script src="%s"></script>',
+          appRoot: ''
+        },
+        files: {
+          '*.html': ['assets/js/*.js']
+        }
+      },
+      css : {
+        options: {
+          startTag: '<!--GLOBAL:CSS-->',
+          endTag: '<!--GLOBAL:CSS END-->',
+          fileTmpl: '<link rel="stylesheet" href="%s"></script>',
+          appRoot: ''
+        },
+        files: {
+          '*.html': ['assets/css/*.css', '!assets/css/home.css', '!assets/css/ie.css']
+        }
+      }
+    }
   });
   // load plugins
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -134,10 +187,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-combine-media-queries');
-  
+  grunt.loadNpmTasks('grunt-sails-linker');
+  grunt.loadNpmTasks('grunt-bower-task');
 
   // Default task.
 grunt.registerTask('default', ['watch']);
+grunt.registerTask('build', ['bower', 'copy', 'sails-linker']);
 
 
 };
