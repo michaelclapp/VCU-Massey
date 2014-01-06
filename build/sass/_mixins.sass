@@ -4,9 +4,9 @@
 	font-size: $size + rem
 	line-height: $line + rem
 
-@mixin space($space)
-	margin: ($space) + px
-	padding: ($space) + px
+@mixin nospace
+	margin: 0
+	padding: 0
 
 @mixin border($type, $thickness, $style)
 	@if $type == all
