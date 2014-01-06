@@ -15,8 +15,8 @@
 #content
   .flexslider
     position: relative
-    width: 690px !important
-    height: 363px !important
+    width: 100% !important
+    height: auto !important
     margin: 0 0 25px 0
     padding: 0
     .slides
@@ -26,12 +26,13 @@
         padding: 0
         -webkit-backface-visibility: hidden
         span
+          +box-sizing(border-box)
           display: block
           position: absolute
           bottom: 0
           bottom: 20px\0 //ie8 hack
           left: 0
-          width: 650px
+          width: 100%
           height: auto
           padding: 20px
           background: url('../imgs/layout/caption-bg.png') //fall-back
@@ -49,7 +50,7 @@
             text-align: right
           p
             float: left
-            width: 389px
+            width: 360px
             margin: 0
             padding: 0
             font:

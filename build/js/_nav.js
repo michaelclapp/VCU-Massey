@@ -15,4 +15,6 @@ $(document).ready(function() {
     $(this).children('ul').removeClass('dip');
     $(tlpSpan).removeClass('dip');
   });
+
+  $("#sidebar span").last().children().addClass('current');
 });

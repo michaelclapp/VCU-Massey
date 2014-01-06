@@ -6,11 +6,13 @@
       &:after
         content: ""
 [id*='col-']
+  +box-sizing(border-box)
   float: left
   overflow: hidden
-  width: 220px
+  width: 32%
   height: auto
-  margin-right: 10px
+  min-height: 290px
+  margin-right: 2%
   border: 1px solid #cccccc
   +border-radius(12px)
   ul
@@ -24,21 +26,21 @@
       background: none !important
       a
         float: left
-        width: 145px
+        width: 70%
         padding: 0 2px
         color: #666666
-        font:
-          size: 11px
-          weight: normal
+        font-size: 11px
         line-height: 1.2
+        font-weight: normal
         &:hover, &:focus
           border: 0
           background: #f8b800
           color: #000000
       img
         float: left
-        width: 40px
-        height: 40px
+        width: 30%
+        max-width: 40px
+        max-height: 40px
         padding: 0 6px 10px 0
   p a
     float: left
@@ -70,7 +72,8 @@
     background-position: 0 -118px
   .news-date
     float: left
-    width: 40px
+    width: 30%
+    max-width: 40px
     height: 40px
     padding-bottom: 14px
     background: url('../imgs/layout/icon-calendar-bg.gif') 0 0 no-repeat
@@ -87,7 +90,7 @@
           weight: bold
         line-height: 12px
   ul li a
-    width: 150px
+    width: 70%
     border: 0
     color: $white
   p a
@@ -98,35 +101,32 @@
     border: 0
     color: #fbba00
     &:hover, &:focus
-      color: #ffffff !important
+      color: #ffffff !important 
 #sidebar
   ul#intro-nav
-    margin: 15px 0 0 20px
-    li
-      position: relative
-      height: 90px
-      margin: 0 0 20px 0
-      background: url('../imgs/layout/intro-nav.gif') 0 0 no-repeat
-      &.begin
-        background-position: 0 25px
-        &:hover
-          background-position: -234px 25px
-      &.discover
-        background-position: 0 -110px
-        &:hover
-          background-position: -234px -110px
-      &.give
-        background-position: 0 -240px
-        &:hover
-          background-position: -234px -240px
-      span.link
-        display: block
-        text-indent: -9999px !important
-      span.nav-info
-        position: absolute
-        bottom: 0
-        padding-left: 25px
-        &:hover
-          color: #666666
+    margin-top: $pad*2
+    li 
       a
-        border: 0
+        position: relative
+        margin: 0
+        padding: 35px 0
+        border: none
+        background: url('../imgs/layout/intro-nav.png') 0 0 no-repeat
+        &.begin
+          background-position: 0px 0px
+          &:hover
+            background-position: -248px 0px
+        &.discover
+          background-position: 0 -110px
+          &:hover
+            background-position: -248px -110px
+        &.give
+          background-position: 0 -240px
+          &:hover
+            background-position: -248px -240px
+      span.link
+        display: none
+      span.nav-info
+        display: block
+        margin-top: $pad-sm
+        text-align: right

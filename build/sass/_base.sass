@@ -25,23 +25,13 @@ body
 #sidebar
 	position: relative
 	float: left
-	width: 251px
-.content-respond
-	float: none !important
-	width: 100% !important
-	padding: 10px 20px
+	width: 30%
+	padding: $pad
+	overflow: hidden
+	+box-sizing(border-box)
 #content
 	float: right
-	width: 709px
+	width: 70%
 	min-height: 700px
-	.gutter
-		float: left
-		padding: 0 40px 3.5em 0
-	img
-		margin: 10px
-		&.pull-right
-			float: right
-		&.pull-left
-			float: left
-	.photo-left img
-		margin: 0
+	padding: $pad
+	+box-sizing(border-box)

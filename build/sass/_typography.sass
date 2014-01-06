@@ -77,9 +77,8 @@ a
 		padding: 0
 		color: #707070
 		@include font-size(1.667) // 20px/30px
-		font:
-			family: Helvetica, Arial, sans-serif
-			weight: bold
+		font-family: Helvetica, Arial, sans-serif
+		font-weight: bold
 		a
 			&:link, &:active, &:visited
 				border: 0
@@ -107,7 +106,7 @@ a
 	h4
 		margin: 5px 0
 		padding: 0
-		border-bottom: 1px solid #c8c8c8
+		@include border(bottom, 1, solid)
 		color: #555
 		font:
 			size: 16px
@@ -121,7 +120,7 @@ a
 		margin: 0 0 10px
 		@include font-size(1)
 	ul, ol
-		margin: 10px 0 10px 10px
+		margin: $pad-sm 0 $pad-sm $pad
 	li
 		margin: 0 0 5px
 		@include font-size(1)
@@ -177,13 +176,14 @@ table
 	width: 100%
 	margin: 0 0 20px
 	@include font-size(1)
+	text-align: left
+	+border-radius(5px)
 	th
-		border: 1px solid #d9d9d9
-		padding: 10px 6px 10px 12px
+		padding: $pad-sm
+		@include border(all, 1, solid)
 		background: #f3f3f3
 		color: #333
 		font-weight: bold
-		text-align: left
 	td
-		border: 1px solid #d9d9d9
-		padding: 8px 8px 8px 12px
+		padding: $pad-sm
+		@include border(all, 1, solid)

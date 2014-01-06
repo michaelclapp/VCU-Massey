@@ -103,11 +103,10 @@
 #sidebar
   h3
     display: block
-    width: 225px
-    margin: 0
-    padding: 20px 0 14px 32px
-    color: #336699
-    font: bold 14px / 1.8em Helvetica, sans-serif
+    margin: $pad-sm 0
+    color: $text-blue
+    @include font-size(1)
+    font-weight: bold
     a
       &:link, &:visited, &:hover, &:active
         border-bottom: none
@@ -115,22 +114,28 @@
       &:hover
         text-decoration: underline
   ul#subnav
-    margin: 0 0 0 16px
-    border-top: 1px solid #ccc
+    @include border(top, 1, solid)
   li a
+    +box-sizing(border-box)
     display: block
-    width: 194px
-    border: 0
-    padding: 8px 0 8px 15px
+    width: 100%
+    padding: $pad-sm 0 $pad-sm $pad-sm
+    @include border(bottom, 1, solid)
     color: #666
     @include font-size(1)
-    font:
-      family: Helvetica, Arial, sans-serif
-      weight: 200
+    font-family: Helvetica, Arial, sans-serif
+    font-weight: 200
     &:hover
-      background: none
-      color: #010101
-  ul
+      background: $gray-bg-lite
+    &.current
+      color: $text-red
+      font-weight: bold
+/*-- Sam's hot fix for indented 4th level nav --*/
+#sidebar ul.multilevel-linkul-0 a
+  padding-left: $pad-sm*2
+#sidebar ul.multilevel-linkul-1 a
+  padding-left: $pad-sm*3
+  /*ul
     &.arrows
       margin: 0
       border: 0
@@ -141,36 +146,28 @@
         &.active
           background: url('../imgs/layout/subnav-arrow-on.gif') 15px 11px no-repeat //not loaded into T4
         a
-          width: 197px
+          width: 100%
           padding-left: 38px
       ul li
         background: none
         a
           display: block
-          width: 188px
+          width: 100%
           padding-left: 50px
     ul li a
-      width: 205px
-      padding-left: 30px
-  li a
-    width: 220px
-    border-bottom: 1px solid #ccc
-  ul
-    &#subnav li a.current
-      &:link, &:visited, &:hover, &:active
-        color: #ff3300 !important
-        font-weight: 700 !important
+      width: 100%
+      padding-left: 30px */
+#sidebar
   #quicklinks
     position: relative
-    width: 228px
-    margin: 60px 0 0 0
-    padding: 0 0 0 20px
+    width: 100%
+    margin: $pad*2 0 0 0
+    padding: 0
     color: #444444
     a
       display: block
-      width: 150px
-      margin: 5px 0
-      padding: 5px 20px 5px 40px
+      margin: $pad-sm/2 0
+      padding: $pad-sm/2 $pad-sm*2 $pad-sm/2 $pad-sm*4
       border: 1px solid #cccccc
       background: url('../imgs/layout/icons/quicklinks.png') no-repeat left top
       text-decoration: none
@@ -213,13 +210,6 @@
         background-position: 0px -420px
         &:hover, &:focus
           background-position: 0 -450px
-
-            
-
-/*-- Sam's hot fix for indented 4th level nav --*/
-#sidebar ul.multilevel-linkul-1 a
-  width: 175px
-  padding-left: 60px
 
 // sidebar nav list - main sub-level (no yellow arrow)
 
@@ -264,7 +254,7 @@ div#breadcrumb-nav
   p
     margin: 0
     padding: 0
-    font-size: 11px
+    @include font-size(.91) // 11px/1.375
   a
     border: 0
     color: #999

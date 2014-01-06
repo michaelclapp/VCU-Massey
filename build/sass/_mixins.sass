@@ -3,3 +3,19 @@
 	line-height: ($line * 16) + px
 	font-size: $size + rem
 	line-height: $line + rem
+
+@mixin space($space)
+	margin: ($space) + px
+	padding: ($space) + px
+
+@mixin border($type, $thickness, $style)
+	@if $type == all
+		border: $thickness+px $border-color $style
+	@else if $type == top
+		border-top: $thickness+px $border-color $style
+	@else if $type == right
+		border-right: $thickness+px $border-color $style
+	@else if $type == bottom
+		border-bottom: $thickness+px $border-color $style
+	@else if $type == left
+		border-left: $thickness+px $border-color $style

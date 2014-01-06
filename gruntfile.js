@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['build/sass/*.sass'],
-        tasks: ['compass:dist', 'cmq', 'uncss', 'copy', 'replace']
+        tasks: ['compass:dist', 'copy', 'replace']
       }
     },
 
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
     },
     replace: {
       images: {
-        src: ['t4/css/global.css', 't4/css/home.css'],
+        src: ['t4/css/global.css'],
         overwrite: true,
         replacements: [
           {from: '../imgs/layout/background.jpg', to: '<t4 type="media" id="35702" formatter="path/*"/>'},
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
         },
         options: {
           compress: true,
-          ignore: ['a.pdf', 'a.pdf:after', 'a.excel', 'a.excel:after', 'a.word', 'a.word:after', '#rufio nav ul ul.dip']
+          ignore: ['a.pdf', 'a.pdf:after', 'a.excel', 'a.excel:after', 'a.word', 'a.word:after', '#rufio nav ul ul.dip', '#sidebar li a.current']
         }
       }
     },
@@ -173,10 +173,10 @@ module.exports = function(grunt) {
           appRoot: ''
         },
         files: {
-          '*.html': ['assets/css/*.css', '!assets/css/home.css', '!assets/css/ie.css']
+          '*.html': ['assets/css/*.css', '!assets/css/ie.css']
         }
       }
-    }
+    },
   });
   // load plugins
   grunt.loadNpmTasks('grunt-contrib-watch');
