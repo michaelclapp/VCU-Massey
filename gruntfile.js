@@ -96,6 +96,7 @@ module.exports = function(grunt) {
           //from flexslider.sass
           {from: '../imgs/layout/caption-bg.png', to: '<t4 type="media" id="36478" formatter="path/*"/>'},
           {from: '../imgs/layout/slide-nav2.png', to: '<t4 type="media" id="42038" formatter="path/*"/>'},
+          {from: '../imgs/layout/intro-nav.png', to: '<t4 type="media" id="43159" formatter="path/*"/>'},
          
           //Continue adding images that are linked in the CSS here!
         ]

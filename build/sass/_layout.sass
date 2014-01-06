@@ -3,12 +3,10 @@ div#anchorlinks
   clear: both
   margin-bottom: 2em
   ul
-    margin: 0
-    padding: 0
+    @include nospace
     li
-      margin: 0
+      @include nospace
       border: 0
-      padding: 0
       background: none
       font-style: italic
       a
@@ -41,8 +39,7 @@ div#anchorlinks
     line-height: 1.6em
     font-size: 14px
     &.event_title
-      margin: 0
-      padding: 0
+      @include nospace
       font:
         size: 15px
         weight: 700
@@ -56,15 +53,13 @@ div#anchorlinks
     padding-bottom: 1.5em
     ul
       display: block
-      margin: 0
-      padding: 0
+      @include nospace
       background: none
       list-style: none
       li
         display: inline
         float: left
-        margin: 0
-        padding: 0
+        @include nospace
         border-right: 1px solid #cccccc
         background: none
         list-style: none
@@ -98,9 +93,9 @@ img
 .imgright
   float: right
   margin: 0 0 1.25em 1em
-  border: 0
   padding: 0
-  background: #fff
+  border: 0
+  background: $white
 
 .imgleft
   float: left
