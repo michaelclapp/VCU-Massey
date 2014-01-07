@@ -4,19 +4,17 @@ html
 	font-size: 100.1%
 body
 	min-width: 1100px
-	@include nospace
+	@extend %nospace
 	+background-image(linear-gradient($white, $gold-bg))
 #wrapper
 	width: 100%
 	min-width: 998px
-	text-align: center
 	+background-image(linear-gradient($white, $gold-bg))
 #container
 	width: 998px
 	margin: 0 auto
-	padding-top: 22px
-	background: #fff
-	text-align: left
+	padding-top: $pad
+	background: $white
 #sidebar
 	position: relative
 	float: left

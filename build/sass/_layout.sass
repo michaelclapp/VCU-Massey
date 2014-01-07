@@ -1,11 +1,11 @@
-div#anchorlinks
+#anchorlinks
   display: block
   clear: both
   margin-bottom: 2em
   ul
-    @include nospace
+    @extend %nospace
     li
-      @include nospace
+      @extend %nospace
       border: 0
       background: none
       font-style: italic
@@ -14,11 +14,6 @@ div#anchorlinks
         font-style: italic
         list-style: none
         text-decoration: none
-
-// Blue italic text
-.blue-italic
-  color: #336699
-  font-style: italic
 
 // Events page (content format)
 #events
@@ -39,48 +34,12 @@ div#anchorlinks
     line-height: 1.6em
     font-size: 14px
     &.event_title
-      @include nospace
+      @extend %nospace
       font:
         size: 15px
         weight: 700
 
-// A-Z list (Types of Cancer)
-#content
-  div#az-nav
-    display: block
-    clear: both
-    width: auto
-    padding-bottom: 1.5em
-    ul
-      display: block
-      @include nospace
-      background: none
-      list-style: none
-      li
-        display: inline
-        float: left
-        @include nospace
-        border-right: 1px solid #cccccc
-        background: none
-        list-style: none
-        a
-          border: 0
-          padding: 0 10px
-          color: #ff3300
-          font-size: 15px
-          text-decoration: none
-          &:hover
-            background: #eee
-            color: #121212
-          &.current
-            border-bottom: 1px solid #99b2cc
-            color: #336699
-  .az-content h3
-    border-bottom: 1px solid #3674a4
-    padding-bottom: 5px
-    color: #ff3300 !important
-    font-size: 18px !important
-
+        
 // Tables default blue border
 
 

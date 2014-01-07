@@ -1,3 +1,42 @@
+// A-Z list (Types of Cancer)
+#content
+	#az-nav
+		display: block
+		clear: both
+		width: auto
+		padding-bottom: 1.5em
+		h3
+			border: 0 !important
+		ul
+			display: block
+			@extend %nospace
+			background: none
+			list-style: none
+		li
+			display: inline
+			float: left
+			@extend %nospace
+			@include border(right, 1, solid)
+			background: none
+			list-style: none
+			&:last-of-type
+				border: none
+		a
+			border: 0
+			padding: 0 10px
+			color: $text-red
+			@include font-size(1.3334) //16px/24px
+			&:hover
+				background: $gray-bg-lite
+				color: $gray
+	.az-content
+		margin-top: $pad
+	h2
+		@include border(bottom, 1, solid)
+	h3
+		border: 0
+
+//content well
 .well
 	+box-sizing(border-box)
 	width: 100%
@@ -6,9 +45,11 @@
 	@include border(all, 1, solid)
 	background-color: $gray-bg-lite
 	+border-radius(8px)
+
+//blog meta data
 .meta
 	float: right
-	width: 200px
+	width: 50%
 	margin-top: $pad-sm
 	padding: $pad-sm $pad-sm 0
 	@include border(top, 1, solid)

@@ -1,7 +1,6 @@
 #rufio
   width: 100%
-  margin: 0
-  padding: 0
+  @extend %nospace
   background: url('../imgs/layout/header-gradient.jpg') repeat-x //fallback
   +background-image(linear-gradient($header-bg1, $header-bg2))
   a
@@ -29,7 +28,6 @@
       float: right
       width: 229px
       a.ncicc-link
-        display: block
         float: left
         width: 229px
         height: 46px
@@ -54,14 +52,13 @@ form#sitesearch
   position: relative
   float: left
   z-index: 3000
-  margin: 0
-  padding: 0
+  @extend %nospace
   background: transparent url('../imgs/layout/search-bg.gif') 0 0 no-repeat
   label
     display: none
   input.field
     float: left
-    color: #9f9f9f
+    color: $gray-bg
     width: 145px
     height: 20px
     margin: 3px 0 0 0
@@ -77,9 +74,8 @@ form#sitesearch
   height: 20px
   margin: 3px 0 0 0
   padding: 0 4px 0 22px
-  border: 0
   background: none
-  color: #9f9f9f
+  color: $gray-bg
   font: normal 11px Verdana, Helvetica, sans-serif
   voice-family: "\"}\""
   voice-family: inherit
@@ -94,8 +90,8 @@ html > body form#sitesearch input.field, #search input.field:focus
   width: 46px
   height: 26px
   margin: 0 0 0 10px
-  border: 0
   padding: 0
+  border: 0
   background: transparent url('../imgs/layout/search-btn.gif') 0 0 no-repeat
   &:hover  
     background-position: 0 -26px
