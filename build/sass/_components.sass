@@ -86,9 +86,11 @@
 		display: none
 		overflow: hidden
 		float: left
+		width: 100%
 		margin-top: -1px
 		padding: $pad-sm
 		background: $gray-bg-lite
 		@include border(all, 1, solid)
+		+box-sizing(border-box)
 		&.is-open
 			display: block

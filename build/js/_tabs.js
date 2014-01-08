@@ -9,4 +9,6 @@ $(document).ready(function () {
         $('ul#tabs section').removeClass('is-open');
         $(this).next().addClass('is-open');
     });
+
+    $('#tabs li a:empty').remove();
 });
