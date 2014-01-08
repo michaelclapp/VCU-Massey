@@ -11,20 +11,20 @@ body
 	min-width: 998px
 	+background-image(linear-gradient($white, $gold-bg))
 #container
-	width: 998px
+	max-width: 998px
 	margin: 0 auto
 	padding-top: $pad
 	background: $white
+#content
+	float: right
+	width: 70%
+	min-height: 700px
+	padding: $pad
+	+box-sizing(border-box)
 #sidebar
 	position: relative
 	float: left
 	width: 30%
 	padding: $pad
 	overflow: hidden
-	+box-sizing(border-box)
-#content
-	float: right
-	width: 70%
-	min-height: 700px
-	padding: $pad
 	+box-sizing(border-box)
