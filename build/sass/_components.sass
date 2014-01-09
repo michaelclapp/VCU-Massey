@@ -110,3 +110,20 @@
 		width: 85%
 		+box-sizing(border-box)
 		padding: $pad
+//emergency alert
+.alert
+	width: 100%
+	background: lighten($nav-gold, 40%)
+	padding: $pad
+	@include font-size(1)
+	font-weight: bold
+	+box-sizing(border-box)
+	&.emergency
+		background: lighten($text-red, 35%)
+		color: $text-red
+	.alert-container
+		width: 90%
+		max-width: 998px
+		margin: 0 auto
+	p
+		margin: 0 0 $pad-sm
