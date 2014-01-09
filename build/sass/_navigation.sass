@@ -1,17 +1,17 @@
 // Xtra Header Navigation (RSS, E-mail, NCI-CC links)
-#rufio nav ul
-  position: absolute
-  bottom: 0
-  left: 0
-  width: 960px
+#rufio nav > ul
+  position: relative
+  float: left
+  width: 100%
+  max-width: 960px
   height: 40px
-  margin: 0 auto
+  margin: $pad auto 0
   background: $nav-gray
   color: $white
+  @include font-size(1.1666667) //14px/21px
   font:
     family: $sans-serif
     weight: 100
-    size: 14px
   li
     position: relative
     float: left

@@ -11,14 +11,15 @@
       text-decoration: none
   .wrapper
     position: relative
-    width: 960px
+    width: 95%
+    max-width: 960px
     height: 175px
     margin: 0 auto
+    padding: $pad
     h1 a
       float: left
       width: 217px
       height: 93px
-      margin: 20px 0
       background: url('../imgs/layout/massey.png') no-repeat
       text-indent: -9999px
       &:hover, &:focus
@@ -31,7 +32,7 @@
         float: left
         width: 229px
         height: 46px
-        margin: 20px 0 10px 
+        margin: $pad-sm 0 
         background: url('../imgs/layout/ncicc-link.gif') no-repeat 0 0
         text-indent: -9999px
     #header-links
