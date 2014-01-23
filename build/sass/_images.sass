@@ -1,24 +1,22 @@
 #content
-	/* img
-		width: 100%
-		@include space(0) */
-	// can not include this until after Development pages are cleaned up with tables in the T4 content types
 	p
 		img
 			margin: 10px
 		&.pull-left
 			float: left
-			width: 30%
+			width: 40%
 			margin: 0 $pad-sm $pad-sm 0
 			img
-				width: 100%
+				width: 100% !important
+				height: auto !important
 				@extend %nospace
 		&.pull-right
 			float: right
-			width: 30%
+			width: 40%
 			margin: 0 0 $pad-sm $pad-sm
 			img
-				width: 100%
+				width: 100% !important
+				height: auto !important
 				@extend %nospace
 	.banner img
 		width: 100% !important
