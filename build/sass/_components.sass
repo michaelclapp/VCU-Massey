@@ -46,15 +46,6 @@
 	background-color: $gray-bg-lite
 	+border-radius(8px)
 
-//blog meta data
-.meta
-	float: right
-	width: 50%
-	margin-top: $pad-sm
-	padding: $pad-sm $pad-sm 0
-	@include border(top, 1, solid)
-	@include border(bottom, 1, solid)
-
 //tabs
 #content
 	#tabs
@@ -94,6 +85,22 @@
 		+box-sizing(border-box)
 		&.is-open
 			display: block
+//video
+.video
+	margin: 0 0 $pad 0
+//child-feature
+.child-feature
+	.feature
+		a
+			display: block
+			margin: $pad-sm 0
+			padding: $pad
+			background: $gray-bg-lite
+			@include font-size(1.5) //18px/27px
+			&:hover, &:focus
+				padding: $pad
+				border: 0
+				background: darken($gray-bg-lite, 10%)
 //staff profile
 .profile
 	overflow: hidden
@@ -110,6 +117,109 @@
 		width: 85%
 		+box-sizing(border-box)
 		padding: $pad
+
+//blog
+.blog-excerpt
+	overflow: hidden
+	margin: $pad-sm 0
+	padding: $pad
+	background: $gray-bg-lite
+	&.sticky
+		background: $gold-lite
+		.blog-excerpt-image
+			width: 100%
+			margin-bottom: $pad-sm
+	.blog-excerpt-image
+		float: left
+		width: 30%
+		margin-right: $pad-sm
+		img
+			width: 100% !important
+			height: auto !important
+a
+	padding-bottom: 1px
+	font-weight: bold
+	&:hover, &:focus
+		padding-bottom: 0
+		background: $white
+		cursor: pointer
+	&.readmore
+		float: right
+		color: $text-blue
+		&:hover, &:focus
+			color: $gray
+.pagination
+	width: 100%
+	text-align: center
+	@include font-size(1)
+	a
+		&:hover, &:focus
+			color: $text-red
+.blog-meta, .blog-share
+	float: left
+	width: 45%
+	margin-top: $pad-sm
+	padding: $pad-sm $pad-sm 0
+	+box-sizing(border-box)
+.blog-meta
+	float: right
+	background: $gray-bg-lite
+	@include border(left, 5, solid)
+iframe#twitter-widget-0
+	float: left
+	margin-right: $pad-sm
+.fb-iframe-widget
+	float: left
+.fb-comments
+	margin-top: $pad
+.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style], .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style]
+	width: 100% !important
+.iterator
+	float: left
+	width: 100%
+	margin-top: $pad
+	@include font-size(1)
+	.prev, .next
+		position: relative
+		width: 45%
+		+box-sizing(border-box)
+		a
+			display: block
+			background: $gray-bg-lite
+			color: $gray
+			&:hover, &:focus
+				border: 0
+				background: $gray-bg-lite
+				color: $text-blue
+		.icon
+			display: block
+			position: absolute
+			top: 50%
+			width: 20px
+			height: 20px
+			background: url('../imgs/layout/next-prev.png')
+			+translate(0%,-50%)
+	.prev
+		float: left
+		a
+			padding: $pad-sm $pad-sm $pad-sm $pad*2
+		.icon
+			left: ($pad-sm/2)
+			background-position: 0 20px
+		&:hover, &:focus
+			.icon
+				background-position: 20px 20px
+	.next
+		float: right
+		text-align: right
+		a
+			padding: $pad-sm $pad*2 $pad-sm $pad-sm
+		.icon
+			right: ($pad-sm/2)
+			background-position: 0 0
+		&:hover, &:focus
+			.icon
+				background-position: 20px 0
 //emergency alert
 .alert
 	width: 100%

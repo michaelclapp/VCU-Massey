@@ -4,6 +4,7 @@
   background: url('../imgs/layout/header-gradient.jpg') repeat-x //fallback
   +background-image(linear-gradient($header-bg1, $header-bg2))
   a
+    padding: 0
     border: 0
     text-decoration: none
     &:hover, &:focus
@@ -13,7 +14,7 @@
     position: relative
     width: 95%
     max-width: 960px
-    height: 175px
+    height: auto
     margin: 0 auto
     padding: $pad
     h1 a

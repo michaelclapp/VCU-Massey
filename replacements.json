@@ -24,5 +24,6 @@
           {"from":"../imgs/layout/intro-nav.gif" , "to":"<t4 type='media' id='35665' formatter='path/*'/>"},
           {"from":"../imgs/layout/caption-bg.png" , "to":"<t4 type='media' id='36478' formatter='path/*'/>"},
           {"from":"../imgs/layout/slide-nav2.png" , "to":"<t4 type='media' id='42038' formatter='path/*'/>"},
-          {"from":"../imgs/layout/intro-nav.png" , "to":"<t4 type='media' id='43159' formatter='path/*'/>"}
+          {"from":"../imgs/layout/intro-nav.png" , "to":"<t4 type='media' id='43159' formatter='path/*'/>"},
+          {"from":"../imgs/layout/next-prev.png" , "to":"<t4 type='media' id='44643' formatter='path/*'/>"}
 ]
