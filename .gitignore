@@ -4,5 +4,6 @@ validation-report.json
 validation-status.json
 npm-debug.log
 lib
-assets/lib
+assets
 bower_components
+t4
