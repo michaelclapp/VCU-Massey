@@ -19,7 +19,6 @@ $(document).ready(function() {
   $("#sidebar span").last().children().addClass('current');
 
 
-
 /*Off screen toggle js*/
   //Add menu button to all pages
   $('#rufio').append('<a href="#" id="menu">+</a>');

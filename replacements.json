@@ -25,5 +25,12 @@
           {"from":"../imgs/layout/caption-bg.png" , "to":"<t4 type='media' id='36478' formatter='path/*'/>"},
           {"from":"../imgs/layout/slide-nav2.png" , "to":"<t4 type='media' id='42038' formatter='path/*'/>"},
           {"from":"../imgs/layout/intro-nav.png" , "to":"<t4 type='media' id='43159' formatter='path/*'/>"},
-          {"from":"../imgs/layout/next-prev.png" , "to":"<t4 type='media' id='44643' formatter='path/*'/>"}
+          {"from":"../imgs/layout/next-prev.png" , "to":"<t4 type='media' id='44643' formatter='path/*'/>"},
+          {"from":"../imgs/layout/vcu-identity/body-bg-768.gif" , "to":"<t4 type='media' id='45000' formatter='path/*'/>"},
+          {"from":"../imgs/layout/vcu-identity/vcubrand-768.gif" , "to":"<t4 type='media' id='45005' formatter='path/*'/>"},
+          {"from":"../imgs/layout/vcu-identity/body-bg-600.gif" , "to":"<t4 type='media' id='44999' formatter='path/*'/>"},
+          {"from":"../imgs/layout/vcu-identity/vcubrand-600.gif" , "to":"<t4 type='media' id='45004' formatter='path/*'/>"},
+          {"from":"../imgs/layout/vcu-identity/body-bg-sm.gif" , "to":"<t4 type='media' id='45003' formatter='path/*'/>"},
+          {"from":"../imgs/layout/vcu-identity/vcuseal.gif" , "to":"<t4 type='media' id='45006' formatter='path/*'/>"},
+          {"from":"../imgs/layout/menu-bg.jpg" , "to":"<t4 type='media' id='45007' formatter='path/*'/>"}
 ]

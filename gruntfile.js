@@ -66,7 +66,7 @@ module.exports = function(grunt) {
     },
     replace: {
       images: {
-        src: ['t4/css/global.css'],
+        src: ['t4/css/*.css'],
         overwrite: true,
         replacements: []
       }
