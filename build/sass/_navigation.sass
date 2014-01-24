@@ -1,7 +1,11 @@
 // Xtra Header Navigation (RSS, E-mail, NCI-CC links)
 a#menu
   display: none
-  width: 100%
+  position: absolute
+  right: 2%
+  top: 0
+  width: 229px
+  margin: $pad-sm 0
   padding: $pad-sm $pad-sm*2
   color: $white
   text-align: center
@@ -10,8 +14,10 @@ a#menu
   +border-radius($pad)
   +box-sizing(border-box)
   &:hover, &:focus
+    border: none
     background: $nav-gold
 #rufio
+  position: relative
   float: left
   nav
     float: left

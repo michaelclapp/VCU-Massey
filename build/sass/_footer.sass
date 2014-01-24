@@ -12,16 +12,21 @@
 		family: Helvetica, Arial, sans-serif
 	@include font-size(.91) //11px/1.375
 	.wrapper
-		width: 998px
+		width: 100%
+		max-width: 998px
 		margin: 0 auto
 	.footer-col
 		float: left
-		width: 296px
-		margin-right: $pad-sm
+		width: 33%
 		padding: $pad-sm
 		background-color: $nav-gray
-		border-right: 10px transparent solid
-		+border-radius(8px)
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+		+border-radius($pad-sm)
+		+box-sizing(border-box)
+		-moz-background-clip: padding-box
+		-webkit-background-clip: padding-box
+		background-clip: padding-box
 		&.last
 			margin-right: 0 !important
 		h4

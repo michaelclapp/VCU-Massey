@@ -1,11 +1,29 @@
 @media screen and (max-width: $mamabear)
 	#footer
+		.wrapper 
+			width: 95%
+		.footer-col
+			width: 33%
+			margin: 0
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+			+box-sizing(border-box)
+			-moz-background-clip: padding-b
+			-webkit-background-clip: padding-box
+			background-clip: padding-box
+			ul
+				width: 285px
+				margin: 0
+				+column-count(1)
+@media screen and (max-width: $babybear)
+	#footer
 		padding: $pad-sm 0
 		.wrapper
 			width: 95%
 		.footer-col
-			width: 85%
-			margin: $pad-sm 7.5%
+			width: 100%
+			margin: $pad-sm 0
+			+box-sizing(border-box)
 		ul
 			width: 100% !important
 			margin: 0 auto !important

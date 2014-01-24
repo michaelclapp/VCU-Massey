@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 /*Off screen toggle js*/
   //Add menu button to all pages
-  $('#vcuIdentityWrapper').after('<a href="#" id="menu">+</a>');
+  $('#rufio').append('<a href="#" id="menu">+</a>');
   
   var mainNav = $('#rufio nav');
   var menuBtn = $('a#menu');
