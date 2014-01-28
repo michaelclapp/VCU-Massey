@@ -2,9 +2,9 @@
 #content
 	#az-nav
 		display: block
-		clear: both
+		float: left
 		width: auto
-		padding-bottom: 1.5em
+		margin: 0 0 $pad
 		h3
 			border: 0 !important
 		ul
@@ -40,7 +40,7 @@
 .well
 	+box-sizing(border-box)
 	width: 100%
-	margin: $pad-sm 0
+	margin: 0 0 $pad
 	padding: $pad-sm
 	@include border(all, 1, solid)
 	background-color: $gray-bg-lite
@@ -51,15 +51,15 @@
 	#tabs
 		float: left
 		width: 100%
-		margin: $pad auto
+		margin: 0 auto $pad
 	ul#tabs
 		padding: 0
-		li
+		> li
 			display: inline
 			padding: 0 0 0 $pad-sm
 			background: none
 			list-style: none
-	#tabs li a
+	#tabs > li > a
 		display: inline-block
 		z-index: 99 !important
 		padding: $pad-sm ($pad-sm*1.5)
@@ -70,7 +70,7 @@
 		border-bottom: 0
 		color: $white
 		text-decoration: none
-	#tabs li a:hover, #tabs li a.active
+	#tabs li > a:hover, #tabs li > a.active
 		background: $gray-bg-lite
 		color: $gray
 	#tabs section
