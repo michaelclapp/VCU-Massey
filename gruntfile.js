@@ -47,16 +47,14 @@ module.exports = function(grunt) {
     },
     copy: {
       js: {
-        expand: true,
         cwd: 'build/js/',
-        src: ['jquery.js', 'modernizr.js'],
+        src: '*',
         dest: 'assets/js/',
-        flatten: true,
-        filter: 'isFile',
+        expand: true
       },
       imgs: {
         cwd: 'build/imgs/',
-        src: '*',
+        src: '**/*',
         dest: 'assets/imgs/',
         expand: true
       },
@@ -127,44 +125,44 @@ module.exports = function(grunt) {
         options: {
           startTag: '<!--MODERNIZR-->',
           endTag: '<!--MODERNIZR END-->',
-          fileTmpl: '<script src="%s"></script>',
+          fileTmpl: '<script src="../%s"></script>',
           appRoot: ''
         },
         files: {
-          '*.html': ['assets/lib/modernizr/modernizr.js']
+          'templates/*.html': ['assets/lib/modernizr/modernizr.js']
         }
       },
       jquery: {
         options: {
           startTag: '<!--JQUERY-->',
           endTag: '<!--JQUERY END-->',
-          fileTmpl: '<script src="%s"></script>',
+          fileTmpl: '<script src="../%s"></script>',
           appRoot: ''
         },
         files: {
-          '*.html': ['assets/lib/jquery/jquery.min.js']
+          'templates/*.html': ['assets/lib/jquery/jquery.min.js']
         }
       },
       js : {
         options: {
           startTag: '<!--GLOBAL:JS-->',
           endTag: '<!--GLOBAL:JS END-->',
-          fileTmpl: '<script src="%s"></script>',
+          fileTmpl: '<script src="../%s"></script>',
           appRoot: ''
         },
         files: {
-          '*.html': ['assets/js/global.js', 'assets/js/flexy.js']
+          'templates/*.html': ['assets/js/global.js', 'assets/js/flexy.js']
         }
       },
       css : {
         options: {
           startTag: '<!--CSS-->',
           endTag: '<!--CSS END-->',
-          fileTmpl: '<link rel="stylesheet" href="%s"></script>',
+          fileTmpl: '<link rel="stylesheet" href="../%s"></script>',
           appRoot: ''
         },
         files: {
-          '*.html': ['assets/css/global.css', 'assets/css/global-flexy.css', '!assets/css/ie.css']
+          'templates/*.html': ['assets/css/global.css', 'assets/css/global-flexy.css', '!assets/css/ie.css']
         }
       }
     },
@@ -184,18 +182,17 @@ module.exports = function(grunt) {
     }
   });
   // load plugins
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-uncss');
-  grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-html-validation');
-  grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-sails-linker');
-  grunt.loadNpmTasks('grunt-bower-task');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-text-replace');
 
 grunt.registerTask('replace-css', function() {
   var replacements = grunt.file.readJSON('replacements.json');
@@ -205,7 +202,7 @@ grunt.registerTask('replace-css', function() {
 
 // Default task.
 grunt.registerTask('default', ['watch']);
-grunt.registerTask('build', ['bower', 'copy', 'sails-linker']);
+grunt.registerTask('build', ['bower', 'compass', 'concat', 'uglify', 'imagemin', 'copy', 'sails-linker']);
 
 
 };

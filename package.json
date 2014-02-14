@@ -9,20 +9,17 @@
   "author": "",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-compass": "~0.6.0",
-    "grunt-text-replace": "~0.3.10",
-    "grunt-uncss": "~0.1.6",
-    "grunt-html-validation": "~0.1.10",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-combine-media-queries": "~1.0.9",
-    "grunt-bower-task": "~0.3.4",
-    "grunt-sails-linker": "~0.9.5",
-    "grunt-http-server": "0.0.4",
-    "grunt-contrib-connect": "~0.6.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-imagemin": "~0.5.0"
+    "grunt": "latest",
+    "grunt-bower-task": "latest",
+    "grunt-combine-media-queries": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-html-validation": "latest",
+    "grunt-sails-linker": "latest",
+    "grunt-text-replace": "latest" 
   }
 }
