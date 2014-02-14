@@ -38,6 +38,7 @@
 
 //content well
 .well
+	overflow: hidden
 	+box-sizing(border-box)
 	width: 100%
 	margin: 0 0 $pad
@@ -45,7 +46,6 @@
 	@include border(all, 1, solid)
 	background-color: $gray-bg-lite
 	+border-radius(8px)
-
 //tabs
 #content
 	#tabs
@@ -117,7 +117,11 @@
 		width: 85%
 		+box-sizing(border-box)
 		padding: $pad
-
+	&.excerpt
+		padding: $pad-sm
+		background: $gray-bg-lite !important
+	.title
+		font-style: italic
 //blog
 .blog-excerpt
 	overflow: hidden
@@ -247,3 +251,70 @@ iframe#twitter-widget-0
 	@include font-size(.916667) //11px/16.5
 	font-style: italic
 	+box-sizing(border-box)
+//Content filter
+#content .well label
+	display: inline
+	float: left
+	width: 25%
+	margin: 0 0 $pad-sm
+	@include font-size(1)
+	font-weight: bold
+#content .well input[type="text"]
+	display: inline
+	float: left
+	width: 71% !important
+	margin: 0
+	padding: ($pad-sm/2)
+	@include font-size(1)
+	+border-radius(2px)
+//image lightbox - currently for p.pull-right images only
+.overlay
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 9999
+	background: url('../imgs/layout/caption-bg.png') //fall-back
+	background: rgba($black,.8)
+	&.hello
+		display: block
+	.wrapper
+		position: absolute
+		top: 50%
+		left: 50%
+		+translate(-50%, -50%)
+		width: 50%
+		max-width: 850px
+		img
+			display: block
+			width: auto !important
+			max-width: 100% !important
+			height: auto !important
+			margin: 0 auto
+//Search
+#globalSearch
+	float: right
+	width: 63%
+	margin: 0 auto
+	padding: 0 $pad
+	@include font-size(1)
+	.main-results-without-dn
+		@extend %nospace
+		p.g
+			padding: $pad $pad 0
+			@extend .profile
+			td.s
+				background: none
+	table td
+		border: none !important
+		@include font-size(1)
+	table t4
+		@include font-size(1)
+	#bottom-navigation
+		@extend .pagination
+//Photo Slideshow
+.flexslider.inPage ul.slides li img
+	width: 100% !important
+	height: 100% !important

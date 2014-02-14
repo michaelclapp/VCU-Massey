@@ -1,0 +1,609 @@
+
+<html><head><meta name="robots" content="NOINDEX,NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    /* Returns the root path prefix for full-refresh search requests. */
+    function GSA_getSearchRootPathPrefix() {
+      return '/search';
+    }
+    /* Returns the root path prefix for resources. */
+    function GSA_getResourceRootPathPrefix() {
+      return '';
+    }
+    /* Checks if the search results is accessed in embedded mode or not. */
+    function GSA_isEmbeddedMode() {
+      return false;
+    }
+  </script>
+<title>Search Results:
+   News
+</title><style>
+   <!--
+body,td,div,.p,a,.d,.s{font-family:arial,sans-serif}
+body,td,div,.p,a,.d{font-size: }
+body,div,td,.p,.s{color:#000000}
+body,.d,.p,.s{background-color:#ffffff}
+.s{font-size: 80%}
+.g{margin-top: 15px; margin-bottom: 15px;}
+.s td{width:34em}
+.l{font-size: }
+.l{color: #0000cc}
+a:link,.w,.w a:link{color:#0000cc}
+.f,.f:link,.f a:link{color:#7777cc}
+a:visited,.f a:visited{color:#551a8b}
+a:active,.f a:active{color:#ff0000}
+.t{color:#000000}
+.t{background-color:#ffffff}
+.z{display:none}
+.i,.i:link{color:#a90a08}
+.a,.a:link{color:#008000}
+div.n {margin-top: 1ex}
+.n a{font-size: 10pt; color:#000000}
+.n .i{font-size: 10pt; font-weight:bold}
+.q a:visited,.q a:link,.q a:active,.q {color:#0000cc;}
+.b,.b a{font-size: 12pt; color:#0000cc; font-weight:bold}
+.d{margin-right:1em; margin-left:1em;}
+div.oneboxResults {margin-top: 1em;}
+
+.z{display:none}
+-->
+  div.main-results-without-dn {
+    margin-right: 15.1em;
+  }
+</style><script type="text/javascript">
+   <!--
+
+        function resetForms() {
+          for (var i = 0; i < document.forms.length; i++ ) {
+              document.forms[i].reset();
+          }
+        }
+
+        /**
+         * Converts file links from encoded UTF-8 to Unicode, so that Internet
+         * Explorer can follow the links correctly
+         */
+        function fixFileLinks() {
+          for (var l = 0; l < document.links.length; ++l) {
+            var link = document.links[l];
+            if (link.href.indexOf("file://") != 0) {
+              continue;
+            }
+
+            var s = unescape(link.href);
+            var result = "";
+            for (var i = 0; i < s.length; ++i) {
+              var c = s.charCodeAt(i);
+              if (c >> 4 == 12 || c >> 4 == 13) {
+                c = ((c & 0x1F) << 6)
+                    + (s.charCodeAt(++i) & 0x3F);
+              } else if (c >> 4 == 14) {
+                c = ((c & 0x0F) << 12)
+                    + ((s.charCodeAt(++i) & 0x3F) << 6)
+                    + (s.charCodeAt(++i) & 0x3F);
+              } else if (c >> 4 == 15) {
+                c = ((c & 0x07) << 18)
+                    + ((s.charCodeAt(++i) & 0x3F) << 12)
+                    + ((s.charCodeAt(++i) & 0x3F) << 6)
+                    + (s.charCodeAt(++i) & 0x3F);
+              }
+              result += String.fromCharCode(c);
+            }
+            link.href = result;
+          }
+        }
+
+        // Search query
+        var page_query = "News"
+        // Starting page offset, usually 0 for 1st page, 10 for 2nd, 20 for 3rd.
+        var page_start = ""
+        // Front end that served the page.
+        var page_site = "massey"
+        //--></script><script type="text/javascript">
+   <!--
+    // User added results - i18n messages.
+    var uar_i18n_messages = {};
+    uar_i18n_messages['ADDED_BY'] = 'Added by' + ' ';
+    uar_i18n_messages['EDIT'] = 'Edit';
+    uar_i18n_messages['TITLE'] = 'Title'  + ':';
+    uar_i18n_messages['SAVE'] = 'Save';
+    uar_i18n_messages['CANCEL'] = 'Cancel';
+    uar_i18n_messages['ADDRESS'] = 'Address'  + ':';
+    uar_i18n_messages['OR'] = 'or'  + ' ';
+    uar_i18n_messages['DELETE'] = 'delete';
+    uar_i18n_messages['USERNAME'] = 'UserName'  + ':';
+    uar_i18n_messages['LESS'] = 'Less';
+    uar_i18n_messages['MORE'] = 'More';
+    uar_i18n_messages['ADD_ANOTHER_RESULT'] = 'Add another result';
+    uar_i18n_messages['ADD_A_RESULT'] = 'Add a result';
+    uar_i18n_messages['SAVING'] = 'Saving'  + '...';
+    uar_i18n_messages['DELETING'] = 'Deleting'  + '...';
+    uar_i18n_messages['SAVE_FAILED'] = 'Save failed'  + '!';
+    uar_i18n_messages['DELETE_FAILED'] = 'Deletion failed'  + '!';
+    uar_i18n_messages['ERROR_HANDLING_REQUEST'] = 'Error handling this request'  + '.';
+    uar_i18n_messages['ERROR_DELETING'] = 'Error deleting this result! Could not create the request'  + '.';
+    uar_i18n_messages['ERROR_ADD_OR_UPDATE'] = 'Problem adding/updating this result: Could not create the request'  + '.';
+  //--></script></head>
+<body onLoad="resetForms(); fixFileLinks();" dir="ltr"> <!-- Please enter html code below. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<meta name="author" content=" VCU Massey Cancer Center " />
+<meta name="generator" content="TerminalFour SiteManager" />
+<title>VCU Massey Cancer Center</title>
+
+<script type="text/javascript" src="http://www.massey.vcu.edu/media/massey-cancer-center/style-assets/javascript/modernizr-ck.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="assets/css/global.css"
+/>
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" media="" href="http://www.massey.vcu.edu/media/massey-cancer-center/style-assets/css/ie.css"
+/>
+<![endif]-->  
+</head>  
+
+<a name="top" id="pagetop"></a>
+<div id="jumptocontent"><a href="#content">Jump to content</a></div>
+
+<div id="vcuIdentityWrapper">
+<header id="vcuIdentity">
+<h1><a title="Virginia Commonwealth University" target="_blank" href="http://www.vcu.edu">Virginia Commonwealth University</a></h1>
+</header>
+</div>
+
+<div id="rufio">
+<div class="wrapper">
+<h1><a href="http://massey.vcu.edu/" title="VCU Massey Cancer Center">VCU Massey Cancer Center</a></h1>
+<div class="right">
+<a href="http://www.cancer.gov/researchandfunding/extramural/cancercenters" class="ncicc-link">A Cancer Center desginated
+by the National Cancer Institute</a>
+
+<!-- navigation object : Massey Search --><div id="search">
+<form id="sitesearch" name="gs" method="GET" action="http://search.vcu.edu/search">
+<label for="searchField">Search:</label>
+<div><input type="text" name="q" class="field" id="searchField" value="Search the site">
+<input id="search_btn" type="image" src="/media/massey-cancer-center/style-assets/images/search-btn-mask.gif" name="Search"
+value="" alt="Go" /></div>
+<input type="hidden" name="query" value="">
+<input type="hidden" name="proxystylesheet" value="massey">
+<input type="hidden" name="output" value="xml_no_dtd">
+<input type="hidden" name="client" value="massey">
+<input type="hidden" name="sitesearch" value="www.massey.vcu.edu">
+<input type="hidden" name="sort" value="date:D:L:d1">
+<input type="hidden" name="entqr" value="3">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="ud" value="1">
+<input type="hidden" name="site" value="massey">
+</form>
+</div>
+<!--end #search-->
+</div>
+
+<div id="header-links">
+<ul id="util-nav">
+<!-- navigation object : Massey Social Media --><li><a href="https://www.facebook.com/VCUMasseyCancerCenter" class="facebook-link"
+target="_blank" title="Facebook"></a></li><li><a href="https://twitter.com/vcumassey" class="twitter-link" target="_blank"
+title="Twitter"></a></li><li><a href="http://www.youtube.com/teammassey" class="youtube-link" target="_blank" title="YouTube"></a></li><li><a
+href="http://wp.vcu.edu/masseynews/feed/" class="rss-link" target="_blank" title="RSS"></a></li><li><a href="https://www.support.vcu.edu/event/masseysubscribe"
+class="email-link" target="_blank" title="Subscribe to Email List"></a></li>
+</div><!--end #header-links-->
+
+<nav>
+<!-- navigation object : Massey Homepage Menu --><ul><li><a href="/cancer/">About Cancer</a>
+<ul class="multilevel-linkul-0">
+<li><a href="/cancer/types/">Types of cancer</a></li>
+<li><a href="/cancer/family-history/">Cancer and family history</a></li>
+<li><a href="/cancer/causes/">Causes and risk factors</a></li>
+<li><a href="/cancer/warnings/">Cancer warnings and risk reduction</a></li>
+<li><a href="/cancer/diagnosis/">Cancer testing and diagnosis</a></li>
+<li><a href="/cancer/treatment/">Treatment modalities</a></li>
+<li><a href="/cancer/nutrition/">Cancer and nutrition</a></li>
+<li><a href="/cancer/additional-info/">Additional health information</a></li>
+
+</ul>
+</li><li><a href="/patient-care/">Patient Care</a>
+<ul class="multilevel-linkul-0">
+<li><a href="/patient-care/refer/">Refer a patient</a></li>
+<li><a href="/patient-care/become/">Become a Patient</a></li>
+<li><a href="/patient-care/find-a-doctor/">Find a doctor</a></li>
+<li><a href="/patient-care/locations/">Our locations</a></li>
+<li><a href="/patient-care/teams/">Treatment teams</a></li>
+<li><a href="/patient-care/methods/">Treatment methods</a></li>
+<li><a href="/patient-care/resources/">Patient resources</a></li>
+<li><a href="/patient-care/prevention-screening/">Prevention and screening resources</a></li>
+<li><a href="/patient-care/testimonials/">Patient testimonials</a></li>
+
+</ul>
+</li><li><a href="/survivorship/">Survivorship</a>
+<ul class="multilevel-linkul-0">
+<li><a href="/survivorship/coping/">Coping with cancer</a></li>
+<li><a href="/survivorship/health/">Survivor health</a></li>
+<li><a href="/survivorship/work-and-insurance/">Work and insurance resources</a></li>
+<li><a href="/survivorship/legal-financial/">Legal and financial resources</a></li>
+<li><a href="/survivorship/support-groups/">Support groups</a></li>
+<li><a href="/survivorship/integrative/">Integrative medicine</a></li>
+
+</ul>
+</li><li><a href="/clinical-trials/">Clinical Trials</a>
+<ul class="multilevel-linkul-0">
+<li><a href="/clinical-trials/find/">Find a clinical trial</a></li>
+<li><a href="/clinical-trials/about/">Learn about clinical trials</a></li>
+<li><a href="/clinical-trials/participants/">Meet trial participants</a></li>
+<li><a href="/clinical-trials/expert-opinion/">Get expert opinion</a></li>
+<li><a href="/clinical-trials/support-for-participants/">Access support for clinical trial participants</a></li>
+<li><a href="/clinical-trials/personnel/">Contact clinical research personnel</a></li>
+<li><a href="/clinical-trials/cran/">Clinical Research Affiliation Network</a></li>
+<li><a href="/clinical-trials/research/">Clinical Research Shared Resource</a></li>
+<li><a href="/clinical-trials/protocol-review/">Protocol Review and Monitoring Committee</a></li>
+<li><a href="/clinical-trials/oncore/">Access Oncore (for staff only)</a></li>
+
+</ul>
+</li><li><a href="/research/">Research</a>
+<ul class="multilevel-linkul-0">
+<li><a href="/research/highlights/">Research highlights</a></li>
+<li><a href="/research/programs/">Research programs</a></li>
+<li><a href="/research/cores/">Shared resource cores</a></li>
+<li><a href="/research/members/">Research members</a></li>
+<li><a href="/research/business/">Administration and business services</a></li>
+<li><a href="/research/funding/">Research resources and funding</a></li>
+<li><a href="/research/training/">Advanced research training</a></li>
+<li><a href="/research/newsletter/">Research Report e-newsletter</a></li>
+<li><a href="/research/retreat/">Cancer Research Retreat</a></li>
+
+</ul>
+</li><li><a href="/news/">Newsroom</a>
+<ul class="multilevel-linkul-0">
+<li><a href="/news/press-inquiry/">Press inquiry</a></li>
+<li><a href="/news/breaking/">Breaking news and discoveries</a></li>
+<li><a href="/news/coverage/">Press coverage</a></li>
+<li><a href="/news/about/">About Massey</a></li>
+<li><a href="/news/publications/">Publications</a></li>
+<li><a href="/news/social-media/">Social media</a></li>
+<li><a href="/news/request-a-speaker/">Request a public speaker</a></li>
+<li><a href="/news/identity/">Identity guidelines</a></li>
+<li><a href="/news/resources/">Resources for Massey staff</a></li>
+<li><a href="/news/symposium/">VCU Presidential Symposium on Cancer</a></li>
+
+</ul>
+</li><li><a href="/giving/">Giving</a>
+<ul class="multilevel-linkul-0">
+<li><a href="/giving/now/">Give now</a></li>
+<li><a href="/giving/why/">Why support Massey</a></li>
+<li><a href="/giving/research/">Research for Life</a></li>
+<li><a href="/giving/ways/">Ways to give</a></li>
+<li><a href="/giving/honorary/">Honorary and memorial gifts</a></li>
+<li><a href="/giving/stories/">Patient and donor stories</a></li>
+<li><a href="/giving/fundraising/">Fundraising events</a></li>
+<li><a href="/giving/advisory-board/">Community Advisory Board</a></li>
+<li><a href="/giving/massey-alliance/">Massey Alliance</a></li>
+<li><a href="/giving/contact/">Contact the Development Office</a></li>
+
+</ul>
+</li></ul>
+</nav>
+
+</div>
+</div>
+
+<div id="wrapper" class="clearfix">
+<div id="container" class="clearfix"><!-- start content container -->
+
+<div id="globalSearch">
+
+<input type="hidden" name="security_token" id="token" value="HbySPXP5T8QZAHdCINyMRSy_em8:1391803987464"><table border="0" cellpadding="0" cellspacing="0"></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tr>
+      <td class="sep" bgcolor="#ffffff"><img width="1" height="1" alt=""></td>
+   </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+   <tr>
+      <td nowrap="1" width="1%" bgcolor="#ffffff"><font size="+1">&nbsp;<b>Search</b></font></td>
+      <td nowrap="1" align="right" bgcolor="#ffffff"></td>
+   </tr>
+</table>
+<hr class="z">
+<hr size="1" color="gray">
+<div id="top-navigation">
+   <table width="100%">
+      <tr>
+         <td align="left">
+            <table border="0" cellpadding="0" width="1%" cellspacing="0">
+               <tr align="center" valign="top">
+                  <td nowrap="1"></td>
+                  <td nowrap="1">&nbsp;<span class="s"><a ctype="nav.next" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=10">Next&nbsp;&gt;</a></span></td>
+               </tr>
+            </table>
+         </td>
+         <td align="right">
+            <table>
+               <tr valign="top">
+                  <td><span class="s"><a ctype="sort" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;sort=date%3AD%3AS%3Ad1">Sort by date</a><font color="#000000"> / Sort by relevance</font></span></td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+   </table>
+</div>
+<!--tro2-->
+<div class="main-results-without-dn">
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="1"
+      
+      href="http://www.massey.vcu.edu/news/blog/"><span id="title_1" class="l"><span class="goog-trans-section l" transId="gadget_1"><b>News</b> Blog - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_1" class="goog-trans-section" transId="gadget_1"><b>...</b> <b>News</b> Blog Archive. The $125 billion question: how will the ACA affect<br> cancer survivors? In 2010, the
+                  total cost of cancer <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/</font><font color="#008000" size="-1"> - 22k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_1" class="f" href="/search?q=cache:vipldlFXtEQJ:www.massey.vcu.edu/news/blog/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="2"
+      
+      href="http://www.massey.vcu.edu/news/breaking/"><span id="title_2" class="l"><span class="goog-trans-section l" transId="gadget_2">Breaking <b>news</b> and discoveries - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_2" class="goog-trans-section" transId="gadget_2"><b>...</b> Home &gt; Newsroom &gt; Breaking <b>news</b> and discoveries. Breaking <b>news</b><br> and discoveries. Exciting
+                  things are happening every <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/breaking/</font><font color="#008000" size="-1"> - 16k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_2" class="f" href="/search?q=cache:ZB216S84D2UJ:www.massey.vcu.edu/news/breaking/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=ISO-8859-1">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="3"
+      
+      href="https://www.massey.vcu.edu/news/blog/categories/clinical-news/"><span id="title_3" class="l"><span class="goog-trans-section l" transId="gadget_3">Clinical <b>news</b> - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_3" class="goog-trans-section" transId="gadget_3"><b>...</b> Clinical <b>news</b>. Hometown healthcare heroes at Massey. In the May 2013<br> issue of Our Health Richmond magazine,
+                  Massey <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/categories/clinical-news/</font><font color="#008000" size="-1"> - 21k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_3" class="f" href="/search?q=cache:O-KZ95Jfv44J:www.massey.vcu.edu/news/blog/categories/clinical-news/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p><blockquote class="g">
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="4"
+      
+      href="https://www.massey.vcu.edu/news/blog/categories/center-news-funding/"><span id="title_4" class="l"><span class="goog-trans-section l" transId="gadget_4">Center <b>news</b> &amp; funding - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_4" class="goog-trans-section" transId="gadget_4"><b>...</b> Center <b>news</b> &amp; funding. VCU Massey introduces new, high-tech radiation<br> technology to improve cancer
+                  care. VCU Massey <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/categories/center-news-funding/</font><font color="#008000" size="-1"> - 22k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_4" class="f" href="/search?q=cache:rNZRkjPG0LcJ:www.massey.vcu.edu/news/blog/categories/center-news-funding/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a><br>
+               [
+               <a ctype="sitesearch" class="f" href="/search?as_sitesearch=https://www.massey.vcu.edu/news/blog/categories&amp;q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0">More results from https://www.massey.vcu.edu/news/blog/categories</a>
+               ]
+               
+               
+               
+            </td>
+         </tr>
+      </table>
+   </p></blockquote>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="5"
+      
+      href="http://www.massey.vcu.edu/news/blog/2014/how-will-the-aca-affect-cancer-survivors/"><span id="title_5" class="l"><span class="goog-trans-section l" transId="gadget_5">The $125 billion question: how will the ACA affect - VCU <b>...</b></span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_5" class="goog-trans-section" transId="gadget_5">Virginia Commonwealth University. <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/2014/how-will-the-aca-affect-cancer-survivors/</font><font color="#008000" size="-1"> - 27k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_5" class="f" href="/search?q=cache:uW2qLUuPfPIJ:www.massey.vcu.edu/news/blog/2014/how-will-the-aca-affect-cancer-survivors/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="6"
+      
+      href="http://www.massey.vcu.edu/news/blog/8/"><span id="title_6" class="l"><span class="goog-trans-section l" transId="gadget_6"><b>News</b> Blog - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_6" class="goog-trans-section" transId="gadget_6"><b>...</b> <b>News</b> Blog Archive. “Beat the heat” tips for cancer patients. <b>...</b> Massey rated the<br> top cancer
+                  center in Virginia by US <b>News</b> two years in a row. <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/8/</font><font color="#008000" size="-1"> - 22k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_6" class="f" href="/search?q=cache:VuQnO_eiySkJ:www.massey.vcu.edu/news/blog/8/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="7"
+      
+      href="http://www.massey.vcu.edu/news/blog/13/"><span id="title_7" class="l"><span class="goog-trans-section l" transId="gadget_7"><b>News</b> Blog - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_7" class="goog-trans-section" transId="gadget_7"><b>...</b> <b>News</b> Blog Archive. Clinical trials seek to enhance the treatments and<br> quality of life for melanoma patients.
+                  Andrew Poklepovic <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/13/</font><font color="#008000" size="-1"> - 19k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_7" class="f" href="/search?q=cache:GsaPqMIwJowJ:www.massey.vcu.edu/news/blog/13/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="8"
+      
+      href="http://www.massey.vcu.edu/news/blog/10/"><span id="title_8" class="l"><span class="goog-trans-section l" transId="gadget_8"><b>News</b> Blog - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_8" class="goog-trans-section" transId="gadget_8"><b>...</b> <b>News</b> Blog Archive. Top cancers among men. Top cancers among men:<br> During National Men&#39;s Health Awareness
+                  Month <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/10/</font><font color="#008000" size="-1"> - 21k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_8" class="f" href="/search?q=cache:chh91TQg7xoJ:www.massey.vcu.edu/news/blog/10/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="9"
+      
+      href="http://www.massey.vcu.edu/news/blog/7/"><span id="title_9" class="l"><span class="goog-trans-section l" transId="gadget_9"><b>News</b> Blog - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_9" class="goog-trans-section" transId="gadget_9"><b>...</b> <b>News</b> Blog Archive. Letter to a new patient. Letter to a new patient by<br> Susan J. Mellette, MD. In 1960,
+                  Susan J. Mellette, MD <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/7/</font><font color="#008000" size="-1"> - 20k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_9" class="f" href="/search?q=cache:HbuFyYZ_3EcJ:www.massey.vcu.edu/news/blog/7/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+   <p class="g"><font size="-2"><b></b></font> <a 
+      ctype="c"
+      
+      rank="10"
+      
+      href="http://www.massey.vcu.edu/news/blog/4/"><span id="title_10" class="l"><span class="goog-trans-section l" transId="gadget_10"><b>News</b> Blog - VCU Massey Cancer Center</span></span></a>
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <td class="s"><span id="snippet_10" class="goog-trans-section" transId="gadget_10"><b>...</b> <b>News</b> Blog Archive. Enter the “Mos for Massey” Social Media Contest!<br> “Movemeber” is a campaign that encourages
+                  men <b>...</b>  </span><br><font color="#008000" size="-1">www.massey.vcu.edu/news/blog/4/</font><font color="#008000" size="-1"> - 21k</font><font color="#008000" size="-1"> - 2014-02-05</font><font color="#008000" size="-1"> - </font><a ctype="cache" id="cache_link_10" class="f" href="/search?q=cache:Divau84EkAoJ:www.massey.vcu.edu/news/blog/4/+News&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;ie=UTF-8&amp;site=massey&amp;access=p&amp;oe=UTF-8">Cached</a></td>
+         </tr>
+      </table>
+   </p>
+</div>
+<div id="bottom-navigation"><center>
+   <div class="n">
+   <table border="0" cellpadding="0" width="1%" cellspacing="0">
+      <tr align="center" valign="top">
+         <td valign="bottom" nowrap="1"><font size="-1">
+               Result Page&nbsp;</font></td>
+         <td nowrap="1"></td>
+         <td>&nbsp;<span class="i">1</span>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=10">2</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=20">3</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=30">4</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=40">5</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=50">6</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=60">7</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=70">8</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=80">9</a>&nbsp;
+         </td>
+         <td>&nbsp;<a ctype="nav.page" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=90">10</a>&nbsp;
+         </td>
+         <td nowrap="1">&nbsp;<span class="b"><a ctype="nav.next" href="/search?q=News&amp;Search.x=0&amp;Search.y=0&amp;query=&amp;proxystylesheet=massey&amp;output=xml_no_dtd&amp;client=massey&amp;sitesearch=www.massey.vcu.edu&amp;sort=date:D:L:d1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=massey&amp;ulang=en&amp;ip=172.31.2.186&amp;access=p&amp;entqrm=0&amp;start=10">Next</a></span></td>
+      </tr>
+   </table></div>
+   </center>
+</div>
+<div id="bottom-search-box"></div>
+<center><br><br><p><font face="arial,sans-serif" size="-1" color="#2f2f2f">
+         Powered by Google Search Appliance</font></p>
+</center><span class="p"></div> <!--end #globalSearch -->
+   
+
+<div id="sidebar">
+  <h3><!-- navigation object : Massey Display Level 2 name -->Search Results</h3>
+    <ul id="subnav">
+      <li><a href="http://www.massey.vcu.edu/news/about/">Mission &amp; history</a></li>
+      <li><a href="http://www.massey.vcu.edu/news/about/facts/">Facts &amp; figures</a></li>
+      <li><a href="http://www.massey.vcu.edu/news/about/leadership/team/">Leadership</a></li>
+      <li><a href="http://www.massey.vcu.edu/employment/">Employment opportunities</a></li>
+      <li><a href="http://www.massey.vcu.edu/patient-care/locations/">Directions &amp; parking</a></li>
+      <li><a href="http://www.massey.vcu.edu/news/blog/">News blog</a></li>
+    </ul>
+        
+      <div id="quicklinks">
+        <a class="question" target="_self" href="http://www.massey.vcu.edu/ask/">Ask a question</a>
+        <a class="appointment" target="_self" href="http://www.massey.vcu.edu/appointments/">Make first appointment</a>
+        <a class="refer" target="_self" href="http://www.massey.vcu.edu/appointments/">Refer a patient</a>
+        <a class="clinical" target="_self" href="http://oncoreapp.mcvh-vcu.edu/sip/SIPControlServlet">Find a clinical trial</a>
+        <a class="doctor" target="_self" href="http://www.massey.vcu.edu/patient-care/find-a-doctor/">Find a doctor</a>
+        <a class="event" target="_self" href="http://www.massey.vcu.edu/upcoming-events/">Attend an event</a>
+        <a class="dictionary" target="_self" href="http://www.massey.vcu.edu/dictionary/">Search cancer dictionary</a>
+        <a class="contact" target="_self" href="http://www.massey.vcu.edu/contact/">Contact us</a>
+      </div>
+    
+    </div> <!-- end #sidebar -->
+
+</div><!-- end #globalSearch -->
+
+   <!-- Please enter html code below. -->
+   </div><!--end #container-->
+   </div><!--end #wrapper-->
+   
+   <div id="footer">
+   <div class="wrapper">
+   <div class="gutter">
+   <div class="footer-col">
+   <!-- navigation object : Massey Footer Block1 --><h4 class="education">education</h4>
+   <ul>
+   <li><a href="/cancer/additional-info/">Consumer health &amp; cancer information</a></li>
+   <li><a href="http://www.vcuhealth.org/cme">Continuing Medical Education</a></li>
+   <li><a href="http://www.healthsciences.vcu.edu/about.html">Healthcare degree &amp; certificate programs</a></li>
+   <li><a href="/research/training/palliative-care/">Palliative care training</a></li>
+   <li><a href="/research/training/">Pre- and post-doctoral<br /> cancer reseach training</a></li>
+   </ul>
+   </div>
+   
+   <div class="footer-col">
+   <!-- navigation object : Massey Footer Block 2 --><h4 class="research">research</h4>
+   <ul>
+   <li><a href="/research/programs/">Research programs</a></li>
+   <li><a href="/research/cores/">Shared resources</a></li>
+   <li><a title="Home%20%BB%20Massey%20Cancer%20Center%20%BB%20New%20Home%20%BB%20Clinical%20Trials%20%BB%20Clinical%20Research%20Affiliation%20Network"
+   href="/clinical-trials/cran/">Clinical Research Affiliation Network</a></li>
+   <li><a href="/clinical-trials/protocol-review/">Scientific Review Board- PRMC</a></li>
+   <li><a href="https://oncoreapp.mcvh-vcu.edu/smrs/jsp/login.jsp" target="https://oncoreapp.mcvh-vcu.edu/smrs/jsp/login.jsp">Oncore
+   (staff only)</a></li>
+   </ul>
+   </div>
+   
+   <div class="footer-col last">
+   <!-- navigation object : Massey Footer Block 3 --><h4 class="about us">about us</h4>
+   <ul>
+   <li><a href="/news/about/">Mission &amp; history</a></li>
+   <li><a href="/news/about/facts/">Facts &amp; figures</a></li>
+   <li><a title="Home%20%BB%20Massey%20Cancer%20Center%20%BB%20New%20Home%20%BB%20Newsroom%20%BB%20About%20Massey%20%BB%20Leadership%20%BB%20Leadership%20Team"
+   href="/news/about/leadership/team/">Leadership</a></li>
+   <li><a href="/employment/">Employment opportunities</a></li>
+   <li><a href="/patient-care/locations/">Directions &amp; parking</a></li>
+   <li><a href="/contact/">Contact us</a></li>
+   </ul>
+   </div>
+   
+   <div class="clear"></div>
+   <div id="signature">
+   <!-- navigation object : Massey Footer Content --><p>
+   VCU Massey Cancer Center  |  Phone: (804) 828-0450  |  Fax: (804) 828-8453  |  E-mail: <a href="mailto:AskMassey@vcu.edu">AskMassey@vcu.edu</a>
+   |  401 College Street, P.O. Box 980037<br />
+   Richmond, Virginia 23298-0037  |  &copy; 2011 Virginia Commonwealth University </p>
+   
+   <p><script type="text/javascript">
+   var lastmod= document.lastModified;
+   var lda = lastmod.substr(0,10);
+   	document.write("Last Updated: " + lda + " ");
+   </script><a class="t4Edit-page" href="https://t4.vcu.edu/terminalfour/SiteManager?ctfn=publish&amp;fnno=31&amp;sid=14255&amp;chid=119&amp;lang=en&amp;ede=true">Edit</a></p>
+   </div><!--end #signature-->
+   </div><!--end .gutter-->
+   </div><!--end .wrapper-->
+   </div><!--end #footer-->
+   
+   <script type="text/javascript" src="http://massey.vcu.edu/media/massey-cancer-center/style-assets/javascript/jquery-latest.js"></script>
+   <script type="text/javascript" src="http://massey.vcu.edu/media/massey-cancer-center/style-assets/javascript/global-ck.js"></script>
+   <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-24820654-40']);
+   _gaq.push(['_trackPageview']);
+   (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+   </script>
+   </span></body></html>

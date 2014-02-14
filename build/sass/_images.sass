@@ -2,22 +2,19 @@
 	p
 		img
 			margin: 10px
+		&.pull-left, &.pull-right
+			width: 40%
+			background: $white
+			img
+				width: 100% !important
+				height: auto !important
+				@extend %nospace
 		&.pull-left
 			float: left
-			width: 40%
-			margin: 0 $pad-sm $pad-sm 0
-			img
-				width: 100% !important
-				height: auto !important
-				@extend %nospace
+			padding: 0 $pad-sm $pad-sm 0
 		&.pull-right
 			float: right
-			width: 40%
-			margin: 0 0 $pad-sm $pad-sm
-			img
-				width: 100% !important
-				height: auto !important
-				@extend %nospace
+			padding: 0 0 $pad-sm $pad-sm
 	.banner img
 		width: 100% !important
 		height: auto !important

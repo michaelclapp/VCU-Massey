@@ -13,12 +13,16 @@ module.exports = function(grunt) {
         tasks: ['validation', 'copy']
       },
       js: {
-        files: ['build/js/*.js'],
-        tasks: ['uglify', 'copy']
+        files: ['build/js/**/*.js'],
+        tasks: ['concat', 'uglify', 'copy']
       },
       css: {
         files: ['build/sass/*.sass'],
         tasks: ['compass:dist', 'copy', 'replace-css']
+      },
+      images: {
+        files: ['build/imgs/*'],
+        tasks: ['imagemin', 'copy']
       }
     },
 
@@ -32,7 +36,12 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'assets/js/global.js' : ['build/js/*.js', '!build/js/jquery.js', '!build/js/modernizr.js']
+          'assets/js/global.js' : ['build/js/global.js']
+        }
+      },
+      flexy: {
+        files: {
+          'assets/js/flexy.js' : ['build/js/flexy.js']
         }
       }
     },
@@ -71,15 +80,27 @@ module.exports = function(grunt) {
         replacements: []
       }
     },
-    uncss: {
+    concat: {
       dist: {
-        files: {
-          'assets/css/global.css': ['*.html']
-        },
-        options: {
-          compress: true,
-          ignore: ['a.pdf', 'a.pdf:after', 'a.excel', 'a.excel:after', 'a.word', 'a.word:after', '#rufio nav ul ul.dip', '#sidebar li a.current']
-        }
+        src: [
+          'build/js/components/_triggers.js',
+          'build/js/components/_nav.js',
+          'build/js/components/_documentClasses.js',
+          'build/js/components/_photoCaptions.js',
+          'build/js/components/_tabs.js',
+          'build/js/components/_thumbnailPics.js',
+          'build/js/components/_filterContent.js',
+          'build/js/components/_flexslider.js'
+        ],
+        dest: 'build/js/global.js',
+      },
+      flexy: {
+        src: [
+          'build/js/flexy/_flexyNav.js',
+          'build/js/flexy/_respond.js',
+          'build/js/flexy/_fitvids.js'
+        ],
+        dest: 'build/js/flexy.js',
       }
     },
     validation: {
@@ -132,33 +153,49 @@ module.exports = function(grunt) {
           appRoot: ''
         },
         files: {
-          '*.html': ['assets/js/*.js']
+          '*.html': ['assets/js/global.js', 'assets/js/flexy.js']
         }
       },
       css : {
         options: {
-          startTag: '<!--GLOBAL:CSS-->',
-          endTag: '<!--GLOBAL:CSS END-->',
+          startTag: '<!--CSS-->',
+          endTag: '<!--CSS END-->',
           fileTmpl: '<link rel="stylesheet" href="%s"></script>',
           appRoot: ''
         },
         files: {
-          '*.html': ['assets/css/*.css', '!assets/css/ie.css']
+          '*.html': ['assets/css/global.css', 'assets/css/global-flexy.css', '!assets/css/ie.css']
         }
       }
     },
+    imagemin: {
+      dynamic: {
+        options: {
+          cache: false,
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          cwd: 'build/imgs/',
+          src: ['*/**/*.{png,jpg,gif}'],
+          dest: 'assets/imgs/'
+        }]
+      }
+    }
   });
   // load plugins
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-sails-linker');
   grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
 grunt.registerTask('replace-css', function() {
   var replacements = grunt.file.readJSON('replacements.json');
