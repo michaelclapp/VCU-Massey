@@ -127,7 +127,7 @@
     +box-sizing(border-box)
     display: block
     width: 100%
-    padding: $pad-sm
+    padding: $pad-sm $pad-sm*2 
     @include border(bottom, 1, solid)
     color: #666
     @include font-size(1)
@@ -140,10 +140,16 @@
       color: $text-red
       font-weight: bold
 /*-- Sam's hot fix for indented 4th level nav --*/
+#sidebar ul#subnav li span.currentbranch0 a
+  background: url('../imgs/layout/subnav-arrow-on.gif') no-repeat center left 2px
+#sidebar ul#subnav li span.currentbranch1 a
+  background: url('../imgs/layout/subnav-arrow-on.gif') no-repeat center left $pad
+
+
 #sidebar ul.multilevel-linkul-0 a
-  padding-left: $pad-sm*2
+  padding-left: 41px
 #sidebar ul.multilevel-linkul-1 a
-  padding-left: $pad-sm*3
+  padding-left: $pad-sm*6
   /*ul
     &.arrows
       margin: 0
