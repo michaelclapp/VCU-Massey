@@ -1,0 +1,39 @@
+//tabs
+#content
+	#tabs
+		float: left
+		width: 100%
+		margin: 0 auto $pad
+	ul#tabs
+		padding: 0
+		> li
+			display: inline
+			padding: 0 0 0 $pad-sm
+			background: none
+			list-style: none
+	#tabs > li > a
+		display: inline-block
+		z-index: 99 !important
+		padding: $pad-sm ($pad-sm*1.5)
+		background: $nav-gray
+		@include border(top, 1, solid)
+		@include border(right, 1, solid)
+		@include border(left, 1, solid)
+		border-bottom: 0
+		color: $white
+		text-decoration: none
+	#tabs li > a:hover, #tabs li > a.active
+		background: $gray-bg-lite
+		color: $gray
+	#tabs section
+		display: none
+		overflow: hidden
+		float: left
+		width: 100%
+		margin-top: -1px
+		padding: $pad-sm
+		background: $gray-bg-lite
+		@include border(all, 1, solid)
+		+box-sizing(border-box)
+		&.is-open
+			display: block

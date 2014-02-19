@@ -1,0 +1,13 @@
+//child-feature
+.child-feature
+	.feature
+		a
+			display: block
+			margin: $pad-sm 0
+			padding: $pad
+			background: $gray-bg-lite
+			@include font-size(1.5) //18px/27px
+			&:hover, &:focus
+				padding: $pad
+				border: 0
+				background: darken($gray-bg-lite, 10%)
