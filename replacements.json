@@ -32,5 +32,6 @@
           {"from":"../imgs/layout/vcu-identity/vcubrand-600.gif" , "to":"<t4 type='media' id='45004' formatter='path/*'/>"},
           {"from":"../imgs/layout/vcu-identity/body-bg-sm.gif" , "to":"<t4 type='media' id='45003' formatter='path/*'/>"},
           {"from":"../imgs/layout/vcu-identity/vcuseal.gif" , "to":"<t4 type='media' id='45006' formatter='path/*'/>"},
-          {"from":"../imgs/layout/menu-bg.jpg" , "to":"<t4 type='media' id='45007' formatter='path/*'/>"}
+          {"from":"../imgs/layout/menu-bg.jpg" , "to":"<t4 type='media' id='45007' formatter='path/*'/>"},
+          {"from":"../imgs/layout/subnav-arrow-on.gif" , "to":"<t4 type='media' id='35730' formatter='path/*'/>"}
 ]
