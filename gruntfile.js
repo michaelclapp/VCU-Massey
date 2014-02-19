@@ -34,6 +34,10 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
+      options: {
+        expand: true,
+        flatten: true
+      },
       dist: {
         files: {
           'assets/js/global.js' : ['build/js/global.js']
@@ -46,18 +50,6 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      js: {
-        cwd: 'build/js/',
-        src: '*',
-        dest: 'assets/js/',
-        expand: true
-      },
-      imgs: {
-        cwd: 'build/imgs/',
-        src: '**/*',
-        dest: 'assets/imgs/',
-        expand: true
-      },
       t4: {
         cwd: 'assets/',
         src: '*/**',
@@ -81,22 +73,22 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          'build/js/components/_triggers.js',
           'build/js/components/_nav.js',
-          'build/js/components/_documentClasses.js',
           'build/js/components/_photoCaptions.js',
           'build/js/components/_tabs.js',
+          'build/js/components/_documentClasses.js',
           'build/js/components/_thumbnailPics.js',
           'build/js/components/_filterContent.js',
-          'build/js/components/_flexslider.js'
+          'build/js/components/_triggers.js',
+          'build/js/components/_flexslider.js',
+          'build/js/components/_fitvids.js'
         ],
         dest: 'build/js/global.js',
       },
       flexy: {
         src: [
           'build/js/flexy/_flexyNav.js',
-          'build/js/flexy/_respond.js',
-          'build/js/flexy/_fitvids.js'
+          'build/js/flexy/_respond.js'
         ],
         dest: 'build/js/flexy.js',
       }
