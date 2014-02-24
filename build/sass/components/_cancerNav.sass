@@ -1,0 +1,58 @@
+.cancer-nav
+	display: block
+	position: relative
+	float: right
+	width: 100%
+	max-width: 33%
+	margin: 0 $pad-sm $pad 0
+	+box-sizing(border-box)
+	@media screen and (max-width: $babybear)
+		width: 100%
+		max-width: 100%
+		margin: 0 0 $pad
+	a.menu
+		display: block
+		width: 100%
+		padding: $pad-sm
+		border: 1px solid lighten($gray, 55%)
+		background: $gray-bg-lite
+		@include font-size(1)
+		+box-sizing(border-box)
+		&:hover, &:focus
+			background: $gold-bg
+		@media screen and (max-width: $babybear)
+			width: 100%
+	.cancers
+		position: absolute
+		z-index: 99
+		width: 100%
+		max-height: 0
+		@extend %nospace
+		background: $gray-bg-lite
+		@extend %transition
+		overflow: hidden
+		&.hello
+			max-height: 9999px
+		@media screen and (max-width: $babybear)
+			width: 100%
+		ul
+			overflow: scroll
+			height: 200px
+			width: 100%
+			margin: 0 !important
+			@media screen and (max-width: $babybear)
+				width: 100%
+		li
+			margin: 0 !important
+			padding: 0 !important
+		a
+			display: block
+			float: left
+			width: 100%
+			margin: 0 !important
+			padding: $pad-sm
+			border-bottom: 1px solid lighten($gray, 55%)
+			+box-sizing(border-box)
+			&:hover, &:focus
+				border: none
+				background: $gold-bg
