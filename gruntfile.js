@@ -9,15 +9,15 @@ module.exports = function(grunt) {
         livereload: true
       },
       html: {
-        files: '*.html',
-        tasks: ['validation', 'copy']
+        files: 'templates/*.html',
+        tasks: ['copy']
       },
       js: {
         files: ['build/js/**/*.js'],
         tasks: ['concat', 'uglify', 'copy']
       },
       css: {
-        files: ['build/sass/*.sass'],
+        files: ['build/sass/**/*.sass'],
         tasks: ['compass:dist', 'copy', 'replace-css']
       },
       images: {
@@ -74,6 +74,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'build/js/components/_nav.js',
+          'build/js/components/_cancerNav.js',
           'build/js/components/_photoCaptions.js',
           'build/js/components/_tabs.js',
           'build/js/components/_documentClasses.js',
@@ -95,7 +96,7 @@ module.exports = function(grunt) {
     },
     validation: {
       files: {
-        src: ['*.html']
+        src: ['templates/*.html']
       }
     },
     cmq: {
