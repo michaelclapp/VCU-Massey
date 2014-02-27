@@ -1,25 +1,26 @@
 {
-  "name": "VCU Massey",
+  "name": "VCUMassey",
   "version": "0.1.0",
-  "description": "VCU Massey Package",
+  "description": "Front end for VCU Massey Cancer Center's website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sam Yerkes",
   "license": "BSD-2-Clause",
   "devDependencies": {
     "grunt": "latest",
     "grunt-bower-task": "latest",
-    "grunt-combine-media-queries": "latest",
-    "grunt-contrib-compass": "latest",
-    "grunt-contrib-concat": "latest",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-imagemin": "latest",
+    "grunt-combine-media-queries": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-imagemin": "latest",
     "grunt-html-validation": "latest",
+    "grunt-include-replace": "latest",
     "grunt-sails-linker": "latest",
-    "grunt-text-replace": "latest" 
+    "grunt-text-replace": "latest"
   }
 }

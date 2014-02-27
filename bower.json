@@ -1,8 +1,10 @@
 {
-    "name":  "VCU Massey",
-    "version": "0.0.1",
-    "dependencies": {
-        "jquery": "latest",
-        "modernizr": "latest"
-    }
+  "name": "VCU Massey",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "latest",
+    "modernizr": "latest",
+    "html5shiv": "latest",
+    "respond": "latest"
+  }
 }

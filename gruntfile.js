@@ -9,20 +9,24 @@ module.exports = function(grunt) {
         livereload: true
       },
       html: {
-        files: 'templates/*.html',
-        tasks: ['copy']
+        files: 'build/views/*.html',
+        tasks: ['includereplace', 'sails-linker', 'validation', 't4']
       },
       js: {
-        files: ['build/js/**/*.js'],
-        tasks: ['concat', 'uglify', 'copy']
+        files: ['build/js/*.js'],
+        tasks: ['uglify', 't4']
       },
       css: {
-        files: ['build/sass/**/*.sass'],
-        tasks: ['compass:dist', 'copy', 'replace-css']
+        files: ['build/sass/*.sass'],
+        tasks: ['compass', 't4', 'cmq', 'cssmin']
       },
       images: {
         files: ['build/imgs/*'],
-        tasks: ['imagemin', 'copy']
+        tasks: ['imagemin', 't4']
+      },
+      includes: {
+        files: ['build/inc/*'],
+        tasks: ['includereplace', 'sails-linker', 'validation', 't4']
       }
     },
 
@@ -34,78 +38,54 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      options: {
-        expand: true,
-        flatten: true
-      },
       dist: {
         files: {
-          'assets/js/global.js' : ['build/js/global.js']
-        }
-      },
-      flexy: {
-        files: {
-          'assets/js/flexy.js' : ['build/js/flexy.js']
+          'assets/js/global.js' : ['build/js/*.js']
         }
       }
     },
     copy: {
+      bower: {
+        cwd: 'build/js/lib/',
+        src: '*/**',
+        dest: 'assets/js/lib',
+        expand: true
+      },
       t4: {
         cwd: 'assets/',
         src: '*/**',
         dest: 't4/',
         expand: true
-      },
-      bower: {
-        cwd: 'bower_components',
-        src: '*/**',
-        dest: 'assets/lib',
-        expand: true
       }
     },
     replace: {
-      images: {
+      t4css: {
         src: ['t4/css/*.css'],
         overwrite: true,
         replacements: []
-      }
-    },
-    concat: {
-      dist: {
-        src: [
-          'build/js/components/_nav.js',
-          'build/js/components/_cancerNav.js',
-          'build/js/components/_photoCaptions.js',
-          'build/js/components/_tabs.js',
-          'build/js/components/_documentClasses.js',
-          'build/js/components/_thumbnailPics.js',
-          'build/js/components/_filterContent.js',
-          'build/js/components/_triggers.js',
-          'build/js/components/_flexslider.js',
-          'build/js/components/_fitvids.js'
-        ],
-        dest: 'build/js/global.js',
       },
-      flexy: {
-        src: [
-          'build/js/flexy/_flexyNav.js',
-          'build/js/flexy/_respond.js'
-        ],
-        dest: 'build/js/flexy.js',
-      }
+      t4html: {
+        src: ['t4/views/*.html'],
+        overwrite: true,
+        replacements: []
+      },
     },
     validation: {
       files: {
-        src: ['templates/*.html']
+        src: ['assets/views/*.html']
       }
     },
     cmq: {
-      options: {
-        log: true
-      },
       dist: {
         files: {
-          'assets/css/' : ['assets/css/*.css']
+          't4/css/' : ['t4/css/*.css']
+        }
+      }
+    },
+    cssmin: {
+      dist: {
+        files: {
+          't4/css/global.css': ['t4/css/global.css']
         }
       }
     },
@@ -119,21 +99,10 @@ module.exports = function(grunt) {
           startTag: '<!--MODERNIZR-->',
           endTag: '<!--MODERNIZR END-->',
           fileTmpl: '<script src="../%s"></script>',
-          appRoot: ''
+          appRoot: 'assets/'
         },
         files: {
-          'templates/*.html': ['assets/lib/modernizr/modernizr.js']
-        }
-      },
-      jquery: {
-        options: {
-          startTag: '<!--JQUERY-->',
-          endTag: '<!--JQUERY END-->',
-          fileTmpl: '<script src="../%s"></script>',
-          appRoot: ''
-        },
-        files: {
-          'templates/*.html': ['assets/lib/jquery/jquery.min.js']
+          'assets/views/*.html': ['assets/js/lib/modernizr/modernizr.js']
         }
       },
       js : {
@@ -141,21 +110,32 @@ module.exports = function(grunt) {
           startTag: '<!--GLOBAL:JS-->',
           endTag: '<!--GLOBAL:JS END-->',
           fileTmpl: '<script src="../%s"></script>',
-          appRoot: ''
+          appRoot: 'assets/'
         },
         files: {
-          'templates/*.html': ['assets/js/global.js', 'assets/js/flexy.js']
+          'assets/views/*.html': ['assets/js/*.js']
         }
       },
       css : {
         options: {
           startTag: '<!--CSS-->',
           endTag: '<!--CSS END-->',
-          fileTmpl: '<link rel="stylesheet" href="../%s"></script>',
-          appRoot: ''
+          fileTmpl: '<link rel="stylesheet" href="../%s" />',
+          appRoot: 'assets/'
         },
         files: {
-          'templates/*.html': ['assets/css/global.css', 'assets/css/global-flexy.css', '!assets/css/ie.css']
+          'assets/views/*.html': ['assets/css/global.css', 'assets/css/global-flexy.css', '!assets/css/ie.css']
+        }
+      },
+      ie : {
+        options: {
+          startTag: '<!--[if lte IE 8]>',
+          endTag: '<![endif]-->',
+          fileTmpl: '<link rel="stylesheet" href="../%s" />',
+          appRoot: 'assets/'
+        },
+        files: {
+          'assets/views/*.html': ['assets/css/ie.css', 'assets/js/lib/html5shiv/dist/html5shiv.js', 'assets/js/lib/respond/dest/respond.min.js']
         }
       }
     },
@@ -168,9 +148,20 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'build/imgs/',
-          src: ['*/**/*.{png,jpg,gif}'],
+          src: ['**/*.{png,jpg,gif}'],
           dest: 'assets/imgs/'
         }]
+      }
+    },
+    includereplace: {
+      dist: {
+        options: {
+          includesDir: 'build/inc/'
+        },
+        src: '*.html',
+        dest: 'assets/views/',
+        cwd: 'build/views/',
+        expand: 'true'
       }
     }
   });
@@ -178,24 +169,29 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-validation');
+  grunt.loadNpmTasks('grunt-include-replace');
   grunt.loadNpmTasks('grunt-sails-linker');
   grunt.loadNpmTasks('grunt-text-replace');
 
-grunt.registerTask('replace-css', function() {
-  var replacements = grunt.file.readJSON('replacements.json');
-  grunt.config('replace.images.replacements', replacements);
+grunt.registerTask('replace-t4', function() {
+  var cssReplacements = grunt.file.readJSON('replacements.json');
+  grunt.config('replace.t4css.replacements', cssReplacements);
   grunt.task.run('replace');
 });
 
+//Build the initial directories
+grunt.registerTask('build', ['bower', 'compass', 'uglify', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 't4', 'cmq', 'cssmin', 'watch']);
+
+//Builds T4 directory
+grunt.registerTask('t4', ['copy:t4', 'replace-t4']);
+
 // Default task.
 grunt.registerTask('default', ['watch']);
-grunt.registerTask('build', ['bower', 'compass', 'concat', 'uglify', 'imagemin', 'copy', 'sails-linker']);
-
 
 };

@@ -6,10 +6,6 @@
 	max-width: 33%
 	margin: 0 $pad-sm $pad 0
 	+box-sizing(border-box)
-	@media screen and (max-width: $babybear)
-		width: 100%
-		max-width: 100%
-		margin: 0 0 $pad
 	a.menu
 		display: block
 		width: 100%
@@ -19,9 +15,8 @@
 		@include font-size(1)
 		+box-sizing(border-box)
 		&:hover, &:focus
-			background: $gold-bg
-		@media screen and (max-width: $babybear)
-			width: 100%
+			background: $nav-blue
+			color: $white
 	.cancers
 		position: absolute
 		z-index: 99
@@ -33,15 +28,11 @@
 		overflow: hidden
 		&.hello
 			max-height: 9999px
-		@media screen and (max-width: $babybear)
-			width: 100%
 		ul
 			overflow: scroll
 			height: 200px
 			width: 100%
 			margin: 0 !important
-			@media screen and (max-width: $babybear)
-				width: 100%
 		li
 			margin: 0 !important
 			padding: 0 !important
@@ -53,6 +44,14 @@
 			padding: $pad-sm
 			border-bottom: 1px solid lighten($gray, 55%)
 			+box-sizing(border-box)
+			+transition(padding-left .3s ease-in-out)
 			&:hover, &:focus
+				padding-left: $pad
 				border: none
 				background: $gold-bg
+.attribution
+	float: left
+	margin: $pad-sm 0
+	padding: $pad-sm
+	@include border(all, 1, solid)
+	@include font-size(.8)

@@ -7,6 +7,10 @@ $(document).ready(function() {
     maxItems: 1,
     itemMargin: 0
   });
+  $('.overlay.flexslider').flexslider({
+    slideshow: false,
+  });
+
 
   $(".video").fitVids();
   

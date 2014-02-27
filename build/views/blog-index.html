@@ -1,26 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-  <meta name="Description" content="VCU Massey Cancer Center" />
-  <meta name="Keywords" content="vcu, massey cancer center" />
-
-	<title>Shell - VCU Massey Cancer Center</title>
-	
-	<!--CSS-->
-<link rel="stylesheet" href="../assets/css/global.css"></script>
-<link rel="stylesheet" href="../assets/css/global-flexy.css"></script>
-<!--CSS END-->
-
-	<!--[if lte IE 7]>
-    <link rel="stylesheet" type="text/css" href="css/ie.css" />
-  <![endif]-->
-
-	<!--MODERNIZR-->
-<script src="../assets/lib/modernizr/modernizr.js"></script>
-<!--MODERNIZR END-->
-
-</head>
+@@include('header.html') 
 <body>
   <a id="top"></a>
 
@@ -175,7 +153,39 @@
             <p><a href="http://www.massey.vcu.edu/index.html">Home</a> &gt;  <a href="http://www.massey.vcu.edu/patient-care.html" class="current">Shell</a></p>
           </div><!--end #breadcrumb-nav-->
         
-          <h2 class="title">Shell</h2>
+          <h2 class="title">News Blog Archive</h2>
+
+          <div class="blog-excerpt sticky">
+            <a href="#"><h3>Blog title</h3></a>
+            <div class="blog-excerpt-image">
+              <img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/research--education/Sabik_Barnes_Bradley-1364x852.jpg" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, provident, adipisci quae cupiditate odit <a href="#">fugiat id possimus quod</a> officia beatae eveniet a sequi excepturi labore quisquam fuga praesentium obcaecati debitis natus aperiam ducimus et illo nisi blanditiis neque itaque deleniti iusto quaerat unde dolorum tempore illum mollitia accusamus impedit totam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, provident, adipisci quae cupiditate odit <a href="#">fugiat id possimus quod</a> officia beatae eveniet a sequi excepturi labore quisquam fuga praesentium obcaecati debitis natus aperiam ducimus et illo nisi blanditiis neque itaque deleniti iusto quaerat unde dolorum tempore illum mollitia accusamus impedit totam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, provident, adipisci quae cupiditate odit <a href="#">fugiat id possimus quod</a> officia beatae eveniet a sequi excepturi labore quisquam fuga praesentium obcaecati debitis natus aperiam ducimus et illo nisi blanditiis neque itaque deleniti iusto quaerat unde dolorum tempore illum mollitia accusamus impedit totam.</p>
+            <p><a class="readmore">Continue reading →</a></p>
+          </div>
+
+          <div class="blog-excerpt">
+            <a href="#"><h3>Blog title</h3></a>
+            <div class="blog-excerpt-image">
+              <img src="http://www.massey.vcu.edu/media/massey-cancer-center/content-assets/images/med-illustrations/top5blognew-300x183-135x137.jpg" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, provident, adipisci quae cupiditate odit <a href="#">fugiat id possimus quod</a> officia beatae eveniet a sequi excepturi labore quisquam fuga praesentium obcaecati debitis natus aperiam ducimus et illo nisi blanditiis neque itaque deleniti iusto quaerat unde dolorum tempore illum mollitia accusamus impedit totam.</p>
+            <p><a class="readmore">Continue reading →</a></p>
+          </div>
+
+          <div class="blog-excerpt">
+            <a href="#"><h3>Blog title</h3></a>
+            <div class="blog-excerpt-image">
+              <img src="http://www.massey.vcu.edu/media/massey-cancer-center/content-assets/images/headshots/researchers/unnamed-1-300x207-125x124.jpg" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, provident, adipisci quae cupiditate odit <a href="#">fugiat id possimus quod</a> officia beatae eveniet a sequi excepturi labore quisquam fuga praesentium obcaecati debitis natus aperiam ducimus et illo nisi blanditiis neque itaque deleniti iusto quaerat unde dolorum tempore illum mollitia accusamus impedit totam.</p>
+            <p><a class="readmore">Continue reading →</a></p>
+          </div>
+
+          <div class="pagination"> <span class="currentpage">1</span> &nbsp; | &nbsp; <a href="/news/blog/2/">2</a> &nbsp; | &nbsp; <a href="/news/blog/3/">3</a> &nbsp; | &nbsp; <a href="/news/blog/4/">4</a> &nbsp; | &nbsp; <a href="/news/blog/5/">5</a> &nbsp; | &nbsp; <a href="/news/blog/6/">6</a> <a href="/news/blog/2/">&gt;</a> <a href="/news/blog/6/">&gt;&gt;</a></div>
+
 
 
 
@@ -272,28 +282,4 @@
     </div><!--end .wrapper-->
   </div><!-- end #footer-->
 
-	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-  <script>
-    if (!window.jQuery) {document.write('<script src="assets/js/jquery.js"><\/script>');}
-  </script>
-
-  <!--GLOBAL:JS-->
-  <script src="../assets/js/global.js"></script>
-  <script src="../assets/js/flexy.js"></script>
-  <!--GLOBAL:JS END-->
-
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-24820654-40']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
-
-<!--Remove before transfer to Production -->
-	<script src="http://localhost:35729/livereload.js"></script>
-</body>
-</html>
+@@include('footer.html') 

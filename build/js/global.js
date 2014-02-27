@@ -20,6 +20,12 @@ $(document).ready(function() {
 
 });
 $(document).ready(function() {
+	$('.cancer-nav a.menu').click(function(e) {
+		e.preventDefault();
+		$('.cancer-nav .cancers').toggleClass('hello');
+	});
+});
+$(document).ready(function() {
 	
 	var image = $('#content p.pull-right img, #content p.pull-left img');
 	
@@ -51,16 +57,45 @@ $(document).ready(function(){
 	$('a[href*=".xlsx"]').addClass('excel');
 });
 $(document).ready(function() {
-	var image = $('p.pull-right img');
-	var imageSource = $('p.pull-right img').attr('src');
-	var imageAlt = $('p.pull-right img').attr('alt');
-	$('body').append('<div class="overlay"><div class="wrapper"><img src="' + imageSource + '" alt="' + imageAlt + '" /></div></div>');
-	$(image).click(function() {
+	var image = $('p.pull-right img, p.pull-left img');
+	var imageSource = $('p.pull-right img, p.pull-left img').attr('src');
+	var imageAlt = $('p.pull-right img, p.pull-left img').attr('alt');
+
+	if($(image).length != 0) {
+		$('body').append('<div class="overlay"><div class="wrapper"></div></div>');
+	};
+
+	$(image).click(function(e) {
+		e.preventDefault();
 		$('.overlay').addClass('hello');
+		var thisImageSrc = $(this).attr('src');
+		var thisImageAlt = $(this).attr('alt');
+		$('.overlay .wrapper').append('<img src="' + thisImageSrc + '" /><div class="caption">' + thisImageAlt + '</div>');
+		e.stopPropagation();
+
+		$('.overlay:not(.overlay .wrapper)').click(function() {
+			$('.overlay').removeClass('hello');
+			$('.overlay .wrapper img').remove();
+			$('.overlay .wrapper .caption').remove();
+		});
+		$('.overlay .wrapper').click(function(e) {
+			e.stopPropagation();
+		});
+
+
+		//	$(image).each(function() {
+		//var thisImageSrc = $(this).attr('src');
+		//	$('.overlay .wrapper').append('<img src="' + thisImageSrc + '" />');
+	//});
+	//	e.stopPropagation();
+	//	$('.overlay:not(img)').click(function() {
+	//	    $('.overlay').removeClass('hello');
+	//	});
 	});
-	$('.overlay').click(function() {
-		$(this).removeClass('hello');
-	});
+
+	
+
+
 });
 $(document).ready(function() {    
   
@@ -95,6 +130,10 @@ $(document).ready(function() {
     maxItems: 1,
     itemMargin: 0
   });
+  $('.overlay.flexslider').flexslider({
+    slideshow: false,
+  });
+
 
   $(".video").fitVids();
   

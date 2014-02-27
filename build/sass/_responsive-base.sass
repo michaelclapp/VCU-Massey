@@ -13,6 +13,8 @@ html, body, #wrapper
 			width: 30%
 		.info
 			width: 70%
+	[class*='col-']
+		width: 100% !important
 @media screen and (max-width: $babybear)
 	body
 		background: $white
@@ -22,3 +24,5 @@ html, body, #wrapper
 		padding: 0 !important
 	#wrapper, #content
 		padding: 0 !important
+	[class*='col-']
+		padding-right: 0

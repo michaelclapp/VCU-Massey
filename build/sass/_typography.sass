@@ -91,6 +91,11 @@ a
 	p
 		margin: 0 0 $pad-sm
 		@include font-size(1)
+		&:last-of-type
+			margin: 0
+		&.small
+			margin: 0
+			@include font-size(.9)
 	ul, ol
 		margin: $pad-sm 0 $pad-sm $pad
 	li

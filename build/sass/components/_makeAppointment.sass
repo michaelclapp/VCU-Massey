@@ -1,19 +1,24 @@
-#content .makeAppointment
+#content .makeAppointment, #content .clinicalTrials
+	margin: $pad-sm 0
 	padding: $pad-sm
 	background: $gray-bg-lite
-	a
+	a h4
 		display: block
 		padding: $pad-sm
 		background: $gold-bg
 		text-align: center
 		text-transform: uppercase
 		@include font-size(1)
+		+background-image(linear-gradient(lighten($nav-gold, 30%), $nav-gold))
+		+box-shadow($gray-bg 1px 1px 10px)
 		&:hover, &:focus
 			padding: $pad-sm
 			border: none
-			background: $nav-blue
+			+background-image(linear-gradient(lighten($nav-blue, 30%), $nav-blue))
 			color: $white
 	h4, p
 		display: block
 		margin: $pad-sm 0
 		text-align: center
+#content .clinicalTrials p
+	text-align: left
