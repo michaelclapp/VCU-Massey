@@ -105,6 +105,12 @@ a#menu
 						background: darken($nav-gold, 20%)
 						ul
 							background: darken($nav-gold, 30%)
+	#rufio nav > ul li:hover a 
+		color: $gray
+	#rufio nav > ul > li:hover > a 
+		color: $white
+		&:hover, &:focus
+			color: $gray
 	#sidebar, ul#util-nav
 		display: none
 #vcuIdentityWrapper, #rufio, #wrapper, #footer
