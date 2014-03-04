@@ -13,12 +13,12 @@ module.exports = function(grunt) {
         tasks: ['includereplace', 'sails-linker', 'validation', 't4']
       },
       js: {
-        files: ['build/js/*.js'],
-        tasks: ['uglify', 't4']
+        files: ['build/js/**/*.js'],
+        tasks: ['concat', 'uglify']
       },
       css: {
         files: ['build/sass/*.sass'],
-        tasks: ['compass', 't4', 'cmq', 'cssmin']
+        tasks: ['compass', 'cmq', 'cssmin', 'replace-t4']
       },
       images: {
         files: ['build/imgs/*'],
@@ -40,7 +40,8 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'assets/js/global.js' : ['build/js/*.js']
+          't4/js/global.js' : ['assets/js/global.js'],
+          't4/js/global-flexy.js' : ['assets/js/global-flexy.js']
         }
       }
     },
@@ -56,7 +57,7 @@ module.exports = function(grunt) {
         src: '*/**',
         dest: 't4/',
         expand: true
-      }
+      },
     },
     replace: {
       t4css: {
@@ -78,14 +79,16 @@ module.exports = function(grunt) {
     cmq: {
       dist: {
         files: {
-          't4/css/' : ['t4/css/*.css']
+          't4/css/' : ['assets/css/*.css']
         }
       }
     },
     cssmin: {
       dist: {
         files: {
-          't4/css/global.css': ['t4/css/global.css']
+          't4/css/global.css': ['t4/css/global.css'],
+          't4/css/global-flexy.css': ['t4/css/global-flexy.css'],
+          't4/css/ie.css': ['t4/css/ie.css']
         }
       }
     },
@@ -163,12 +166,35 @@ module.exports = function(grunt) {
         cwd: 'build/views/',
         expand: 'true'
       }
+    },
+    concat: {
+      dist: {
+        src: [
+          'build/js/components/_nav.js',
+          'build/js/components/_documentClasses.js',
+          'build/js/components/_tabs.js',
+          'build/js/components/_thumbnailPics.js',
+          'build/js/components/_cancerNav.js', 
+          'build/js/components/_filterContent.js', 
+          'build/js/components/_fitvids.js', 
+          'build/js/components/_flexslider.js',
+          'build/js/components/_triggers.js'
+        ],
+        dest: 'assets/js/global.js',
+      },
+      flexy: {
+        src: [
+          'build/js/flexy/_flexyNav.js',
+        ],
+        dest: 'assets/js/global-flexy.js',
+      }
     }
   });
   // load plugins
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -186,7 +212,7 @@ grunt.registerTask('replace-t4', function() {
 });
 
 //Build the initial directories
-grunt.registerTask('build', ['bower', 'compass', 'uglify', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 't4', 'cmq', 'cssmin', 'watch']);
+grunt.registerTask('build', ['bower', 'compass', 'concat', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 't4', 'uglify', 'cmq', 'cssmin', 'watch']);
 
 //Builds T4 directory
 grunt.registerTask('t4', ['copy:t4', 'replace-t4']);

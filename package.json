@@ -21,6 +21,7 @@
     "grunt-html-validation": "latest",
     "grunt-include-replace": "latest",
     "grunt-sails-linker": "latest",
-    "grunt-text-replace": "latest"
+    "grunt-text-replace": "latest",
+    "grunt-contrib-concat": "~0.3.0"
   }
 }
