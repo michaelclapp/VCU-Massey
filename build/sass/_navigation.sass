@@ -19,6 +19,8 @@
       font:
         family: $sans-serif
         weight: 100
+      > li:nth-child(n+8)
+        display: none
       li
         position: relative
         float: left 
@@ -41,8 +43,6 @@
           content: ""
         &:first-child:after
           background: none
-        &:nth-child(n+8)
-          display: none
         a
           display: table-cell
           width: 14.2857%
