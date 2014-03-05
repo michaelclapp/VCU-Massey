@@ -18,4 +18,6 @@ $(document).ready(function() {
 
   $("#sidebar span").last().children().addClass('current');
 
+  $('#breadcrumb-nav').children('p').children('a').last().addClass('current');
+
 });
