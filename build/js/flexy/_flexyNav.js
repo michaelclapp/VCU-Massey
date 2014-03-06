@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   //Add menu button to all pages
-  $('#rufio').append('<a href="#" id="menu">+</a>');
+  $('#rufio').append('<a href="#" id="menu">Menu</a>');
   
   var mainNav = $('#rufio nav');
   var menuBtn = $('a#menu');

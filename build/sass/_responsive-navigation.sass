@@ -36,9 +36,9 @@ a#menu
 				float: right
 				width: 25%
 				height: 100%
-				padding: $pad-sm
-				background: $black
-				color: $nav-gold
+				padding: $pad-sm !important
+				background: $nav-gold
+				color: $black
 				text-align: center !important
 				&:hover, &:focus
 					background: $white
@@ -65,7 +65,6 @@ a#menu
 				&:hover, &:focus
 					background: none
 				a.more
-					color: $identity
 					&:hover, &:focus
 						background: $identity
 						color: $black
@@ -92,19 +91,32 @@ a#menu
 		> ul
 			background: $nav-gray //fall-back
 			background: url('../imgs/layout/menu-bg.jpg')
-			li a
-				display: block
-				width: 100%
-				&.parent
-					width: 75%
+			li
+				&:nth-child(n+6) > ul
+					float: left
+				a
+					display: block
+					width: 100%
+					&.parent
+						width: 75%
 			ul
 				background: $nav-gold
+				li a
+					padding-left: $pad !important
+				a.more
+					background: darken($nav-gold, 10%)
 				ul
 					background: darken($nav-gold, 10%)
+					a.more
+						background: darken($nav-gold, 13%)
 					ul
-						background: darken($nav-gold, 20%)
+						background: darken($nav-gold, 13%)
+						a.more
+							background: darken($nav-gold, 16%)
 						ul
-							background: darken($nav-gold, 30%)
+							background: darken($nav-gold, 16%)
+							a.more
+								background: darken($nav-gold, 19%)
 	#rufio nav > ul li:hover a
 		color: $gray
 	#rufio nav > ul > li:hover > a, #rufio nav > ul > li:hover > a span  
