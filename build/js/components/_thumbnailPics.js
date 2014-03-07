@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var image = $('img');
+	var image = $('.pull-right img, .pull-left img');
 	var imageSource = $('.pull-right img, .pull-left img').attr('src');
 	var imageAlt = $('.pull-right img, .pull-left img').attr('alt');
 
