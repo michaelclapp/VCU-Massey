@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         tasks: ['concat', 'uglify']
       },
       css: {
-        files: ['build/sass/*.sass'],
+        files: ['build/sass/**/*.sass'],
         tasks: ['compass', 'cmq', 'cssmin', 'replace-t4']
       },
       images: {
