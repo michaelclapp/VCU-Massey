@@ -5,8 +5,6 @@
  */
 
 (function ($) {
-	$('.flexslider li:empty').remove();
-
 	$('#content .flexslider.inPage ul.slides li img').each(function() {
 		var imageCaption = $(this).attr('alt');
 		$(this).after('<div class="caption">' + imageCaption + '</div>');
