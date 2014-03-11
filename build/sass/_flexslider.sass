@@ -39,36 +39,39 @@
           background: url('../imgs/layout/caption-bg.png') //fall-back
           background: rgba(0,0,0,.7)
           color: $white
-          h3
-            float: left
-            width: 200px
-            margin: 0 20px 0 0
-            border: none
+          a
+            background: none
             color: $nav-gold
-            font:
-              size: 24px
-              weight: 100
-            line-height: 1
-            text-align: right
-          p
-            float: left
-            width: 360px
-            margin: 0
-            padding: 0
-            font:
-              size: 12px
-              weight: 100
-            line-height: 1.4
-            a
-              border: 0
-              color: $nav-gold
       img
         width: 100%
         display: block
         margin: 0
       ul
         margin: 0 !important
-      
+    &.home
+      h3
+        float: left
+        width: 200px
+        margin: 0 20px 0 0
+        border: none
+        color: $nav-gold
+        font:
+          size: 24px
+          weight: 100
+        line-height: 1
+        text-align: right
+      p
+        float: left
+        width: 360px
+        margin: 0
+        padding: 0
+        font:
+          size: 12px
+          weight: 100
+        line-height: 1.4
+        a
+          border: 0
+          color: $nav-gold  
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 
