@@ -157,13 +157,15 @@ html[xmlns] .slides
 .flexslider:hover
   .flex-prev
     right: 32px
+    &:hover, &:focus
+      opacity: 1
+      background: url('../imgs/layout/slide-nav2.png')
   .flex-next
     right: 5px
-    &:hover
+    &:hover, &:focus
       opacity: 1
-  .flex-prev:hover
-    opacity: 1
-
+      background: url('../imgs/layout/slide-nav2.png')
+      background-position: 27px 0
 .flex-direction-nav
   .flex-disabled
     opacity: 0!important
