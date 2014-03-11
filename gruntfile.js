@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['build/sass/**/*.sass'],
-        tasks: ['compass', 'cmq', 'cssmin', 'replace-t4']
+        tasks: ['compass', 'cmq', 'cssmin', 't4']
       },
       images: {
         files: ['build/imgs/*'],
@@ -51,13 +51,7 @@ module.exports = function(grunt) {
         src: '*/**',
         dest: 'assets/js/lib',
         expand: true
-      },
-      t4: {
-        cwd: 'assets/',
-        src: '*/**',
-        dest: 't4/',
-        expand: true
-      },
+      }
     },
     replace: {
       t4css: {
@@ -215,7 +209,7 @@ grunt.registerTask('replace-t4', function() {
 grunt.registerTask('build', ['bower', 'compass', 'concat', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 't4', 'uglify', 'cmq', 'cssmin', 'watch']);
 
 //Builds T4 directory
-grunt.registerTask('t4', ['copy:t4', 'replace-t4']);
+grunt.registerTask('t4', ['replace-t4']);
 
 // Default task.
 grunt.registerTask('default', ['watch']);
