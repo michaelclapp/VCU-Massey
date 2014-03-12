@@ -271,10 +271,15 @@
 
 #breadcrumb-nav
   display: block
+  margin: 0 0 $pad-sm
+  padding: $pad-sm
+  border: $gray-border-lite 1px solid
+  background: $gray-bg-lite
+  +border-radius($pad-sm)
   p
     @include font-size(.91) // 11px/1.375
   a
-    color: $gray
+    color: $text-blue
     &.current
-      color: $text-blue
+      color: $gray
       font-weight: bold
