@@ -2,13 +2,12 @@
 .profile
 	overflow: hidden
 	margin: $pad-sm 0
-	background: $gray-bg-lite
+	@extend %gray-box
 	.photo
 		float: left
 		width: 15%
 		img
-			width: 100% !important
-			height: auto !important
+			@extend %responsive-t4
 	.info
 		float: left
 		width: 85%

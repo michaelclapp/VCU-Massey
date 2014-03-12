@@ -3,7 +3,7 @@
 	overflow: hidden
 	margin: $pad-sm 0
 	padding: $pad
-	background: $gray-bg-lite
+	@extend %gray-box
 	&.sticky
 		background: $gold-lite
 	.blog-excerpt-image
@@ -11,8 +11,7 @@
 		width: 30%
 		margin-right: $pad-sm
 		img
-			width: 100% !important
-			height: auto !important
+			@extend %responsive-t4
 	&.no-bg
 		@include border(top, 1, solid)
 		background: none

@@ -1,26 +1,30 @@
+@import '_variables'
+
 /*For lte IE8*/
+html, body
+	background: $gray-bg-lite
 form#sitesearch input.field, #search input.field:focus
 	margin: 6px 0 0 0
 html>body form#sitesearch input.field, #search input.field:focus
 	margin: 6px 0 0 0
 
-#rufio nav ul li
-	display: inline-block
-	width: 136px !important
-	height: 40px
-	border-left: 1px solid #ffffff
-	&:first-child
-		border: none
-	a
+#rufio nav > ul
+	max-width: 998px
+	li
 		display: inline-block
-		width: 136px !important
-		height: 29px
-		padding-top: 10px
-		text-align: center
-	ul
-		display: none !important
-	span
-		height: 40px !important
+		height: 40px
+		//border-left: 1px solid #ffffff (not needed)
+		&:first-child
+			border: none
+		a
+			display: inline-block
+			width: 136px !important
+			height: 29px
+			padding-top: 6px
+			font-size: 14px
+			text-align: center
+		span
+			height: 40px !important
 #header-links
 	width: 155px !important
 .flexslider .slides 
@@ -31,3 +35,5 @@ html>body form#sitesearch input.field, #search input.field:focus
 		width: 667px !important
 .footer-col
 	min-height: 170px !important
+#breadcrumb-nav p
+	margin: 0

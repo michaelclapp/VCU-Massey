@@ -10,8 +10,7 @@
 		display: block
 		width: 100%
 		padding: $pad-sm
-		border: 1px solid lighten($gray, 55%)
-		background: $gray-bg-lite
+		@extend %gray-box
 		@include font-size(1)
 		+box-sizing(border-box)
 		&:hover, &:focus
@@ -42,7 +41,7 @@
 			width: 100%
 			margin: 0 !important
 			padding: $pad-sm
-			border-bottom: 1px solid lighten($gray, 55%)
+			border-bottom: 1px solid $gray-border-lite
 			+box-sizing(border-box)
 			+transition(padding-left .3s ease-in-out)
 			&:hover, &:focus
