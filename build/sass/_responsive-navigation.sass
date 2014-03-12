@@ -1,9 +1,9 @@
 a#menu
 	display: none
-@media screen and (max-width: $papabear)
+@include mq($papabear)
 	#rufio nav > ul
 		@include font-size(1)
-@media screen and (max-width: $mamabear)
+@include mq($mamabear)
 	a#menu
 		display: block
 		position: absolute
@@ -132,7 +132,7 @@ a#menu
 		@media screen and (min-width: $mamabear)
 			margin-left: 0
 
-@media screen and (max-width: $babybear)
+@include mq($babybear)
 	a#menu
 		position: absolute
 		top: 0

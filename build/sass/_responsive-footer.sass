@@ -1,4 +1,4 @@
-@media screen and (max-width: $mamabear)
+@include mq($mamabear)
 	#footer
 		.wrapper 
 			width: 95%
@@ -15,7 +15,7 @@
 				width: 285px
 				margin: 0
 				+column-count(1)
-@media screen and (max-width: $babybear)
+@include mq($babybear)
 	#footer
 		padding: $pad-sm 0
 		.wrapper

@@ -3,7 +3,7 @@ html, body, #wrapper
 	overflow-x: hidden
 #container
 	width: 95%
-@media screen and (max-width: $mamabear)
+@include mq($mamabear)
 	#content, #sidebar
 		width: 100%
 	ul#intro-nav
@@ -15,7 +15,7 @@ html, body, #wrapper
 			width: 70%
 	[class*='col-']
 		width: 100% !important
-@media screen and (max-width: $babybear)
+@include mq($babybear)
 	body
 		background: $white
 	#container
