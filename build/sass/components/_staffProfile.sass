@@ -2,19 +2,14 @@
 .profile
 	overflow: hidden
 	margin: $pad-sm 0
-	@extend %gray-box
 	.photo
 		float: left
 		width: 15%
+		margin-right: $pad-sm
 		img
 			@extend %responsive-t4
 	.info
 		float: left
-		width: 85%
-		+box-sizing(border-box)
-		padding: $pad
-	&.excerpt
+		width: 80%
 		padding: $pad-sm
-		background: $gray-bg-lite !important
-	.title
-		font-style: italic
+		+box-sizing(border-box)
