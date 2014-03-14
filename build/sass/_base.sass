@@ -46,3 +46,12 @@ body
 	width: 66%
 .col-1-3
 	width: 33%
+
+.module
+	padding: $pad
+	border: 1px solid $border-color-lite
+	background: $gray-bg-lite
+	+box-sizing(border-box)
+.module-sm
+	@extend .module
+	padding: $pad-sm
