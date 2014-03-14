@@ -4,16 +4,17 @@
 		float: left
 		width: 100%
 		margin: $pad auto
-	ul#tabs
 		padding: 0
 		> li
 			display: inline
-			padding: 0 0 0 $pad-sm
+			margin: 0
+			padding: 0
 			background: none
 			list-style: none
 	#tabs > li > a
 		display: inline-block
 		z-index: 99 !important
+		width: 19%
 		padding: $pad-sm ($pad-sm*1.5)
 		background: $nav-gray
 		@include border(top, 1, solid)
@@ -21,7 +22,10 @@
 		@include border(left, 1, solid)
 		border-bottom: 0
 		color: $white
-		text-decoration: none
+		text:
+			align: center
+			decoration: none
+		+box-sizing(border-box)
 	#tabs li > a:hover, #tabs li > a.active
 		background: $gray-bg-lite
 		color: $gray
