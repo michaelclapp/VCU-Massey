@@ -188,6 +188,23 @@ module.exports = function(grunt) {
         ],
         dest: 'assets/js/global-flexy.js',
       }
+    },
+    browserSync: {
+      files: {
+        src : ['build/sass/*.sass', 'build/js/*.js', 'assets/build/*.html']
+      },
+      options: {
+        watchTask: true,
+        ghostMode: {
+          clicks: true,
+          scroll: true,
+          links: true,
+          forms: true
+        },
+        server: {
+          baseDir: 'assets'
+        }
+      }
     }
   });
   // load plugins
@@ -204,6 +221,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-include-replace');
   grunt.loadNpmTasks('grunt-sails-linker');
   grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
 grunt.registerTask('replace-t4', function() {
   var cssReplacements = grunt.file.readJSON('replacements.json');
@@ -217,7 +235,7 @@ grunt.registerTask('build', ['bower', 'compass', 'concat', 'imagemin', 'copy:bow
 //Builds T4 directory
 grunt.registerTask('t4', ['replace-t4']);
 
-// Default task.
-grunt.registerTask('default', ['watch']);
+// Default task. address will be: http://172.31.2.192:3002/views/index.html
+grunt.registerTask('default', ['browserSync','watch']);
 
 };

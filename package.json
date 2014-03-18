@@ -22,6 +22,7 @@
     "grunt-include-replace": "latest",
     "grunt-sails-linker": "latest",
     "grunt-text-replace": "latest",
-    "grunt-contrib-concat": "latest"
+    "grunt-contrib-concat": "latest",
+    "grunt-browser-sync": "latest"
   }
 }
