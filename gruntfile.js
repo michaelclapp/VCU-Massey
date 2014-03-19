@@ -202,7 +202,7 @@ module.exports = function(grunt) {
           forms: true
         },
         server: {
-          baseDir: 'assets/view/'
+          baseDir: 'assets/'
         }
       }
     }
@@ -235,7 +235,10 @@ grunt.registerTask('build', ['bower', 'compass', 'concat', 'imagemin', 'copy:bow
 //Builds T4 directory
 grunt.registerTask('t4', ['replace-t4']);
 
-// Default task. address will be: http://172.31.2.192:3002/views/index.html
-grunt.registerTask('default', ['browserSync','watch']);
+// Default task
+grunt.registerTask('default', ['watch']);
+
+//address will be: http://172.31.2.192:3002/views/index.html
+grunt.registerTask('watchB', ['browserSync', 'watch']);
 
 };
