@@ -202,7 +202,7 @@ module.exports = function(grunt) {
           forms: true
         },
         server: {
-          baseDir: 'assets'
+          baseDir: 'assets/view/'
         }
       }
     }
