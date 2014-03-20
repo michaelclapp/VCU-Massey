@@ -6,15 +6,15 @@
 
 @mixin border($type, $thickness, $style)
 	@if $type == all
-		border: $thickness+px $border-color $style
+		border: $thickness+px $border $style
 	@else if $type == top
-		border-top: $thickness+px $border-color $style
+		border-top: $thickness+px $border $style
 	@else if $type == right
-		border-right: $thickness+px $border-color $style
+		border-right: $thickness+px $border $style
 	@else if $type == bottom
-		border-bottom: $thickness+px $border-color $style
+		border-bottom: $thickness+px $border $style
 	@else if $type == left
-		border-left: $thickness+px $border-color $style
+		border-left: $thickness+px $border $style
 
 @mixin mq($size)
 	@media screen and (max-width: $size)

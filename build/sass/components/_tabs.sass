@@ -1,3 +1,7 @@
+$links: $white
+$links-bg: $gray
+$links-hover-bg: $gray-lite
+
 //tabs
 #content
 	#tabs
@@ -16,12 +20,12 @@
 		z-index: 99 !important
 		width: 19%
 		padding: $pad-sm 0
-		background: $nav-gray
+		background: $links-hover-bg
 		@include border(top, 1, solid)
 		@include border(right, 1, solid)
 		@include border(left, 1, solid)
 		border-bottom: 0
-		color: $white
+		color: $links
 		text:
 			align: center
 			decoration: none
@@ -36,7 +40,7 @@
 		width: 100%
 		margin-top: -1px
 		padding: $pad-sm
-		background: $gray-bg-lite
+		background: $module-bg
 		@include border(all, 1, solid)
 		+box-sizing(border-box)
 		&.is-open

@@ -50,9 +50,11 @@ body
 
 .module
 	padding: $pad
-	border: 1px solid $border-color-lite
-	background: $gray-bg-lite
+	border: 1px solid $module-border
+	background: $module-bg
 	+box-sizing(border-box)
 .module-sm
 	@extend .module
 	padding: $pad-sm
+.clear
+	clear: both

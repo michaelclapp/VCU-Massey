@@ -1,0 +1,98 @@
+$nav-current: $body-text-alert
+$links: $body-text
+
+#sidebar
+  h3
+    margin: $pad-sm 0
+    color: $blue
+    @include font-size(1.3) //16px/24px
+    font-weight: bold
+    a
+      &:link, &:visited, &:hover, &:active
+        border-bottom: none
+        background: none
+      &:hover
+        text-decoration: underline
+  ul#subnav
+    @include border(top, 1, solid)
+  li a
+    +box-sizing(border-box)
+    display: block
+    width: 100%
+    padding: $pad-sm $pad-sm*2 
+    @include border(bottom, 1, solid)
+    color: $links
+    @include font-size(1)
+    font:
+      family: $sans-serif
+      weight: 200
+    &:hover
+      background: $module-bg
+    &.current
+      color: $nav-current
+      font-weight: bold
+/*-- Sam's hot fix for indented 4th level nav --*/
+#sidebar ul#subnav li span.currentbranch0 a
+  background: url('../imgs/layout/subnav-arrow-on.gif') no-repeat center left 2px
+#sidebar ul#subnav li span.currentbranch1 a
+  background: url('../imgs/layout/subnav-arrow-on.gif') no-repeat center left $pad
+#sidebar ul#subnav li span.currentbranch2 a
+  background: url('../imgs/layout/subnav-arrow-on.gif') no-repeat center left $pad*1.8
+
+#sidebar ul.multilevel-linkul-0 a
+  padding-left: 41px
+#sidebar ul.multilevel-linkul-1 a
+  padding-left: $pad-sm*6
+#sidebar ul.multilevel-linkul-2 a
+  padding-left: $pad-sm*9
+  
+#sidebar
+  #quicklinks
+    position: relative
+    width: 100%
+    margin-top: $pad*2
+    a
+      display: block
+      margin: $pad-sm/2 0
+      padding: $pad-sm/2 $pad-sm*2 $pad-sm/2 $pad-sm*4
+      @include border(all, 1, solid)
+      background: url('../imgs/layout/icons/quicklinks.png') no-repeat left top
+      text-decoration: none
+      color: $links
+      @include font-size(1)
+      font-weight: 100
+      +box-shadow(2px 2px 5px $border)
+      &:hover
+        +box-shadow(2px 2px 5px $body-text)
+      &.question
+        background-position: 0 0px
+        &:hover, &:focus
+          background-position: 0 -30px
+      &.appointment
+        background-position: 0px -60px
+        &:hover, &:focus
+          background-position: 0 -90px
+      &.refer
+        background-position: 0px -120px
+        &:hover, &:focus
+          background-position: 0 -150px
+      &.clinical
+        background-position: 0px -180px
+        &:hover, &:focus
+          background-position: 0 -210px
+      &.doctor
+        background-position: 0px -240px
+        &:hover, &:focus
+          background-position: 0 -270px
+      &.event
+        background-position: 0px -300px
+        &:hover, &:focus
+          background-position: 0 -330px
+      &.dictionary
+        background-position: 0px -360px
+        &:hover, &:focus
+          background-position: 0 -390px
+      &.contact
+        background-position: 0px -420px
+        &:hover, &:focus
+          background-position: 0 -450px

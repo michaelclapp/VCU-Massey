@@ -1,3 +1,7 @@
+$links: $red
+$links-hover: $gray
+$links-hover-bg: $module-bg
+
 // A-Z list (Types of Cancer)
 #content
 	#az-nav
@@ -24,11 +28,11 @@
 		a
 			border: 0
 			padding: 0 10px
-			color: $text-red
+			color: $links
 			@include font-size(1.3334) //16px/24px
 			&:hover
-				background: $gray-bg-lite
-				color: $gray
+				background: $links-hover-bg
+				color: $links-hover
 	.az-content
 		margin-top: $pad
 		h2

@@ -1,3 +1,6 @@
+$body-text: $white
+$links: $gold
+
 /* Browser Resets
  *********************************/
 
@@ -38,10 +41,10 @@
           padding: 20px
           border: none
           @extend %black-overlay
-          color: $white
+          color: $body-text
           a
             background: none
-            color: $nav-gold
+            color: $links
       img
         @extend %responsive-t4
         display: block
@@ -54,7 +57,7 @@
         width: 200px
         margin: 0 20px 0 0
         border: none
-        color: $nav-gold
+        color: $gold
         font:
           size: 24px
           weight: 100
@@ -71,7 +74,7 @@
         line-height: 1.4
         a
           border: 0
-          color: $nav-gold  
+          color: $links
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 
@@ -135,7 +138,7 @@ html[xmlns] .slides
   height: 38px
   margin: 0 !important
   @extend %black-overlay
-  +border-radius(0 0 0 10px)
+  +border-radius(0 0 0 $pad-sm)
   a
     display: block
     position: absolute

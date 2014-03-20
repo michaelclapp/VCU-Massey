@@ -1,3 +1,5 @@
+$links-hover-bg: #f8b800
+
 #home-news
   img
     margin: 0
@@ -13,7 +15,7 @@
   height: auto
   min-height: 290px
   margin-right: 2%
-  border: 1px solid #cccccc
+  border: 1px solid $border
   +border-radius(12px)
   ul
     float: left
@@ -28,14 +30,13 @@
         float: left
         width: 70%
         padding: 0 2px
-        color: #666666
+        color: $links
         font-size: 11px
         line-height: 1.2
         font-weight: normal
         &:hover, &:focus
           border: 0
-          background: #f8b800
-          color: #000000
+          background: $links-hover-bg
       img
         float: left
         width: 30%
@@ -51,7 +52,7 @@
       align: center
       transform: uppercase
     &:hover, &:focus
-      color: #333333 !important
+      color: $body-text !important
       border: none
       background: none
 [id*='col-'] h3
@@ -62,7 +63,7 @@
   text-indent: -9999px
 #col-a
   p a
-    color: red
+    color: $red
 #col-b
   h3
     background-position: 0 -59px
@@ -102,7 +103,7 @@
     border: 0
     color: #fbba00
     &:hover, &:focus
-      color: #ffffff !important 
+      color: $white !important 
 #sidebar
   ul#intro-nav
     margin-top: $pad*2

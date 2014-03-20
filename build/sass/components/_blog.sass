@@ -1,3 +1,7 @@
+$links: $blue
+$links-bg: $white
+$links-hover: $gray
+
 //blog
 .blog-excerpt
 	overflow: hidden
@@ -33,20 +37,20 @@ a
 	font-weight: bold
 	&:hover, &:focus
 		padding-bottom: 0
-		background: $white
+		background: $links-bg
 		cursor: pointer
 	&.readmore
 		float: right
-		color: $text-blue
+		color: $links
 		&:hover, &:focus
-			color: $gray
+			color: $links-hover
 .pagination
 	width: 100%
 	text-align: center
 	@include font-size(1)
 	a
 		&:hover, &:focus
-			color: $text-red
+			color: $red
 .blog-meta, .blog-share
 	float: left
 	width: 45%
@@ -55,7 +59,7 @@ a
 	+box-sizing(border-box)
 .blog-meta
 	float: right
-	background: $gray-bg-lite
+	background: $module-bg
 	@include border(left, 5, solid)
 iframe#twitter-widget-0
 	float: left
@@ -77,12 +81,12 @@ iframe#twitter-widget-0
 		+box-sizing(border-box)
 		a
 			display: block
-			background: $gray-bg-lite
+			background: $module-bg
 			color: $gray
 			&:hover, &:focus
 				border: 0
-				background: $gray-bg-lite
-				color: $text-blue
+				background: $module-bg
+				color: $blue
 		.icon
 			display: block
 			position: absolute

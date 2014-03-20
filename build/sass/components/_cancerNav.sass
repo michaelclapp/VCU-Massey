@@ -1,3 +1,6 @@
+$links-hover: $white
+$links-hover-bg: $nav-blue
+
 .cancer-nav
 	display: block
 	position: relative
@@ -9,20 +12,19 @@
 	a.menu
 		display: block
 		width: 100%
-		padding: $pad-sm
-		@extend %gray-box
+		@extend .module-sm
 		@include font-size(1)
 		+box-sizing(border-box)
 		&:hover, &:focus
-			background: $nav-blue
-			color: $white
+			background: $links-hover-bg
+			color: $links-hover
 	.cancers
 		position: absolute
 		z-index: 99
 		width: 100%
 		max-height: 0
 		@extend %nospace
-		background: $gray-bg-lite
+		background: $module-bg
 		@extend %transition
 		overflow: hidden
 		&.hello
@@ -41,7 +43,7 @@
 			width: 100%
 			margin: 0 !important
 			padding: $pad-sm
-			border-bottom: 1px solid $border-color-lite
+			border-bottom: 1px solid $border-lite
 			+box-sizing(border-box)
 			+transition(padding-left .3s ease-in-out)
 			&:hover, &:focus
