@@ -10,12 +10,12 @@
 			text-align: center
 			text-transform: uppercase
 			@include font-size(1)
-			+background-image(linear-gradient(lighten($nav-gold, 30%), $nav-gold))
-			+box-shadow($gray-bg 1px 1px 10px)
+			background-image: linear-gradient(lighten($nav-gold, 30%), $nav-gold)
+			box-shadow: $gray-bg 1px 1px $pad-sm
 			&:hover, &:focus
 				padding: $pad-sm
 				border: none
-				+background-image(linear-gradient(lighten($nav-blue, 30%), $nav-blue))
+				background: linear-gradient(lighten($nav-blue, 30%), $nav-blue)
 				color: $white
 		h4, p
 			display: block

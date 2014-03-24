@@ -23,6 +23,7 @@
     "grunt-sails-linker": "latest",
     "grunt-text-replace": "latest",
     "grunt-contrib-concat": "latest",
-    "grunt-browser-sync": "latest"
+    "grunt-browser-sync": "latest",
+    "grunt-autoprefixer": "~0.7.2"
   }
 }

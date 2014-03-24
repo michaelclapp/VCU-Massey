@@ -6,6 +6,8 @@
     z-index: 9999 !important
     float: left
     margin: $pad 0 0
+    @include print
+      display: none
     > ul
       position: relative
       float: left
@@ -131,7 +133,7 @@
   ul#subnav
     @include border(top, 1, solid)
   li a
-    +box-sizing(border-box)
+    box-sizing: border-box
     display: block
     width: 100%
     padding: $pad-sm $pad-sm*2 
@@ -197,10 +199,10 @@
       color: $gray
       @include font-size(1)
       font-weight: 100
-      +box-shadow(2px 2px 5px #cccccc)
+      box-shadow: 2px 2px 5px #cccccc
       &:hover
         color: darken($gray, 10%)
-        +box-shadow(2px 2px 5px $gray)
+        box-shadow: 2px 2px 5px $gray
       &.question
         background-position: 0 0px
         &:hover, &:focus
@@ -272,7 +274,7 @@
 #breadcrumb-nav
   display: block
   margin: 0 0 $pad-sm
-  +border-radius($pad-sm)
+  border-radius: $pad-sm
   p
     @include font-size(.91) // 11px/1.375
   a

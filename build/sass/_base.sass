@@ -1,11 +1,11 @@
 html	
 	background: $header-bg1
-	+background-image(linear-gradient(left, $gray-bg, $border-color, $gray-bg))
+	background: linear-gradient(left, $gray-bg, $border-color, $gray-bg)
 	font-size: 100.1%
 body
 	min-width: 1100px
+	background: linear-gradient($header-bg1, $white 10%, $gold-bg)
 	@extend %nospace
-	+background-image(linear-gradient($header-bg1, $white 10%, $gold-bg))
 #wrapper
 	overflow: hidden
 	width: 100%
@@ -18,18 +18,22 @@ body
 	float: right
 	width: 70%
 	min-height: 700px
+	box-sizing: border-box
 	margin: 0 0 $pad-sm
 	padding: $pad
-	+box-sizing(border-box)
 	&.col-1-1
+		width: 100%
+	@include print
 		width: 100%
 #sidebar
 	position: relative
+	overflow: hidden
 	float: left
 	width: 30%
+	box-sizing: border-box
 	padding: $pad
-	overflow: hidden
-	+box-sizing(border-box)
+	@include print()
+		display: none
 
 /*Grid*/
 .grid
@@ -39,8 +43,8 @@ body
 		clear: both
 [class*='col-']
 	float: left
+	box-sizing: border-box
 	padding-right: $pad
-	+box-sizing(border-box)
 	&:last-of-type
 		padding-right: 0
 .col-2-3
@@ -49,10 +53,10 @@ body
 	width: 33%
 
 .module
+	box-sizing: border-box
 	padding: $pad
 	border: 1px solid $border-color-lite
 	background: $gray-bg-lite
-	+box-sizing(border-box)
 .module-sm
 	@extend .module
 	padding: $pad-sm

@@ -19,3 +19,17 @@
 @mixin mq($size)
 	@media screen and (max-width: $size)
 		@content
+
+@mixin link()
+	color: $link
+	text-decoration: none
+	@include print
+		&:after
+			content: " ("attr(href)") "
+	&:hover, &:focus
+		color: darken($link, 15%)
+		text-decoration: underline
+
+@mixin print()
+	@if $print == true
+		@content

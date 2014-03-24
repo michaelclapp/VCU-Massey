@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['build/sass/**/*.sass'],
-        tasks: ['compass', 'copy', 't4']
+        tasks: ['compass', 'autoprefixer', 'copy', 't4']
       },
       images: {
         files: ['build/imgs/*'],
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
           'assets/views/*.html': ['assets/js/*.js']
         }
       },
-      css : {
+      css: {
         options: {
           startTag: '<!--CSS-->',
           endTag: '<!--CSS END-->',
@@ -128,6 +128,17 @@ module.exports = function(grunt) {
         },
         files: {
           'assets/views/*.html': ['assets/css/global.css', 'assets/css/global-flexy.css', '!assets/css/ie.css']
+        }
+      },
+      cssPrint: {
+        options: {
+          startTag: '<!--CSS Print-->',
+          endTag: '<!--CSS Print END-->',
+          fileTmpl: '<link rel="stylesheet" media="print" href="../%s" />',
+          appRoot: 'assets/'
+        },
+        files: {
+          'assets/views/*.html': ['assets/css/print.css']
         }
       },
       ie : {
@@ -205,6 +216,14 @@ module.exports = function(grunt) {
           baseDir: 'assets/'
         }
       }
+    },
+    autoprefixer: {
+      files: {
+        expand: true,
+        flatten: true,
+        src: 'assets/css/*.css',
+        dest:'assets/css/'
+      }
     }
   });
   // load plugins
@@ -222,6 +241,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sails-linker');
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
 grunt.registerTask('replace-t4', function() {
   var cssReplacements = grunt.file.readJSON('replacements.json');

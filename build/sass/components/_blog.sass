@@ -52,7 +52,9 @@ a
 	width: 45%
 	margin-top: $pad-sm
 	padding: $pad-sm
-	+box-sizing(border-box)
+	box-sizing: border-box
+	@include print
+		display: none
 .blog-meta
 	float: right
 	background: $gray-bg-lite
@@ -71,10 +73,12 @@ iframe#twitter-widget-0
 	width: 100%
 	margin-top: $pad
 	@include font-size(1)
+	@include print
+		display: none
 	.prev, .next
 		position: relative
 		width: 45%
-		+box-sizing(border-box)
+		box-sizing: border-box
 		a
 			display: block
 			background: $gray-bg-lite
@@ -90,7 +94,7 @@ iframe#twitter-widget-0
 			width: 20px
 			height: 20px
 			background: url('../imgs/layout/next-prev.png')
-			+translate(0%,-50%)
+			transform: translate(0%, -50%)
 	.prev
 		float: left
 		a

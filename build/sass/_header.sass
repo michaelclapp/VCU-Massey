@@ -17,8 +17,8 @@
     height: auto
     margin: 0 auto
     padding: $pad $pad 0
-    +background-image(linear-gradient(rgba($header-bg1, 0), $white))
-    +box-sizing(border-box)
+    background: linear-gradient(rgba($header-bg1,0), $white)
+    box-sizing: border-box
     &:after
       display: block
       visibility: hidden
@@ -37,6 +37,8 @@
     .right
       float: right
       width: 229px
+      @include print
+        display: none
       a.ncicc-link
         float: left
         width: 229px

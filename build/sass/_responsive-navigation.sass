@@ -15,9 +15,9 @@ a#menu
 		color: $white
 		text-align: center
 		@include font-size(1)
-		+background-image(linear-gradient($nav-gray, darken($nav-gray,20%)))
-		+border-radius($pad)
-		+box-sizing(border-box)
+		background: linear-gradient($nav-gray, darken($nav-gray, 20%))
+		border-radius: $pad
+		box-sizing: border-box
 		&:hover, &:focus
 			border: none
 			background: $nav-gold
@@ -30,7 +30,7 @@ a#menu
 			margin: 0 !important
 			padding: $pad-sm
 			text-align: left !important
-			+box-sizing(border-box)
+			box-sizing: border-box
 			&.more
 				display: block !important
 				float: right
@@ -53,7 +53,7 @@ a#menu
 			height: 100%
 			@extend %nospace
 			border-right: $black 5px solid
-			+transition(left .8s ease-in-out)
+			transition: left .8s ease-in-out
 			&.active
 				left: 0
 			li
@@ -75,7 +75,7 @@ a#menu
 					display: block
 				> ul
 					width: 100%
-					+transition(max-height .8s ease-in-out)
+					transition: max-height .8s ease-in-out
 					&.dip
 						display: none
 					&.dip-mama
@@ -139,7 +139,7 @@ a#menu
 		left: 0
 		width: 100%
 		margin: 0
-		+border-radius(0)
+		border-radius: 0
 		&:hover, &:focus
 			border: none
 	#rufio
@@ -167,7 +167,7 @@ a#menu
 		height: auto
 		max-height: 0
 		width: 100%
-		+transition(max-height .8s ease-in-out)
+		transition: max-height .8s ease-in-out
 		&.active
 			max-height: 9999px
 	#vcuIdentityWrapper, #rufio, #wrapper, #footer
