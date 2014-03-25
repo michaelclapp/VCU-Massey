@@ -31,12 +31,16 @@
       height: 93px
       background: url('../imgs/layout/massey.png') no-repeat
       text-indent: -9999px
+      @include print
+        text-indent: 0
       &:hover, &:focus
         border: 0
         text-decoration: none
     .right
       float: right
       width: 229px
+      @include print
+        display: none
       a.ncicc-link
         float: left
         width: 229px

@@ -21,6 +21,8 @@ body
 	margin: 0 0 $pad-sm
 	padding: $pad
 	+box-sizing(border-box)
+	@include print
+		width: 100%
 	&.col-1-1
 		width: 100%
 #sidebar
@@ -30,6 +32,8 @@ body
 	padding: $pad
 	overflow: hidden
 	+box-sizing(border-box)
+	@include print
+		display: none
 
 /*Grid*/
 .grid

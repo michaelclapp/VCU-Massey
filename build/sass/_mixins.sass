@@ -19,3 +19,7 @@
 @mixin mq($size)
 	@media screen and (max-width: $size)
 		@content
+
+@mixin print
+	@if $print == true
+		@content

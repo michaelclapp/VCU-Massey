@@ -2,6 +2,8 @@
   display: block
   margin: 0 0 $pad-sm
   +border-radius($pad-sm)
+  @include print
+    border: none
   p
     @include font-size(.91) // 11px/1.375
   a

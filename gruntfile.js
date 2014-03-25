@@ -130,6 +130,17 @@ module.exports = function(grunt) {
           'assets/views/*.html': ['assets/css/global.css', 'assets/css/global-flexy.css', '!assets/css/ie.css']
         }
       },
+      cssPrint : {
+        options: {
+          startTag: '<!--CSS Print-->',
+          endTag: '<!--CSS Print END-->',
+          fileTmpl: '<link rel="stylesheet" media="print" href="../%s" />',
+          appRoot: 'assets/'
+        },
+        files: {
+          'assets/views/*.html': ['assets/css/print.css']
+        }
+      },
       ie : {
         options: {
           startTag: '<!--[if lte IE 8]>',

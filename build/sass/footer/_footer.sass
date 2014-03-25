@@ -19,13 +19,8 @@ $border-color: lighten($nav-gray, 30%)
 	font:
 		family: Helvetica, Arial, sans-serif
 	@include font-size(1) //12px/1.375
-	/* .sunburst
-		position: absolute
-		z-index: 0
-		right: 0
-		bottom: 0
-		width: 450px
-		height: 300px */
+	@include print
+		display: none
 	.wrapper
 		position: relative
 		width: 100%
