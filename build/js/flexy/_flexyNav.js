@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   //Add menu button to all pages
-  $('#rufio').append('<a href="#" id="menu">Menu</a>');
+  $('#rufio').append('<a href="#" id="menu"><i class="fa fa-bars"></i> Menu</a>');
   
   var mainNav = $('#rufio nav');
   var menuBtn = $('a#menu');
@@ -26,7 +26,7 @@ $(document).ready(function() {
       $('#rufio nav > ul').removeClass('active');
     }
   });
-
+  
   $('nav').click(function(e) {
     e.stopPropagation();
   });
@@ -45,7 +45,7 @@ $(document).ready(function() {
   });
 
   //if the li has children add a more + button
-  $('li:has(a.parent)').prepend('<a class="more" href="#">+</a>');
+  $('li:has(a.parent)').prepend('<a class="more" href="#"><i class="fa fa-chevron-right"></i></a>');
 
   //$('.parent').before('<a class="more" href="#">+</a>');
 

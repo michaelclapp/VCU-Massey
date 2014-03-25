@@ -1,0 +1,29 @@
+@@include('header.html') 
+@@include('vcuIdentityHeader.html') 
+@@include('mainNav.html') 
+  
+  <div id="wrapper" class="clearfix">
+    <div id="container" class="clearfix"><!-- start content container -->
+      <div id="content">
+        <div class="gutter">
+        
+          @@include('breadcrumbNav.html')
+        
+          <h2 class="title">Patient services</h2>
+
+          <select name="diagnosis" id="diagnosis">
+            <option value="bladder">Bladder cancer</option>
+            <option value="bone">Bone cancer</option>
+            <option value="brain">Brain cancer</option>
+            <option value="breast">Breast cancer</option>
+          </select>
+
+        </div><!--end .gutter-->
+      </div><!--end #content-->
+
+      @@include('sidebar.html')
+
+    </div><!--end #container-->
+  </div><!--end #wrapper-->
+@@include('footerContent.html') 
+@@include('footer.html') 
