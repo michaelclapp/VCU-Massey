@@ -1,6 +1,5 @@
 html	
-	background: $header-bg1
-	background: linear-gradient(left, $gray-bg, $border-color, $gray-bg)
+	background: #BABABA
 	font-size: 100.1%
 body
 	min-width: 1100px
@@ -23,8 +22,6 @@ body
 	padding: $pad
 	&.col-1-1
 		width: 100%
-	@include print
-		width: 100%
 #sidebar
 	position: relative
 	overflow: hidden
@@ -32,8 +29,6 @@ body
 	width: 30%
 	box-sizing: border-box
 	padding: $pad
-	@include print()
-		display: none
 
 /*Grid*/
 .grid
@@ -57,8 +52,6 @@ body
 	padding: $pad
 	border: 1px solid $border-color-lite
 	background: $gray-bg-lite
-	@include print
-		border: none
 .module-sm
 	@extend .module
 	padding: $pad-sm

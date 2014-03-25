@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-  //Add menu button to all pages
-  $('#rufio').append('<a href="#" id="menu"><i class="fa fa-bars"></i> Menu</a>');
   
   var mainNav = $('#rufio nav');
   var menuBtn = $('a#menu');
@@ -11,7 +8,7 @@ $(document).ready(function() {
   var secondLvl = $('#rufio nav > ul li > ul');
 
   //on click, make rest of page move offscreen
-  $(menuBtn).on('click', function(e){
+  $(menuBtn).click(function(e){
     e.preventDefault();
     e.stopPropagation();
     $('#rufio nav > ul').toggleClass('active');

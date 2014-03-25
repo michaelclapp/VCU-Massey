@@ -1,35 +1,26 @@
-$print: true
+@import "_helpers/_variables"
+@import "_helpers/_mixins"
+@import "_helpers/_extends"
 
-@import "_normalize"
-@import "_variables"
-@import "_mixins"
-@import "_extends"
+html
+	font-size: 12px
+	font-family: $sans-serif
 
-@import "_base"
-
-@import "_typography"
-@import "_images"
-@import "_identity"
-@import "_header"
-@import "_navigation"
-@import "_layout"
-@import "_footer"
-@import "_home-styles"
-@import "_globalSearch"
-@import "_flexslider"
-
-@import "components/_azList"
-@import "components/_cancerNav"
-@import "components/_widgetCallouts"
-@import "components/_contentWell"
-@import "components/_tabs"
-@import "components/_video"
-@import "components/_audio"
-@import "components/_childFeature"
-@import "components/_blog"
-@import "components/_contentFilter"
-@import "components/_staffProfile"
-@import "components/_photoCaptions"
-@import "components/_imageLightbox"
-@import "components/_photoSlider"
-//@import "components/_emergencyAlert"
+#content
+	width: 100%
+#sidebar, #footer, #rufio .wrapper .right, #rufio nav, .blog-meta, .blog-share, .iterator
+	display: none
+.module, #breadcrumb-nav
+	border: none
+#rufio .wrapper h1 a
+	width: 100%
+	height: auto
+	@include font-size(1.5)
+	text-indent: 0
+#breadcrumb-nav, #rufio .wrapper h1, #az-nav, .pagination
+	a
+		&:after
+			content: ""
+a
+	&:after
+		content: " ("attr(href)") "
