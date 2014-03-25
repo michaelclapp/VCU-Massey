@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['build/sass/**/*.sass', 'build/sass/**/*.scss'],
-        tasks: ['compass', 'autoprefixer', 'copy', 't4']
+        tasks: ['sass', 'autoprefixer', 'copy', 't4']
       },
       images: {
         files: ['build/imgs/*'],
@@ -30,11 +30,15 @@ module.exports = function(grunt) {
       }
     },
 
-    compass: {
-      dist: {
-        options: {
-          config: 'config.rb'
-        }
+    sass: {
+      options: {
+        style: 'compressed'
+      },
+      files: {
+        'assets/global-flexy.css': 'build/global-flexy.sass',
+        'assets/global.css': 'build/global.sass',
+        'assets/ie.css': 'build/ie.sass',
+        'assets/print.css': 'build/print.sass'
       }
     },
     uglify: {
@@ -227,21 +231,22 @@ module.exports = function(grunt) {
     }
   });
   // load plugins
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-include-replace');
   grunt.loadNpmTasks('grunt-sails-linker');
   grunt.loadNpmTasks('grunt-text-replace');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-autoprefixer');
 
 grunt.registerTask('replace-t4', function() {
   var cssReplacements = grunt.file.readJSON('replacements.json');
@@ -250,7 +255,7 @@ grunt.registerTask('replace-t4', function() {
 });
 
 //Build the initial directories
-grunt.registerTask('build', ['bower', 'compass', 'concat', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 't4', 'uglify', 'cmq', 'cssmin', 'watch']);
+grunt.registerTask('build', ['bower', 'sass', 'concat', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 't4', 'uglify', 'cmq', 'cssmin', 'watch']);
 
 //Builds T4 directory
 grunt.registerTask('t4', ['replace-t4']);
