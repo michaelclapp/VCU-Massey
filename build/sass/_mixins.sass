@@ -6,29 +6,34 @@
 
 @mixin border($type, $thickness, $style)
 	@if $type == all
-		border: $thickness+px $border-color $style
+		border: $thickness+px $color-border $style
 	@else if $type == top
-		border-top: $thickness+px $border-color $style
+		border-top: $thickness+px $color-border $style
 	@else if $type == right
-		border-right: $thickness+px $border-color $style
+		border-right: $thickness+px $color-border $style
 	@else if $type == bottom
-		border-bottom: $thickness+px $border-color $style
+		border-bottom: $thickness+px $color-border $style
 	@else if $type == left
-		border-left: $thickness+px $border-color $style
+		border-left: $thickness+px $color-border $style
 
 @mixin mq($size)
 	@media screen and (max-width: $size)
 		@content
 
 @mixin link()
-	color: $link
-	text-decoration: none
-	@include print
-		&:after
-			content: " ("attr(href)") "
-	&:hover, &:focus
-		color: darken($link, 15%)
-		text-decoration: underline
+	&:link, &:visited, &:active
+		padding-bottom: 1px
+		color: $color-link
+		font-weight: bold
+		text-decoration: none
+		@include print
+			&:after
+				content: " ("attr(href)") "
+		&:hover, &:focus, &:active
+			padding-bottom: 1px
+			@include border(bottom, 1, solid)
+			background: $color-link-hover-bg
+			color: $color-link-hover
 
 @mixin print()
 	@if $print == true

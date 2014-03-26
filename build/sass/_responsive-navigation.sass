@@ -50,7 +50,8 @@ a#menu
 			z-index: 9999
 			width: 350px
 			height: 100%
-			@extend %nospace
+			margin: 0
+			padding: 0
 			border-right: $black 5px solid
 			transition: left .8s ease-in-out
 			&.active
@@ -65,7 +66,7 @@ a#menu
 					background: none
 				a.more
 					&:hover, &:focus
-						background: $identity
+						background: $color-vcu-identity
 						color: $black
 				&:after
 					display: none

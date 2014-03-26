@@ -34,11 +34,13 @@ module.exports = function(grunt) {
       options: {
         style: 'compressed'
       },
-      files: {
-        'assets/global-flexy.css': 'build/global-flexy.sass',
-        'assets/global.css': 'build/global.sass',
-        'assets/ie.css': 'build/ie.sass',
-        'assets/print.css': 'build/print.sass'
+      dist: {
+        files: {
+          'assets/css/global-flexy.css': 'build/sass/global-flexy.sass',
+          'assets/css/global.css': 'build/sass/global.sass',
+          'assets/css/ie.css': 'build/sass/ie.sass',
+          'assets/css/print.css': 'build/sass/print.sass'
+        }
       }
     },
     uglify: {
