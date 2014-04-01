@@ -8,7 +8,7 @@
             <form id="sitesearch" name="gs" method="get" action="http://search.vcu.edu/search">
               <label for="searchField">Search:</label>
               <div>
-                <input type="text" name="q" class="field" id="searchField" value="Search the site" />
+                <input type="text" name="q" class="field" id="searchField" value="Search the site" onfocus="this.value=''" />
                 <input id="search_btn" type="image" src="http://www.massey.vcu.edu/images/layout/search-btn-mask.gif" name="Search" alt="Go" />
               </div>
               <input type="hidden" name="query" value="" />
@@ -1900,7 +1900,7 @@
 </li>
 
 </ul>
-</li><li><a href="/intranet/">Intranet</a>
+</li><li><span><a href="/intranet/">Intranet</a></span>
 <ul class="multilevel-linkul-0">
 <li><a href="https://oncoreapp.mcvh-vcu.edu/login/">Access Oncore</a></li>
 <li><a href="/intranet/announcements/">Announcements</a>

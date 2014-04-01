@@ -1,11 +1,17 @@
+$nav-width: 350px
+
 a#menu
 	display: none
 @include mq($papabear)
-	#rufio nav > ul
-		@include font-size(1)
+	#rufio nav > ul li a
+		@include font-size(.9)
 @include mq($mamabear)
-	a#menu
+	a
+		&#menu, &.more, &.back, &.close
+			display: block !important
+	#rufio nav ul ul
 		display: block
+	a#menu
 		position: absolute
 		right: 2%
 		top: 0
@@ -22,117 +28,152 @@ a#menu
 			border: none
 			background: $nav-gold
 	#rufio nav
-		height: auto
-		a
+		ul ul ul, ul ul ul ul, ul ul ul ul ul
 			display: block
-			width: 100%
-			height: auto
-			margin: 0 !important
-			padding: $pad-sm
-			text-align: left !important
-			box-sizing: border-box
-			&.more
-				display: block !important
-				float: right
-				width: 25%
-				height: 100%
-				padding: $pad-sm !important
-				color: $white
-				text-align: center !important
-				&:hover, &:focus
-					background: $white
-		ul
-			display: block
+			height: 100%
+	#rufio
+		nav
 			position: fixed
 			top: 0
-			left: -355px
-			overflow-y: scroll
-			z-index: 9999
-			width: 350px
-			height: 100%
+			left: -1*$nav-width
+			overflow-x: hidden
+			width: $nav-width
+			min-height: 100%
 			margin: 0
-			padding: 0
-			border-right: $black 5px solid
+			background: $color-nav-bg
 			transition: left .8s ease-in-out
 			&.active
 				left: 0
+			a, ul, li 
+				box-sizing: border-box
 			li
-				overflow: hidden
-				margin: 0
-				padding: 0
+				float: left
 				width: 100%
-				border-bottom: 1px solid lighten($gray, 5%)
-				&:hover, &:focus
-					background: none
-				a.more
-					&:hover, &:focus
-						background: $color-vcu-identity
-						color: $black
+				border-bottom: 1px solid #4f4f4f
 				&:after
 					display: none
+				&:hover, &:focus, &:active
 					background: none
-				&:nth-child(n+8)
-					display: block
-				> ul
-					width: 100%
-					transition: max-height .8s ease-in-out
-					&.dip
-						display: none
-					&.dip-mama
-						display: block
-						max-height: 9999px
-					li 
-						margin: 0 !important
-						a
-							width: 100%
-							padding: $pad-sm
-							&.parent
-								width: 75%
-		> ul
-			background: $nav-gray //fall-back
-			background: url('../imgs/layout/menu-bg.jpg')
-			li
-				&:nth-child(n+6) > ul
-					float: left
+					color: inherit
+					a
+						color: $white
+			.menuControls
+				float: left
+				width: 100%
+				height: auto
+				border-bottom: 1px solid #4f4f4f
+				background: #333
+				color: $color-body
 				a
-					display: block
-					width: 100%
-					&.parent
-						width: 75%
+					&.back, &.close
+						float: left
+						width: 50%
+						&:hover, &:focus, &:active
+							background: $gold
+					&.close
+						float: right
+						padding-right: $pad
+						text-align: right
+			a
+				display: inline-block
+				float: left
+				width: 100%
+				height: auto
+				padding: $pad $pad-sm $pad $pad
+				@include font-size(1)
+				text-align: left
+				text-decoration: none
+				text-transform: uppercase
+				&:hover
+					background: #333
+					color: #fff
+				&.has-child
+					width: 80%
+				&.more
+					float: right
+					width: 20%
+					padding: $pad $pad-sm
+					text-align: center
+			span a
+				&.has-child
+					width: 80%
+					background: $blue
+					color: $white
 			ul
-				background: $nav-gold
-				li a
-					padding-left: $pad !important
-				a.more
-					background: darken($nav-gold, 10%)
+				position: fixed
+				left: -1*$nav-width
+				top: 0
+				overflow-y: scroll
+				width: $nav-width
+				height: 100%
+				background: $color-nav-bg
+				transition: left .8s ease-in-out
+				&.active
+					left: 0
+				&.off-left
+					left: -1*$nav-width
+				> li:nth-child(n+8)
+					display: block
+				> li
+					> ul 
+						display: block
+						position: fixed
+						top: 0
+						left: 0
+						width: $nav-width
+						height: 100%
+						padding-top: 0
+						background: $color-nav-bg
 				ul
-					background: darken($nav-gold, 10%)
-					a.more
-						background: darken($nav-gold, 13%)
-					ul
-						background: darken($nav-gold, 13%)
-						a.more
-							background: darken($nav-gold, 16%)
-						ul
-							background: darken($nav-gold, 16%)
-							a.more
-								background: darken($nav-gold, 19%)
-	#rufio nav > ul li:hover a
-		color: $gray
-	#rufio nav > ul > li:hover > a, #rufio nav > ul > li:hover > a span  
-		color: $white
-		&:hover, &:focus
-			color: $gray
-	#sidebar, ul#util-nav
+					position: fixed
+					left: 0
+					top: 0
+					overflow-y: scroll
+					width: $nav-width
+					height: 100%
+					max-height: 9999px
+					padding: 0
+					background: $color-nav-bg
+					&.dip
+						position: absolute
+						top: 0
+						left: -1*$nav-width
+						display: none
+						height: 0
+					li a
+						width: 100%
+						margin: 0
+						padding: $pad
+						@include font-size(1)
+						color: $white
+						&:hover, &:focus, &:active 
+							background: #333
+	#util-nav, #sidebar
 		display: none
 #vcuIdentityWrapper, #rufio, #wrapper, #footer
-	@extend %transition
+	@extend %transition-margin-left
 	&.active-nav
 		margin-left: 350px
 		@media screen and (min-width: $mamabear)
 			margin-left: 0
 
+
 @include mq($babybear)
+	$nav-width: 100%
+	#rufio
+		nav
+			ul
+				left: -1*$nav-width
+				width: $nav-width
+				&.off-left
+					left: -1*$nav-width
+				> li > ul
+					width: $nav-width
+				ul
+					width: $nav-width
+	#vcuIdentityWrapper, #rufio, #wrapper, #footer
+		&.active-nav
+			margin-left: 0
 	a#menu
 		position: absolute
 		top: 0
@@ -140,36 +181,3 @@ a#menu
 		width: 100%
 		margin: 0
 		border-radius: 0
-		&:hover, &:focus
-			border: none
-	#rufio
-		position: absolute
-		z-index: 9999
-		top: 35px
-		left: 0
-		overflow: visible
-		.wrapper
-			overflow: visible
-			width: 100%
-			margin-top: 25px
-	#rufio nav
-		display: block
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		margin: 0 !important
-		padding: 0
-	#rufio nav > ul
-		position: absolute
-		left: 0
-		top: 10px
-		height: auto
-		max-height: 0
-		width: 100%
-		transition: max-height .8s ease-in-out
-		&.active
-			max-height: 9999px
-	#vcuIdentityWrapper, #rufio, #wrapper, #footer
-		&.active-nav
-			margin-left: 0

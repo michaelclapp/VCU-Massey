@@ -5,111 +5,134 @@
   nav
     z-index: 9999 !important
     float: left
-    margin: $pad 0 0
-    > ul
+    width: 100%
+    margin: $pad 0 0 
+    ul
       position: relative
       float: left
       width: 100%
-      max-width: 960px
+      //max-width: 960px
       height: 40px
       margin: 0 auto
-      background: $color-nav-bg
+      background: $gray2
       color: $color-nav-text
       @include font-size(1.1666667) //14px/21px
       font:
         family: $sans-serif
         weight: 100
-      > li:nth-child(n+8)
-        display: none
-      li
-        position: relative
-        float: left 
-        width: 14.2857%
-        @extend %nospace
-        color: $white
-        &:hover, &:focus
-          background: $nav-gold
-          color: $nav-gray
-          a
-            color: $nav-gray
-        &:after
+    > ul
+      > li
+        ul
+          display: none
+          position: relative
+          z-index: 9999
+          overflow-y: hidden
+          width: 250px
+          height: auto
+          padding-top: $pad-sm
+          border-top: none
+          background: $gold
+        &:hover > ul
           display: block
-          position: absolute
-          top: 0
-          left: 0
-          width: 1px
-          height: 32px
-          background: url('../imgs/layout/nav-bar.png')
-          content: ""
-        &:first-child:after
-          background: none
+      > li
+        &:nth-child(n+9)
+          display: none
+    li
+      position: relative
+      float: left 
+      width: 14.2857%
+      @extend %nospace
+      color: $white
+      &:hover, &:focus
+        background: $nav-gold
+        color: $nav-gray
         a
-          display: table-cell
-          width: 14.2857%
-          height: 39px
-          border-bottom: 0
-          color: $white
-          font-weight: 100
-          letter-spacing: 1px
-          text-align: center
-          vertical-align: middle
-          &:hover, &:focus
-            background: $nav-gold
-            color: $nav-gray
-          &.more
-            display: none
-        span
-          display: block
-          background: $nav-blue
-          &.dip
-            display: block
-            background: $nav-gold !important
-        &:last-of-type > ul
-          float: right
-        &:last-of-type span > ul
-          float: right
-        &:nth-child(n+6) > ul 
-          float: right
-        &:nth-child(n+6) span > ul 
-          float: right
-      ul
-        position: relative
+          color: $nav-gray
+      &:after
+        display: block
+        position: absolute
         top: 0
         left: 0
-        z-index: 9999
-        overflow-y: hidden
-        width: 250px
-        height: auto
-        max-height: 0px
-        border-top: none
+        width: 1px
+        height: 32px
+        background: url('../imgs/layout/nav-bar.png')
+        content: ""
+      &:first-child:after
+        display: none
+        background: none
+        width: 0
+        height: 0
+        content: ""
+      &:last-of-type > ul
+        float: right
+      &:last-of-type span > ul
+        float: right
+      &:nth-child(n+6) > ul 
+        float: right
+      &:nth-child(n+6) span > ul 
+        float: right
+    a
+      display: table-cell
+      width: 14.2857%
+      height: 39px
+      border-bottom: 0
+      color: $white
+      font-weight: 100
+      letter-spacing: 1px
+      text-align: center
+      vertical-align: middle
+      &:hover, &:focus
         background: $nav-gold
-        &.dip
-          max-height: 9999px
-        li
-          display: block
+        color: $nav-gray
+      &.more
+        display: none
+    span
+      display: block
+      background: $nav-blue
+      /*&.dip
+        display: block
+        background: $nav-gold !important*/
+    ul ul
+      //position: relative
+      //top: 0
+      //left: 0
+      //z-index: 9999
+      //overflow-y: hidden
+      //width: 250px
+      //height: 0
+      //border-top: none
+      //background: $nav-gold
+      //&.dip
+        //height: auto
+      li
+        display: block
+        float: left
+        width: 100%
+        padding: 0
+        @include font-size(1)
+        &:after
+          background: none
+        &:first-child
+          margin-top: $pad-sm
+        &:last-child
+          margin-bottom: $pad-sm
+        a
           float: left
-          width: 100%
-          padding: 0
-          @include font-size(1)
-          &:after
-            background: none
-          &:first-of-type
-            margin-top: 10px
-          &:last-of-type
-            margin-bottom: 10px
-          a
-            float: left
-            width: 210px
-            height: auto
-            margin: 0 10px
-            padding: ($pad-sm/2) $pad-sm
-            color: $black
-            text-align: left
-            &:hover, &:focus
-              color: $white
-              background: darken($nav-gold, 10%)
-        ul, ul ul, ul ul ul, ul ul ul ul
-          display: none
+          width: 210px
+          height: auto
+          margin: 0 10px
+          padding: ($pad-sm/2) $pad-sm
+          color: $black
+          text-align: left
+          &:hover, &:focus
+            color: $white
+            background: darken($nav-gold, 10%)
+
+#rufio nav
+  ul ul ul, ul ul ul ul, ul ul ul ul ul
+    display: none
+  a.more, a.back, a.close
+    display: none
 .clear
   clear: both
 

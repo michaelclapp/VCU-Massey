@@ -8,8 +8,10 @@
 	.main-results-without-dn
 		@extend %nospace
 		p.g
+			box-sizing: border-box
 			padding: $pad $pad 0
-			@extend .profile
+			border: 1px solid $color-module-border
+			background: $color-module-bg
 			td.s
 				background: none
 	table td
