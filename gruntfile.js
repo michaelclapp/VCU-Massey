@@ -39,7 +39,8 @@ module.exports = function(grunt) {
           'assets/css/global-flexy.css': 'build/sass/global-flexy.sass',
           'assets/css/global.css': 'build/sass/global.sass',
           'assets/css/ie.css': 'build/sass/ie.sass',
-          'assets/css/print.css': 'build/sass/print.sass'
+          'assets/css/print.css': 'build/sass/print.sass',
+          'assets/css/critical.css': 'build/sass/critical.sass'
         }
       }
     },
@@ -111,7 +112,7 @@ module.exports = function(grunt) {
           appRoot: 'assets/'
         },
         files: {
-          'assets/views/*.html': ['assets/js/lib/modernizr/modernizr.js']
+          'assets/views/*.html': ['assets/js/lib/modernizr/modernizr.js','assets/js/lib/angular/angular.min.js', 'assets/js/app.js']
         }
       },
       js : {
@@ -204,6 +205,12 @@ module.exports = function(grunt) {
           'build/js/flexy/_flexyNav.js',
         ],
         dest: 'assets/js/global-flexy.js',
+      },
+      app: {
+        src: [
+          'build/js/app/_directory.js',
+        ],
+        dest: 'assets/js/app.js',
       }
     },
     browserSync: {

@@ -1,4 +1,4 @@
-#anchorlinks
+/*#anchorlinks
   display: block
   clear: both
   margin-bottom: 2em
@@ -13,10 +13,10 @@
         margin-right: 14px
         font-style: italic
         list-style: none
-        text-decoration: none
+        text-decoration: none*/
 
 // Events page (content format)
-#events
+/*#events
   dl
     margin: 0
     border-bottom: 1px solid #c7c7c7
@@ -37,7 +37,7 @@
       @extend %nospace
       font:
         size: 15px
-        weight: 700
+        weight: 700 */
 
         
 // Tables default blue border
@@ -45,136 +45,126 @@
 
 
 // Images
-img
+/*img
   border: 0
-  background: none
+  background: none*/
 
-.imgright
+/*.imgright
   float: right
   margin: 0 0 1.25em 1em
   padding: 0
   border: 0
-  background: $white
+  background: $white*/
 
-.imgleft
+/*.imgleft
   float: left
   margin: 0 1.5em 0.75em 0
   border: 0
   padding: 0
-  background: #fff
+  background: #fff */
 
 // image link, hide border
 
-a.imglink
+/*a.imglink
   border: 0
   background: none
-  text-decoration: none
+  text-decoration: none*/
 
 // Main Photo (at top of content area in pages)
 
-div.main-photo img
+/*div.main-photo img
   clear: both
-  padding-bottom: 10px
+  padding-bottom: 10px*/
 
 // inset photo area (for photos that are left/right to content)
 
-.photo-right
+/*.photo-right
   float: right
   width: auto
   margin: 0 0 15px 20px
   padding: 3px
-  background: #fff
+  background: #fff*/
 
-.photo-left
+/*.photo-left
   float: left
   width: auto
   margin: 0 20px 15px 0
   padding: 3px
-  background: #fff
+  background: #fff*/
 
-.w204
-  width: 204px
+
+
+/*.w204
+  width: 204px */
 
 // vertical img with 204px width
 
-.w340
-  width: 340px
+/*.w340
+  width: 340px */
 
 // horizontal img with 340px width
 
 // captions area
 
-#content p.caption
+//*deprecated use div.caption with a p inside of it
+/*#content p.caption
   width: inherit
   margin-top: 5px
   margin-bottom: 0
   padding: 0 0 0 .2em
   color: #121212
-  font-size: 11px
+  font-size: 11px*/
 
 // Miscellaneous
-.clearfix:after
-  display: block
-  visibility: hidden
-  clear: both
-  height: 0
-  content: "."
- 
-.clear
-  clear: both
 
-.floatleft
-  float: left
+// * deprecated use .pull-left and .pull-right
+/*.floatleft
+  float: left*/
 
-.floatright
-  float: right
+/*.floatright
+  float: right*/
 
-.inline
-  display: inline
-
-em
-  font-style: italic
+/*.inline
+  display: inline*/
 
 // Jump to content - for screen readers
 
-#jumptocontent
+/*#jumptocontent
   position: absolute
-  top: -1000px
+  top: -1000px*/
 
 // anchor link lists
 
-div#anchorlinks
+/*div#anchorlinks
   display: block
   clear: both
-  margin-bottom: 2em
+  margin-bottom: 2em*/
 
 //Updates November, 2010 (mahuff)
 // 2-column layout in content area (create right-hand sidebar)
-
 #content-left-col
   display: inline
   float: left
   width: 60%
-
 #content-right-col
   display: inline
   float: right
   width: 30%
-  padding: 20px
-  background: #eee
-  line-height: 1.75em
-  h3
+  padding: $pad-sm //was 20px
+  background: $color-module-bg
+  //line-height: 1.75em
+  /*h3
     margin-bottom: 3px
     border-bottom: 1px solid #c7c7c7
     padding-bottom: 3px
-    font-size: 14px
-  p
+    font-size: 14px*/
+  /*p
     padding: 0
     background: none
     font-size: 12px
     list-style: disc
-    line-height: 1.5em
-  ul
+    line-height: 1.5em*/
+  /*ul
     li
       margin-left: 16px
       padding: 0
@@ -183,11 +173,11 @@ div#anchorlinks
       line-height: 1.5em
       list-style: disc
       //line-height:1.2;
-      line-height: 1.4
+      line-height: 1.4*/
 
 // 2-column row layout in content area (create equal width 2-column rows)
 
-.two-column-row
+/*.two-column-row
   display: block
   float: left
   width: 100%
@@ -199,19 +189,19 @@ div#anchorlinks
   .row-right-col
     display: inline
     float: right
-    width: 300px
+    width: 300px*/
 
 // Calendar (events rules)
-p.event_item
+/*p.event_item
   margin: 0
   border-top-color: #999
   border-top-style: dashed
   border-top-width: 1px
   padding-top: 7px
-  padding-bottom: 7px
+  padding-bottom: 7px*/
 
 // Types of cancer, list index
-#content #CancerList h2
+/*#content #CancerList h2
   margin: 0 0 0.5em 0
   border-top: 1px solid #c7c7c7
   padding: 5px 0 0 0
@@ -219,9 +209,9 @@ p.event_item
   font:
     family: Helvetica, Arial, sans-serif
     size: 24px
-    weight: bold
+    weight: bold*/
 
-#CancerListIndex
+/*#CancerListIndex
   ul
     float: left
     margin: 0
@@ -242,44 +232,34 @@ p.event_item
     &:hover
       background-color: #666
       color: #fff
-      text-decoration: none
+      text-decoration: none*/
 
 #content
-  #CancerList
+  /*#CancerList
     ul
       margin: 0 0 2em 1.5em
       padding: 0
     p
       margin: 0
       padding: 0
-      font-weight: bold
       &.toplink
-        padding-bottom: 3em
-  form.standard
+        padding-bottom: 3em*/
+  form
     float: left
     margin: 0
     font-size: 1.0em
     fieldset
       display: block
-      width: 660px
+      width: 100%
       margin: 0
       border: 0
-      padding: 10px 10px 10px 0
+      padding: $pad-sm $pad-sm $pad-sm 0
     ol
-      margin: 0
-      padding: 0
+      @extend %nospace
       li
         margin: 0
-        padding: 0 0 10px 0
-        list-style: none
-    li
-      li
-        padding: 0 0 0 20px
-        font-size: 1em
-      p
-        margin-top: 4px
-        font-size: 1em
-        line-height: 1.4em        
+        padding-bottom: $pad-sm
+        list-style: none       
     legend
       margin: 0 0 10px 0
       padding: 0
@@ -313,8 +293,8 @@ p.event_item
       padding: 0
     label.error
       width: 250px
-      padding-left: 10px
-      color: #fff
+      padding-left: $pad-sm
+      color: $white
       font-style: italic
 
 // Forms
@@ -465,11 +445,17 @@ textarea, select
 //#content .entry-list table {width: 650px; }
 
 // Community Calendar layout (vcu calendar feed formatting)
-table#cal_xml_feed
+//used on http://massey.vcu.edu/upcoming-events/
+
+/* #cal_xml_feed
+  width: 100%
   margin: 0 0 30px 0
-  border: 0
   padding: 0
+  border: 0
   background: none
+  tr.cal_head
+    margin-top: 20px
+    font-size: 1em
   th
     margin: 0 0 30px 0
     border: 0
@@ -479,26 +465,22 @@ table#cal_xml_feed
     margin: 0 0 30px 0
     border: 0
     padding: 6px 6px 8px
-    background: none
+    background: none */
 
 //CSS ID for table that hold list of events
 
 #cal_xml_feed
-  width: 100%
-  margin: 0
-  padding: 0
-  tr.cal_head
-    margin-top: 20px
-    font-size: 1em
-  td.cal_date
-    border-bottom: #B0C4DE dotted 1px
-    color: #666666
-    font-weight: bold
-  tr.cal_info
+  td
+    border: none
+    &.cal_date
+      border-bottom: #B0C4DE dotted 1px
+      color: $gray2
+      font-weight: bold
+  /*tr.cal_info
     font-size: 1.1em
     &:hover
-      background: #F0F8FF
-  td
+      background: #F0F8FF*/
+  /*td
     &.cal_title a
       display: block
       width: 100%
@@ -517,10 +499,9 @@ table#cal_xml_feed
     &.cal_time
       color: #666
       text-align: left
-      font-size: 11px
-  span.cal_ongoing
-    font-size: 1.2em
-
+      font-size: 11px */
+  /* span.cal_ongoing
+    font-size: 1.2em */
 //CSS class for the table row that holds the date of the event
 
 //CSS class for the table cell that holds the date of the event
@@ -539,11 +520,11 @@ table#cal_xml_feed
 
 // Calendar detail
 
-table#cal_xml_detail
+/*table#cal_xml_detail
   border-top: 1px solid #b0c4de
   font-family: Arial, Helvetica, sans-serif
   font-size: 11px
-  line-height: 1.4
+  line-height: 1.4 */
 
 // Massey CSS updates 6/14/2011
 
@@ -551,7 +532,7 @@ table#cal_xml_detail
 
 // Types of cancer, list index for cancer dictionary
 
-#content #CancerList
+/*#content #CancerList
   width: 650px
   h2
     margin: 25px 0 0.5em 0
@@ -573,7 +554,13 @@ table#cal_xml_detail
     border-bottom: 1px dotted #c7c7c7
     font
       size: 13px
-      weight: normal
+      weight: normal */
+
+// This is the A-Z listings on the top of teh Cancer Dictionary page
+// http://www.massey.vcu.edu/dictionary/
+#CancerList
+  h2
+    color: $red
 #CancerListIndex
   ul
     float: left
@@ -583,7 +570,8 @@ table#cal_xml_detail
     li
       float: left
       margin: 0
-      margin-right: 6px
+      margin-top: $pad-sm/2
+      margin-right: $pad-sm/2
       padding: 0
       background: none
   a
@@ -591,14 +579,15 @@ table#cal_xml_detail
     width: 25px
     height: 20px
     padding-top: 2px
-    border: solid 1px #ccc
+    @include border(all, 1, solid)
     text-align: center
     &:hover
-      background-color: #666
-      color: #fff
+      background-color: $gray
+      color: $white
       text-decoration: none
 
-#content
+
+/*#content
   #CancerList
     ul
       margin: 0 0 2em 1.5em
@@ -630,7 +619,7 @@ table#cal_xml_detail
       margin: 0
       padding: 0
       color: #444 !important
-      font-size: 11px !important
+      font-size: 11px !important */
 
 // Note: Add this to MAIN.CSS for Photo Table Captions styles
 
@@ -638,130 +627,13 @@ table#cal_xml_detail
 // Note: Replace the following code in NAVIGATION.CSS for Xtra Header Nav and Main Nav
 
 // Xtra Header Navigation (RSS, E-mail, NCI-CC links)
-ul#util-nav
-  li
-    display: block
-    float: left
-    height: 25px
-    margin-right: .25em
-    list-style: none
-    a
-      display: block
-      float: left
-      margin-right: .25em
-      color: #404040
-      // IE6
-      _display: inline
-    &.nav-alert
-      background: none
-    a
-      &.facebook-link
-        width: 25px
-        height: 25px
-        border: 0
-        padding-top: 0
-        background: url('../imgs/layout/util-nav-icons.png') 0 0 no-repeat
-        text:
-          decoration: none
-          indent: -9999px
-        &:hover, &:visited
-          width: 25px
-          height: 25px
-          border: 0
-          padding-top: 0
-          background: url('../imgs/layout/util-nav-icons.png') 0 0 no-repeat
-          text:
-            decoration: none
-            indent: -9999px
-        &:hover
-          background-position: 0 -30px
-      &.twitter-link
-        text-indent: -9999px
-        background: url('../imgs/layout/util-nav-icons.png') -30px 0 no-repeat
-        text-decoration: none
-        width: 25px
-        height: 25px
-        padding-top: 0
-        border: 0
-        &:hover, &:visited
-          width: 25px
-          height: 25px
-          padding-top: 0
-          border: 0
-          background: url('../imgs/layout/util-nav-icons.png') -30px 0 no-repeat
-          text:
-            decoration: none
-            indent: -9999px
-        &:hover
-          background-position: -30px -30px
-      &.youtube-link
-        width: 25px
-        height: 25px
-        border: 0
-        padding-top: 0
-        background: url('../imgs/layout/util-nav-icons.png') -60px 0 no-repeat
-        text:
-          decoration: none
-          indent: -9999px
-        &:hover, &:visited
-          width: 25px
-          height: 25px
-          padding-top: 0
-          border: 0
-          background: url('../imgs/layout/util-nav-icons.png') -60px 0 no-repeat
-          text:
-            decoration: none
-            indent: -9999px
-        &:hover
-          background-position: -60px -30px
-      &.rss-link
-        width: 25px
-        height: 25px
-        border: 0
-        padding-top: 0
-        background: url('../imgs/layout/util-nav-icons.png') -90px 0 no-repeat
-        text:
-          decoration: none
-          indent: -9999px
-        &:hover, &:visited
-          width: 25px
-          height: 25px
-          border: 0
-          padding-top: 0
-          background: url('../imgs/layout/util-nav-icons.png') -90px 0 no-repeat
-          text:
-            decoration: none
-            indent: -9999px
-        &:hover
-          background-position: -90px -30px
-      &.email-link
-        width: 25px
-        height: 25px
-        padding-top: 0
-        border: 0
-        background: url('../imgs/layout/util-nav-icons.png') -120px 0 no-repeat
-        text:
-          decoration: none
-          indent: -9999px
-        &:hover, &:visited
-          width: 25px
-          height: 25px
-          border: 0
-          padding-top: 0
-          background: url('../imgs/layout/util-nav-icons.png') -120px 0 no-repeat
-          text:
-            decoration: none
-            indent: -9999px
-        &:hover
-          background-position: -120px -30px
 
 #search-wrapper
-  width: 661px
+  width: 100%
   margin: 0
   padding: 0
   word-wrap: -ms-word-wrap
   table-layout: fixed
-  background: #fff
   #content
     display: block
     float: none

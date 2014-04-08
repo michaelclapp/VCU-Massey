@@ -52,17 +52,13 @@
         display: block
         position: absolute
         top: 0
-        left: 0
+        right: 0
         width: 1px
         height: 32px
         background: url('../imgs/layout/nav-bar.png')
         content: ""
-      &:first-child:after
-        display: none
-        background: none
-        width: 0
-        height: 0
-        content: ""
+      &:nth-child(n+8):after
+        background: none !important
       &:last-of-type > ul
         float: right
       &:last-of-type span > ul
@@ -257,41 +253,53 @@
         &:hover, &:focus
           background-position: 0 -450px
 
-// sidebar nav list - main sub-level (no yellow arrow)
+//social nav, the one that's in the header
+ul#util-nav
+  li
+    display: block
+    float: left
+    height: 25px
+    margin-right: .25em
+    list-style: none
+    a
+      display: block
+      float: left
+      margin-right: .25em
+      color: #404040
+      // IE6
+      _display: inline
+    &.nav-alert
+      background: none
+    a
+      width: 25px
+      height: 25px
+      border: 0
+      padding-top: 0
+      text:
+        decoration: none
+        indent: -9999px
+      &.facebook-link
+        background: url('../imgs/layout/util-nav-icons.png') 0 0 no-repeat
+        &:hover, &:visited, &:active
+          background: url('../imgs/layout/util-nav-icons.png') 0 -30px no-repeat
+      &.twitter-link
+        background: url('../imgs/layout/util-nav-icons.png') -30px 0 no-repeat
+        &:hover, &:visited, &:active
+          background: url('../imgs/layout/util-nav-icons.png') -30px -30px no-repeat
+      &.youtube-link
+        background: url('../imgs/layout/util-nav-icons.png') -60px 0 no-repeat
+        &:hover, &:visited, &:active
+          background: url('../imgs/layout/util-nav-icons.png') -60px -30px no-repeat
+      &.rss-link
+        background: url('../imgs/layout/util-nav-icons.png') -90px 0 no-repeat
+        &:hover, &:visited, &:active
+          background: url('../imgs/layout/util-nav-icons.png') -90px -30px no-repeat
+      &.email-link
+        background: url('../imgs/layout/util-nav-icons.png') -120px 0 no-repeat
+        &:hover, &:visited, &:active
+          background: url('../imgs/layout/util-nav-icons.png') -120px -30px no-repeat
 
-// sidebar nav list, sub-levels 2-5 (with yellow arrow)
-// default
-
-// active
-
-// border on nav links
-
-// sidebar nav, current link activated
-
-/*-- Sidebar -- Quicklinks Navigation --*/
-
-// postiion of quicklinks list items (for overlay of image drop shadows)
-
-// Refer a Patient
-
-// Find a clinical trial
-
-// Find a doctor
-
-// Attend an Event
-
-// Search cancer dictionary
-
-// Contact Us
-
-//   	#sidebar ul#quicklinks li.t-3 {position:absolute; top: 70px; z-index:8; margin-top:-2px; background: url(http://www.csv.vcu.edu/dev/massey/images/layout/quicklink-nav-clinical.png) 0 0 no-repeat;}
-
-//ie6 quicklinks fix
-
-// hover and active state for quicklinks
-
-// Breadcrumb Navigation
-
+//breadcrumbs nav
 #breadcrumb-nav
   display: block
   margin: 0 0 $pad-sm

@@ -39,14 +39,20 @@ a
 	&.menu
 		padding: $pad-sm
 		&:hover, &:focus, &:active
-			padding: $pad-sm		
+			padding: $pad-sm
+	&#top
+		position: absolute
+		top: 0
+		left: 0
+		height: 0
+		width: 0
 %linkIconsAfter
 	display: inline-block
 	position: relative
 	content: ""
 	width: 12px
 	height: 12px
-	margin-left: 2px
+	margin-left: 2px		
 #content
 	h1, h2, h3, h4, h5, h6
 		font-family: $sans-serif
@@ -60,13 +66,13 @@ a
 		a
 			&:link, &:active, &:visited
 				border: 0
-				color: $gray-bg !important
+				color: $color-link !important
 				background: none
 				text-decoration: none
 			&:hover, &:focus
 				border: 0
 				background: none
-				color: $gray-bg-lite !important
+				color: $color-link-hover !important
 				text-decoration: underline
 		&.title
 			color: $red
@@ -127,8 +133,8 @@ a
 		font-size: 1.1em
 	p.toplink
 		margin-top: .5em
+		@include font-size(1)
 		font:
-			size: 1.1em
 			weight: 700
 	i
 		&.pull-right, &.pull-left

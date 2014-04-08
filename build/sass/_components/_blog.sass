@@ -1,23 +1,14 @@
 //blog
-.blog-excerpt
-	overflow: hidden
-	margin: $pad-sm 0
-	&.sticky
-		background: $gold-lite
-	.blog-excerpt-image
-		float: left
-		width: 30%
-		margin-right: $pad-sm
-		img
-			@extend %responsive-t4
-	&.no-bg
-		@include border(top, 1, solid)
-		border-right: none
-		border-bottom: none
-		border-left: none
-		background: none
-		h3
-			border: none !important
+.sticky
+	background: $gold-lite
+.no-bg
+	@include border(top, 1, solid)
+	border-right: none
+	border-bottom: none
+	border-left: none
+	background: none
+	h3
+		border: none !important
 .col-1-3
 	.blog-excerpt
 		p span
@@ -72,43 +63,18 @@ iframe#twitter-widget-0
 	margin-top: $pad
 	@include font-size(1)
 	.prev, .next
-		position: relative
+		float: left
 		width: 45%
 		box-sizing: border-box
 		a
 			display: block
+			padding: $pad-sm
 			background: $gray-bg-lite
 			color: $gray
 			&:hover, &:focus
 				border: 0
 				background: $gray-bg-lite
 				color: $text-blue
-		.icon
-			display: block
-			position: absolute
-			top: 50%
-			width: 20px
-			height: 20px
-			background: url('../imgs/layout/next-prev.png')
-			transform: translate(0%, -50%)
-	.prev
-		float: left
-		a
-			padding: $pad-sm $pad-sm $pad-sm $pad*2
-		.icon
-			left: ($pad-sm/2)
-			background-position: 0 20px
-		&:hover, &:focus
-			.icon
-				background-position: 20px 20px
 	.next
 		float: right
 		text-align: right
-		a
-			padding: $pad-sm $pad*2 $pad-sm $pad-sm
-		.icon
-			right: ($pad-sm/2)
-			background-position: 0 0
-		&:hover, &:focus
-			.icon
-				background-position: 20px 0

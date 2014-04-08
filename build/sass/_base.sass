@@ -49,9 +49,31 @@ body
 
 .module
 	box-sizing: border-box
+	overflow: hidden
+	margin-bottom: $pad
 	padding: $pad
 	border: 1px solid $color-module-border
 	background: $color-module-bg
 .module-sm
 	@extend .module
+	margin-bottom: $pad-sm
 	padding: $pad-sm
+.module-image
+	box-sizing: border-box
+	float: left
+	width: 30%
+	margin-right: $pad-sm
+	img
+		@extend %responsive-t4
+.col-1-3
+	.module-image
+		width: 100%
+
+.clearfix:after
+	display: block
+	visibility: hidden
+	clear: both
+	height: 0
+	content: "."
+.clear
+	clear: both

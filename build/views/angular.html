@@ -1,0 +1,28 @@
+@@include('header.html') 
+@@include('vcuIdentityHeader.html') 
+@@include('mainNav.html')
+
+  <div id="wrapper" class="clearfix">
+    <div id="container" class="clearfix"><!-- start content container -->
+      <div id="content" ng-controller="directory">
+        <div class="gutter">
+        
+          @@include('breadcrumbNav.html')
+        
+          <h2 class="title">Angular test</h2>
+          
+          <ul>
+            <li ng-repeat="person in persons | orderBy:order | limitTo:quantity">
+              <a href="{{person.profileURL}}">{{person.nameFirst}} {{person.nameLast}}</a>
+            </li>
+          </ul>
+
+        </div><!--end .gutter-->
+      </div><!--end #content-->
+
+      @@include('sidebar.html')
+
+    </div><!--end #container-->
+  </div><!--end #wrapper-->
+@@include('footerContent.html') 
+@@include('footer.html') 

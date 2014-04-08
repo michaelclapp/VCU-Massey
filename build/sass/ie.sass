@@ -10,32 +10,67 @@ form#sitesearch input.field, #search input.field:focus
 html>body form#sitesearch input.field, #search input.field:focus
 	margin: 6px 0 0 0
 
+//Navigation
 #rufio nav > ul
 	max-width: 998px
-	li
+	> li
 		display: inline-block
 		height: 40px
 		//border-left: 1px solid #ffffff (not needed)
 		&:first-child
 			border: none
+			+ li +li + li + li + li + li + li
+				display: none
+				+ li
+					display: none
 		a
 			display: inline-block
-			width: 136px !important
+			width: 136px
 			height: 29px
 			padding-top: 6px
 			font-size: 14px
 			text-align: center
 		span
 			height: 40px !important
+	ul li
+		a
+			width: 210px
 #header-links
 	width: 155px !important
-.flexslider .slides 
+#breadcrumb-nav p
+	margin: 0
+
+//Sidebar nav
+#sidebar #quicklinks a
+	padding-left: 20px
+	background: $white !important
+	&:hover, &:focus, &:active
+		background: $color-module-bg
+
+//Flexslider
+.flexslider .slides
 	img
 		width: 708px !important
 		height: 363px !important
 	span
 		width: 667px !important
-.footer-col
-	min-height: 170px !important
-#breadcrumb-nav p
-	margin: 0
+#content .flexslider .slides>li .caption
+	bottom: 20px
+.flex-direction-nav
+	top: 24px
+
+//Footer
+#footer
+	.footer-col
+		width: 325px
+		min-height: 250px !important
+		margin-right: $pad-sm
+
+//Home Styles
+#sidebar ul#intro-nav li a
+	padding-top: 25px
+#col-c
+	.news-date
+		span
+			margin: 0
+			line-height: 2

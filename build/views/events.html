@@ -1,0 +1,26 @@
+@@include('header.html') 
+@@include('vcuIdentityHeader.html') 
+@@include('mainNav.html') 
+  
+  <div id="wrapper" class="clearfix">
+    <div id="container" class="clearfix"><!-- start content container -->
+      <div id="content">
+        <div class="gutter">
+        
+          @@include('breadcrumbNav.html')
+        
+          <h2 class="title">Upcoming Events</h2>
+
+          <div id="eventfeed">
+            <script type="text/javascript" src="http://www.ts.vcu.edu/cgi-bin/cgiwrap/getcal4.pl?SearchDate=0&SearchCategory=ALL&Campus=&Buildings=&SearchAudience=0&School=Massey+Cancer+Center&Dept=&ongoing=1&dlFlag=0&areaOfFocus=&IncludeCanceled=0&topLimit=0&flag=2"></script>
+          </div>
+
+        </div><!--end .gutter-->
+      </div><!--end #content-->
+
+      @@include('sidebar.html')
+
+    </div><!--end #container-->
+  </div><!--end #wrapper-->
+@@include('footerContent.html') 
+@@include('footer.html') 

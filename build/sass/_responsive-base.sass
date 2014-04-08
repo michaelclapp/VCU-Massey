@@ -10,6 +10,10 @@ html, body, #wrapper
 		display: none
 	[class*='col-']
 		width: 100% !important
+		padding-right: 0
+	.col-1-3
+		.module-image
+			width: 30%
 @include mq($babybear)
 	body
 		background: $white
@@ -20,3 +24,10 @@ html, body, #wrapper
 		padding: 0 !important
 	[class*='col-']
 		padding-right: 0
+	.module-image
+		width: 100%
+		margin: 0 0 $pad-sm
+	.col-1-3
+		.module-image
+			width: 100%
+
