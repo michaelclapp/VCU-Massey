@@ -1,3 +1,8 @@
 @include mq($babybear)
-	#content label, #content input[type="text"]
-		width: 100% !important
+	#content form.new
+		label, input[type="text"], .radio-set, legend, select, textarea
+			width: 100%
+			margin: $pad-btn 0
+	#content form.new
+		.radio-set label
+			width: auto !important

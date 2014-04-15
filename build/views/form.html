@@ -11,115 +11,76 @@
         
           <h2 class="title">Form Example</h2>
 
-          <p>This form is for patients to use in requesting an appointment and for physicians to use to refer a patient.</p>
-          <p>If you would prefer to speak with a patient services representative at VCU Massey Cancer Center or one of our referral coordinators about an appointment, please call&nbsp;(804) 828-5116, or toll-free (877) 4-MASSEY [(877) 462-7739], Monday through Friday, from 8 a.m. until 4:30 p.m.<br /> <br /> To help us help you, please fill in all relevant fields. When you are finished, please click the &ldquo;Submit&rdquo; button at the bottom of the form to send your request. We will contact you within one business day of receipt.</p>
+          <form method="post" action="http://myforms.vcu.edu/posts" class="new module">
+              <input type="hidden" name="HTTP_REFERER" value="http://dept.vcu.edu/ask.html" />
+              <input type="hidden" name="timestamp" value="on" />
+              <span style="display: none;">
+                <textarea name="{comment}"></textarea>
+              </span>
+
+              <p><span>Required fields*</span></p>
+
+              <div>
+                <label for="name">First Name <span>*</span></label>
+                <input type="text" name="name" id="name" placeholder="First Name" />
+              </div>
+              <div>
+                <label for="name">Last Name <span>*</span></label>
+                <input type="text" name="name" id="name" placeholder="Last Name" />
+              </div>
+            
+              <div>
+                 <fieldset>
+                    <legend>Radio Button Choice</legend>
+                    <div class="radio-set">
+                        <label for="radio-choice-1">Choice 1</label>
+                        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" />
+
+                        <label for="radio-choice-2">Choice 2</label>
+                        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+                    </div>       
+                  </fieldset> 
+              </div>
+              
+
+              <div>
+                <label for="select-choice">Select Dropdown Choice:</label>
+                <select name="select-choice" id="select-choice">
+                  <option value="Choice 1">Choice 1</option>
+                  <option value="Choice 2">Choice 2</option>
+                  <option value="Choice 3">Choice 3</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="textarea">Textarea:</label>
+                <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+              </div>
+
+              <div class="checkbox">
+                <label for="checkbox">Checkbox:</label>
+                <div class="checkbox-set">
+                  <div class="check">
+                    <input type="checkbox" name="checkbox1" id="checkbox1" />
+                    <label for="checkbox1">PowerPoint</label>
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <label for="checkbox1">Laptop computer</label>
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <label for="checkbox1">LCD projector</label>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <input name="submit" type="submit" value="Submit" />
+              </div>
+            </form>  
 
 
-
-<form id="apptfrm" class="standard" onsubmit="chkform_appointment(); return false" method="post" name="apptfrm" action="https://www.vcu.edu/cgi-bin/mailto">
-    <input value="llewispatterson@mcvh-vcu.edu,dtyler@mcvh-vcu.edu,atkinsonan@mcvh-vcu.edu,ibrooksdavis@mcvh-vcu.edu,sklumb@mcvh-vcu.edu,spatterson@mcvh-vcu.edu,dlraine@vcu.edu,jnancekivell@mcvh-vcu.edu,choffmann@mcvh-vcu.edu" type="hidden" name="to" /> <input type="hidden" name="from" /> <input value="Online Appointment Request Form" type="hidden" name="subject" /> <input value="http://www.massey.vcu.edu/thankyou.html" type="hidden" name="redirect" />
-    <p class="required">* Required Field</p>
-    <p class="required">Note: Please include area code with all phone numbers.</p>
-    <fieldset class="row1">
-    <h3>Information about person sending this form</h3>
-    <ol>
-        <li><label name="sender_name">Full name of sender<span>*</span></label> <input id="sender_name" size="60" type="text" name="sender_name" /> </li>
-        <li><label name="sender_phone">Sender’s daytime phone number<span>*</span></label> (<input id="sender_phone_areacode" class="required" maxlength="3" size="3" type="text" name="sender_phone_areacode" minlength="3" />) <input id="sender_phone" class="required" maxlength="8" size="8" type="text" name="sender_phone" minlength="7" /> </li>
-        <li><label name="sender_email">Sender’s e-mail address</label> <input id="sender_email" class="required email" size="60" type="text" name="sender_email" /> </li>
-    </ol>
-    <h3>Information about the patient</h3>
-    <ol>
-        <li><label for="p_name">Full legal name<span>*</span></label> <input id="p_name" size="60" type="text" name="p_name" /> </li>
-        <li><label for="p_home_addr">Home address<span>*</span></label> <input id="p_home_addr" size="60" type="text" name="p_home_addr" /> </li>
-        <li><label for="p_city">City<span>*</span></label> <input id="p_city" size="60" type="text" name="p_city" /> </li>
-        <li><label for="p_state">State<span>*</span></label> <select id="p_state" size="1" name="p_state">
-        <option selected="true" value="#">Select a state</option>
-        <option value="al">Alabama</option>
-        <option value="ak">Alaska</option>
-        <option value="az">Arizona</option>
-        <option value="ar">Arkansas</option>
-        <option value="ca">California</option>
-        <option value="co">Colorado</option>
-        <option value="ct">Connecticut</option>
-        <option value="de">Delaware</option>
-        <option value="dc">District of Columbia</option>
-        <option value="fl">Florida</option>
-        <option value="ga">Georgia</option>
-        <option value="hi">Hawaii</option>
-        <option value="id">Idaho</option>
-        <option value="il">Illinois</option>
-        <option value="in">Indiana</option>
-        <option value="ia">Iowa</option>
-        <option value="ks">Kansas</option>
-        <option value="ky">Kentucky</option>
-        <option value="la">Louisiana</option>
-        <option value="me">Maine</option>
-        <option value="md">Maryland</option>
-        <option value="ma">Massachusetts</option>
-        <option value="mi">Michigan</option>
-        <option value="mn">Minnesota</option>
-        <option value="ms">Mississippi</option>
-        <option value="mo">Missouri</option>
-        <option value="mt">Montana</option>
-        <option value="ne">Nebraska</option>
-        <option value="nv">Nevada</option>
-        <option value="nh">New Hampshire</option>
-        <option value="nj">New Jersey</option>
-        <option value="nm">New Mexico</option>
-        <option value="ny">New York</option>
-        <option value="nc">North Carolina</option>
-        <option value="nd">North Dakota</option>
-        <option value="oh">Ohio</option>
-        <option value="ok">Oklahoma</option>
-        <option value="or">Oregon</option>
-        <option value="pa">Pennsylvania</option>
-        <option value="ri">Rhode Island</option>
-        <option value="sc">South Carolina</option>
-        <option value="sd">South Dakota</option>
-        <option value="tn">Tennessee</option>
-        <option value="tx">Texas</option>
-        <option value="ut">Utah</option>
-        <option value="vt">Vermont</option>
-        <option value="va">Virginia</option>
-        <option value="wa">Washington</option>
-        <option value="wv">West Virginia</option>
-        <option value="wi">Wisconsin</option>
-        <option value="wy">Wyoming</option>
-        </select> </li>
-        <li><label for="p_zipcode">ZIP code<span>*</span></label> <input id="p_zipcode" size="60" type="text" name="p_zipcode" /> </li>
-        <li><label for="p_country">Country</label> <input id="p_country" size="60" type="text" name="p_country" /> </li>
-        <li><label for="p_dt_phone">Daytime phone number<span>*</span></label> (<input id="p_dt_phone_areacode" class="areacode" maxlength="3" size="3" type="text" name="p_dt_phone_areacode" />) <input id="p_dt_phone" maxlength="8" size="8" type="text" name="p_dt_phone" /> </li>
-        <li><label for="p_ev_phone">Evening phone number</label> (<input id="p_ev_phone_areacode" class="areacode" maxlength="3" size="3" type="text" name="p_ev_phone_areacode" />) <input id="p_work_phone2" maxlength="8" size="8" type="text" name="p_ev_phone" /> </li>
-        <li><label for="p_cell_phone">Mobile (cell) number</label> (<input id="p_cell_phone_areacode" class="areacode" maxlength="3" size="3" type="text" name="p_cell_phone_areacode" />) <input id="p_cell_phone" maxlength="8" size="8" type="text" name="p_cell_phone" /> </li>
-        <li><label for="p_emergency_name">Emergency contact name</label> <input id="p_emergency_name" size="60" type="text" name="p_emergency_name" /> </li>
-        <li><label for="p_emergency_phone">Emergency contact number</label> (<input id="p_emergency_phone_areacode" class="areacode" maxlength="3" size="3" type="text" name="p_emergency_phone_areacode" />) <input id="p_emergency_phone" maxlength="8" size="8" type="text" name="p_emergency_phone" /> </li>
-        <li><label for="p_email">E-mail address</label> <input id="p_email" size="60" type="text" name="p_email" /> </li>
-        <li><label for="p_dob">Date of birth<span>*</span></label> <input id="p_dob" size="60" type="text" name="p_dob" /> </li>
-        <li class="radio"><label for="rbGener">Gender: </label><input id="gender1" class="radio" value="Male" type="radio" name="p_gender" /> <label for="gender1">Male</label> <input id="gender2" class="radio" value="Female" type="radio" name="p_gender" /> <label for="gender2">Female</label> </li>
-        <li><label for="reason_for_referral">Reason for referral (type of cancer or problem)<span>*</span></label> <input id="reason_for_referral" size="50" type="text" name="reason_for_referral" /> </li>
-        <li><label for="health_insurance_plan">Health insurance company</label> <input id="health_insurance_company" size="50" type="text" name="health_insurance_company" /> </li>
-    </ol>
-    <h3>Information about the referring physician (if applicable)</h3>
-    <ol>
-        <li><label for="referring_physician">Referring physician name</label> <input id="referring_physician" size="50" type="text" name="referring_physician" /> </li>
-        <li><label for="referring_physician_address">Physician’s practice name and address</label> <textarea id="referring_physician_addr" rows="6" cols="60" name="referring_physician_addr"></textarea> </li>
-        <li><label for="referring_physicians_phone">Physician’s phone number</label> (<input id="referring_physician_phone_areacode" class="areacode" maxlength="3" size="3" type="text" name="referring_physician_phone_areacode" />) <input id="referring_physicians_phone" maxlength="8" size="8" type="text" name="referring_physicians_phone" /> </li>
-        <li><label for="referring_physicians_email">Physician’s e-mail address</label> <input id="referring_physicians_email" size="50" type="text" name="referring_physicians_email" /> </li>
-    </ol>
-    <h3>Information about patient’s primary care physician</h3>
-    <ol>
-        <li><label name="pcp_name">Name of primary care physician<span>*</span></label> <input id="pcp_name" size="50" type="text" name="pcp_name" /> </li>
-        <li><label for="pcp_prative_and_address">Physician’s practice name and address</label> <textarea id="pcp_pratice_and_address" rows="6" cols="60" name="pcp_pratice_and_address"></textarea> </li>
-        <li><label name="pcp_phone">Primary care physician’s phone number<span>*</span></label> (<input id="pcp_phone_areacode" class="areacode" maxlength="3" size="3" type="text" name="pcp_phone_areacode" />) <input id="pcp_phone" maxlength="8" size="8" type="text" name="pcp_phone" /> </li>
-        <li><label for="pcp_email">Physician’s e-mail address</label> <input id="pcp_email" size="50" type="text" name="pcp_email" /> </li>
-        <li>
-        <p><label for="addl_info">Patient will be contacted in order to review insurance coverage or to obtain additional demographic and medical information. If you would like to leave a message for Massey’s patient appointment coordinator, please type it here.</label></p>
-        <p><textarea id="addl_info" rows="6" cols="60" name="addl_info"></textarea></p>
-        </li>
-    </ol>
-    </fieldset> <filedset class="submit" /><input class="submit" value="Submit" src="http://www.massey.vcu.edu/images/layout/btn-submit.gif" type="image" names="Submit" />
-    <div class="clear"></div>
-</form>
 
         </div><!--end .gutter-->
       </div><!--end #content-->

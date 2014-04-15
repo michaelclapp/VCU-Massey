@@ -234,7 +234,7 @@
       color: #fff
       text-decoration: none*/
 
-#content
+/*#content
   /*#CancerList
     ul
       margin: 0 0 2em 1.5em
@@ -244,16 +244,46 @@
       padding: 0
       &.toplink
         padding-bottom: 3em*/
-  form
+  /*form
     float: left
-    margin: 0
-    font-size: 1.0em
+    width: 100%
+    margin: $pad 0
+    @include font-size(1)
+    div
+      float: left
+      width: 100%
+      margin: $pad-sm/2 0
+    label, legend, input, fieldset, .radio-set
+      box-sizing: border-box
+      float: left
+    label, legend
+      width: 35%
+      padding-right: $pad-sm
+    input, .radio-set, textarea
+      float: right
+      width: 65%
+    input, select, textarea
+      box-sizing: border-box
+      padding: $pad-sm
+      border: 1px solid $color-module-border
+      border-radius: $pad-btn
     fieldset
       display: block
+      overflow: hidden
       width: 100%
-      margin: 0
-      border: 0
-      padding: $pad-sm $pad-sm $pad-sm 0
+      border: none
+      padding: 0
+      label, input[type="radio"]
+        float: left
+        width: auto
+        margin-right: $pad-sm
+    input[type="submit"]
+      background: $gold2
+      text-transform: uppercase
+      &:hover, &:focus, :active
+        background: $gold/*
+
+/*
     ol
       @extend %nospace
       li
@@ -273,6 +303,7 @@
       line-height: 1.4em
     fieldset
       input, textarea
+        width: 100%
         padding: 5px
         color: #666
       select

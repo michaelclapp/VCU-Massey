@@ -2,9 +2,17 @@ $nav-width: 350px
 
 a#menu
 	display: none
+
+nav li
+	&:nth-child(n+7):after
+		background: url('../imgs/layout/nav-bar.png') !important
+	&:nth-child(n+8):after
+		background: none !important
+
 @include mq($papabear)
 	#rufio nav > ul li a
 		@include font-size(.9)
+
 @include mq($mamabear)
 	a
 		&#menu, &.more, &.back, &.close
