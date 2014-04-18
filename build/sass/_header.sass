@@ -1,13 +1,6 @@
 #rufio
   width: 100%
   @extend %nospace
-  a
-    padding: 0
-    border: 0
-    text-decoration: none
-    &:hover, &:focus
-      border: 0
-      text-decoration: none
   .wrapper
     position: relative
     width: 95%
@@ -15,6 +8,7 @@
     height: auto
     margin: 0 auto
     padding: $pad $pad 0
+    background: $white
     background: linear-gradient(rgba($header-bg1,0), $white)
     box-sizing: border-box
     &:after
@@ -23,38 +17,47 @@
       clear: both
       height: 0
       content: "."
-    h1 a
-      float: left
-      width: 217px
-      height: 93px
-      background: url('../imgs/layout/massey.png') no-repeat
-      text-indent: -9999px
-      &:hover, &:focus
-        border: 0
-        text-decoration: none
-    .right
-      float: right
-      width: 229px
-      a.ncicc-link
-        float: left
-        width: 229px
-        height: 46px
-        margin: $pad-sm 0 
-        background: url('../imgs/layout/ncicc-link.gif') no-repeat 0 0
-        text-indent: -9999px
-    #header-links
-      position: absolute
-      left: 50%
-      width: 151px 
-      margin: 90px 0 0 -73px
-      ul#util-nav
-        float: left
-        margin: 0 auto
+  h1 a
+    float: left
+    width: 217px
+    height: 93px
+    background: url('../imgs/layout/massey.png') no-repeat
+    text-indent: -9999px
+    &:hover, &:focus
+      border: 0
+      text-decoration: none
+  .right
+    float: right
+    width: 229px
+.ncicc-link
+  float: left
+  width: 229px
+  height: 46px
+  margin: $pad-sm 0
+  background: url('../imgs/layout/ncicc.png') no-repeat 0 0
+  text-indent: -9999px
+  &:hover, &:focus, &:active
+    border: 0
+    background: url('../imgs/layout/ncicc.png') no-repeat 0 0
+.svg
+  .ncicc-link
+    background: url('../imgs/layout/ncicc.svg') no-repeat 0 0
+    &:hover, &:focus, &:active
+      border: 0
+      background: url('../imgs/layout/ncicc.svg') no-repeat 0 0
+#header-links
+  position: absolute
+  left: 50%
+  width: 151px 
+  margin: 90px 0 0 -73px
+  ul#util-nav
+    float: left
+    margin: 0 auto
 
 //SEARCH
 #search
   position: relative
-  height: 43px
+  float: left
 form#sitesearch
   display: block
   position: relative

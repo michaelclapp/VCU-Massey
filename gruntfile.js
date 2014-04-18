@@ -39,8 +39,7 @@ module.exports = function(grunt) {
           'assets/css/global-flexy.css': 'build/sass/global-flexy.sass',
           'assets/css/global.css': 'build/sass/global.sass',
           'assets/css/ie.css': 'build/sass/ie.sass',
-          'assets/css/print.css': 'build/sass/print.sass',
-          'assets/css/critical.css': 'build/sass/critical.sass'
+          'assets/css/print.css': 'build/sass/print.sass'
         }
       }
     },
