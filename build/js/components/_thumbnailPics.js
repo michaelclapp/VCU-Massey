@@ -1,18 +1,20 @@
 $(document).ready(function() {
-	var image = $('.pull-right img, .pull-left img');
-	var imageSource = $('.pull-right img, .pull-left img').attr('src');
-	var imageAlt = $('.pull-right img, .pull-left img').attr('alt');
+	var image = $('.lightbox img, .lightbox img');
+	var imageSource = $('.lightbox img, .lightbox img').attr('src');
+	var imageAlt = $('.lightbox img, .lightbox img').attr('alt');
+	var lightboxBtn = $('.lightbox a');
+	var imageCaption = $('.lightbox').next().text();
 
 	if($(image).length != 0) {
 		$('body').append('<div class="overlay"><div class="wrapper"></div></div>');
 	};
 
-	$(image).click(function(e) {
+	$(lightboxBtn).click(function(e) {
 		e.preventDefault();
 		$('.overlay').addClass('hello');
 		var thisImageSrc = $(this).attr('src');
 		var thisImageCaption = $(this).next('.caption').text();
-		$('.overlay .wrapper').append('<img src="' + thisImageSrc + '" /><div class="caption">' + thisImageCaption + '</div>');
+		$('.overlay .wrapper').append('<img src="' + imageSource + '" /><div class="caption">' + imageCaption + '</div>');
 		e.stopPropagation();
 
 		$('.overlay:not(.overlay .wrapper)').click(function() {
@@ -24,18 +26,5 @@ $(document).ready(function() {
 			e.stopPropagation();
 		});
 
-
-		//	$(image).each(function() {
-		//var thisImageSrc = $(this).attr('src');
-		//	$('.overlay .wrapper').append('<img src="' + thisImageSrc + '" />');
-	//});
-	//	e.stopPropagation();
-	//	$('.overlay:not(img)').click(function() {
-	//	    $('.overlay').removeClass('hello');
-	//	});
 	});
-
-	
-
-
 });

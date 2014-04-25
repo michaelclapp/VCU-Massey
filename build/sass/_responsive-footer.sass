@@ -8,13 +8,10 @@
 			border-left: 5px solid transparent
 			border-right: 5px solid transparent
 			box-sizing: border-box
-			-moz-background-clip: padding-b
-			-webkit-background-clip: padding-box
 			background-clip: padding-box
 			ul
 				width: 285px
 				margin: 0
-				-webkit-column-count: 1
 				column-count: 1
 @include mq($babybear)
 	#footer
@@ -24,9 +21,14 @@
 		.footer-col
 			width: 100%
 			margin: $pad-sm 0
+			padding: 0
 			box-sizing: border-box
 		ul
 			width: 100% !important
 			margin: 0 auto !important
 			padding: 0
 			box-sizing: border-box
+		.social, .links
+			width: 100%
+		.links
+			text-align: left

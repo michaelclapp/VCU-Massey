@@ -188,6 +188,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'build/js/components/_nav.js',
+          'build/js/components/_picturefill.js',
           'build/js/components/_documentClasses.js',
           'build/js/components/_tabs.js',
           'build/js/components/_thumbnailPics.js',

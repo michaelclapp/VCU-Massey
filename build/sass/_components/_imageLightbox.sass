@@ -1,4 +1,3 @@
-//image lightbox - currently for p.pull-right images only
 .overlay
 	display: none
 	position: fixed
@@ -6,7 +5,7 @@
 	left: 0
 	width: 100%
 	height: 100%
-	z-index: 9998
+	z-index: $zindex-overlay
 	@extend %black-overlay
 	&.hello
 		display: block
@@ -24,8 +23,22 @@
 			height: auto !important
 			margin: 0 auto
 		.caption
-			z-index: 99999
-			border: none
-			background: none
+			margin: $pad-sm 0
 			color: $white
 			text-align: center
+.lightbox
+	position: relative
+	a.lightbox-icon
+		position: absolute
+		bottom: $pad/2
+		left: $pad/2
+		z-index: $zindex-components
+		padding: $pad-sm/2
+		@extend %black-overlay
+		color: $white
+		&:hover, &:focus, &:active
+			border: none
+			background: $color-module-bg
+			color: $color-body
+		@include mq($babybear)
+			display: none

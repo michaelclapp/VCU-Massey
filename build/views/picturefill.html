@@ -1,0 +1,39 @@
+@@include('header.html') 
+@@include('vcuIdentityHeader.html') 
+@@include('mainNav.html') 
+  
+  <div id="wrapper" class="clearfix">
+    <div id="container" class="clearfix"><!-- start content container -->
+      <div id="content">
+        <div class="gutter">
+        
+          @@include('breadcrumbNav.html')
+        
+          <h2 class="title">PictureFill</h2>
+
+          <div class="pull-right">
+            <div class="lightbox">
+              <a href="#" class="lightbox-icon"><i class="fa fa-arrows-alt fa-2x"></i></a>
+              <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source srcset="http://www.artnewsblog.com/wp-content/uploads/2013/10/dog-portrait.jpg" media="(min-width: 860px)">
+                <source srcset="http://www.sarahspetportraits.co.uk/wp-content/gallery/dog-pet-portraits/dog-pet-portrait-1-ENLARGE.jpg" media="(min-width: 550px)">
+                <source srcset="http://cutearoo.com/wp-content/uploads/2011/09/Puppy14.jpg">
+                <!--[if IE 9]></video><![endif]-->
+                <img srcset="http://cutearoo.com/wp-content/uploads/2011/09/Puppy14.jpg" alt="A puppy going into a dog">
+              </picture>
+            </div>
+            <div class="module-sm caption">
+              Genetic counselor Heather Creswick and patient
+            </div>
+          </div>
+
+        </div><!--end .gutter-->
+      </div><!--end #content-->
+
+      @@include('sidebar.html')
+
+    </div><!--end #container-->
+  </div><!--end #wrapper-->
+@@include('footerContent.html') 
+@@include('footer.html') 
