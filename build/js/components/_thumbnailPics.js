@@ -10,12 +10,17 @@ $(document).ready(function() {
 	};
 
 	$(lightboxBtn).click(function(e) {
-		e.preventDefault();
-		$('.overlay').addClass('hello');
-		var thisImageSrc = $(this).attr('src');
-		var thisImageCaption = $(this).next('.caption').text();
-		$('.overlay .wrapper').append('<img src="' + imageSource + '" /><div class="caption">' + imageCaption + '</div>');
-		e.stopPropagation();
+		$(this).each(function() {
+			e.preventDefault();
+			$('.overlay').addClass('hello');
+
+			var thisImageSrc = $(this).next().clone();
+			var thisImageCaption = $(this).parent().next('.caption').text();
+
+			$('.overlay .wrapper').append(thisImageSrc);
+			$('.overlay .wrapper').append('<div class="caption">' + thisImageCaption + '</div>');
+			e.stopPropagation();
+		});
 
 		$('.overlay:not(.overlay .wrapper)').click(function() {
 			$('.overlay').removeClass('hello');
