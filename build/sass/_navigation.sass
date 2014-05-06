@@ -1,4 +1,8 @@
 // Xtra Header Navigation (RSS, E-mail, NCI-CC links)
+a
+  &.menu, &.quicklinks, &.close, &.back
+    display: none
+
 #rufio
   position: relative
   float: left
@@ -22,6 +26,9 @@
         weight: 100
     > ul
       > li
+        &:hover, &:focus, &:active
+          a
+            background: $nav-gold
         ul
           display: none
           position: relative
@@ -149,22 +156,23 @@
         text-decoration: underline
   ul#subnav
     @include border(top, 1, solid)
-  li a
-    box-sizing: border-box
-    display: block
-    width: 100%
-    padding: $pad-sm $pad-sm*2 
-    @include border(bottom, 1, solid)
-    color: #666
-    @include font-size(1)
-    font:
-      family: $sans-serif
-      weight: 200
-    &:hover
-      background: $gray-bg-lite
-    &.current
-      color: $text-red
-      font-weight: bold
+  li
+    a
+      box-sizing: border-box
+      display: block
+      width: 100%
+      padding: $pad-sm $pad-sm*2 
+      @include border(bottom, 1, solid)
+      color: #666
+      @include font-size(1)
+      font:
+        family: $sans-serif
+        weight: 200
+      &:hover
+        background: $gray-bg-lite
+      &.current
+        color: $text-red
+        font-weight: bold
 /*-- Sam's hot fix for indented 4th level nav --*/
 #sidebar ul#subnav li span.currentbranch0 a
   background: url('../imgs/layout/subnav-arrow-on.gif') no-repeat center left 2px
@@ -205,53 +213,22 @@
   #quicklinks
     position: relative
     width: 100%
+    @extend .module
     margin-top: $pad*2
+    padding: 0
+    @include border(all, 1, solid)
+    border-radius: $pad-btn
+    li
+      @include border(bottom, 1, solid)
+      &:last-of-type
+        border: none
     a
-      display: block
-      margin: $pad-sm/2 0
-      padding: $pad-sm/2 $pad-sm*2 $pad-sm/2 $pad-sm*4
-      @include border(all, 1, solid)
-      background: url('../imgs/layout/icons/quicklinks.png') no-repeat left top
-      text-decoration: none
-      color: $gray
-      @include font-size(1)
-      font-weight: 100
-      box-shadow: 2px 2px 5px #cccccc
-      &:hover
-        color: darken($gray, 10%)
-        box-shadow: 2px 2px 5px $gray
-      &.question
-        background-position: 0 0px
-        &:hover, &:focus
-          background-position: 0 -30px
-      &.appointment
-        background-position: 0px -60px
-        &:hover, &:focus
-          background-position: 0 -90px
-      &.refer
-        background-position: 0px -120px
-        &:hover, &:focus
-          background-position: 0 -150px
-      &.clinical
-        background-position: 0px -180px
-        &:hover, &:focus
-          background-position: 0 -210px
-      &.doctor
-        background-position: 0px -240px
-        &:hover, &:focus
-          background-position: 0 -270px
-      &.event
-        background-position: 0px -300px
-        &:hover, &:focus
-          background-position: 0 -330px
-      &.dictionary
-        background-position: 0px -360px
-        &:hover, &:focus
-          background-position: 0 -390px
-      &.contact
-        background-position: 0px -420px
-        &:hover, &:focus
-          background-position: 0 -450px
+      border: none
+      &:hover, &:focus, &:active
+        background: lighten($gold, 30%)
+        border: none
+
+    
 
 //social nav, the one that's in the header
 ul#util-nav

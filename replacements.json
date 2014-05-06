@@ -9,6 +9,7 @@
           {"from":"../imgs/layout/vcu-identity/vcubrand.gif" , "to":"<t4 type='media' id='42667' formatter='path/*'/>"},
           {"from":"../imgs/layout/header-gradient.jpg" , "to":"<t4 type='media' id='36474' formatter='path/*'/>"},
           {"from":"../imgs/layout/massey.png" , "to":"<t4 type='media' id='36476' formatter='path/*'/>"},
+          {"from":"../imgs/layout/massey.svg" , "to":"<t4 type='media' id='72737' formatter='path/*'/>"},
           {"from":"../imgs/layout/ncicc-link.gif" , "to":"<t4 type='media' id='35807' formatter='path/*'/>"},
           {"from":"../imgs/layout/search-bg.gif" , "to":"<t4 type='media' id='35701' formatter='path/*'/>"},
           {"from":"../imgs/layout/search-btn.gif" , "to":"<t4 type='media' id='35699' formatter='path/*'/>"},

@@ -1,163 +1,180 @@
 $nav-width: 350px
 
-a#menu
-	display: none
-
 nav li
 	&:nth-child(n+7):after
 		background: url('../imgs/layout/nav-bar.png') !important
 	&:nth-child(n+8):after
 		background: none !important
 
-@include mq($papabear)
-	#rufio nav > ul li a
-		@include font-size(.9)
+#rufio nav > ul li a
+	@include font-size(.9)
 
 @include mq($mamabear)
 	a
-		&#menu, &.more, &.back, &.close
+		&.menu, &.quicklinks, &.more, &.back, &.close
 			display: block !important
 	#rufio nav ul ul
 		display: block
-	a#menu
-		position: absolute
-		right: 2%
-		top: 0
-		width: 229px
-		margin: $pad-sm $pad $pad-sm 0
-		padding: $pad-sm $pad-sm*2
-		color: $white
-		text-align: center
-		@include font-size(1)
-		background: linear-gradient($nav-gray, darken($nav-gray, 20%))
-		border-radius: $pad
-		box-sizing: border-box
-		&:hover, &:focus
-			border: none
-			background: $nav-gold
+	a
+		&.menu, &.quicklinks
+			float: left
+			width: 50%
+			margin: 0
+			color: $white
+			text-align: center
+			@include font-size(1)
+			background: linear-gradient($nav-gray, darken($nav-gray, 20%))
+			box-sizing: border-box
+			box-shadow: none
+			&:hover, &:focus, &:active
+				border: none
+				background: $nav-gold
+		&.menu
+			border-radius: $pad-sm 0 0 $pad-sm
+		&.quicklinks
+			border-left: 1px solid darken($nav-gray, 20%)
+			border-radius: 0 $pad-sm $pad-sm 0
+		
 	#rufio nav
 		ul ul ul, ul ul ul ul, ul ul ul ul ul
 			display: block
 			height: 100%
-	#rufio
-		nav
+	#rufio nav, #sidebar #quicklinks
+		z-index: $zindex-header
+		position: fixed
+		top: 0
+		left: -1*$nav-width
+		overflow-x: hidden
+		width: $nav-width
+		min-height: 100%
+		margin: 0
+		background: $color-nav-bg
+		transition: left .8s ease-in-out
+		&.active
+			left: 0
+		a, ul, li 
+			box-sizing: border-box
+			color: $white
+			background: none
+			li
+				&:hover, &:active, &:focus
+					a
+						background: none
+		li
+			float: left
+			width: 100%
+			border-bottom: 1px solid #4f4f4f
+			&:after
+				display: none
+			&:hover, &:focus, &:active
+				background: none
+				color: inherit
+				a
+					color: $white
+		.menuControls
+			float: left
+			width: 100%
+			height: auto
+			border-bottom: 1px solid #4f4f4f
+			background: #333
+			color: $color-body
+			a
+				&.back, &.close
+					float: left
+					width: 50%
+					&:hover, &:focus, &:active
+						background: $gold
+				&.close
+					float: right
+					padding-right: $pad
+					text-align: right
+		a
+			display: inline-block
+			float: left
+			width: 100%
+			height: auto
+			padding: $pad $pad-sm $pad $pad
+			@include font-size(1)
+			text-align: left
+			text-decoration: none
+			text-transform: uppercase
+			&:hover
+				background: #333
+				color: #fff
+			&.has-child
+				width: 80%
+			&.more
+				float: right
+				width: 20%
+				padding: $pad $pad-sm
+				text-align: center
+		span a
+			&.has-child
+				width: 80%
+				background: $blue
+				color: $white
+			&:hover, &:focus, &:active
+				background: #333 !important
+		ul
 			position: fixed
-			top: 0
 			left: -1*$nav-width
-			overflow-x: hidden
+			top: 0
+			overflow-y: scroll
 			width: $nav-width
-			min-height: 100%
-			margin: 0
+			height: 100%
 			background: $color-nav-bg
 			transition: left .8s ease-in-out
 			&.active
 				left: 0
-			a, ul, li 
-				box-sizing: border-box
-			li
-				float: left
-				width: 100%
-				border-bottom: 1px solid #4f4f4f
-				&:after
-					display: none
-				&:hover, &:focus, &:active
-					background: none
-					color: inherit
-					a
-						color: $white
-			.menuControls
-				float: left
-				width: 100%
-				height: auto
-				border-bottom: 1px solid #4f4f4f
-				background: #333
-				color: $color-body
-				a
-					&.back, &.close
-						float: left
-						width: 50%
-						&:hover, &:focus, &:active
-							background: $gold
-					&.close
-						float: right
-						padding-right: $pad
-						text-align: right
-			a
-				display: inline-block
-				float: left
-				width: 100%
-				height: auto
-				padding: $pad $pad-sm $pad $pad
-				@include font-size(1)
-				text-align: left
-				text-decoration: none
-				text-transform: uppercase
-				&:hover
-					background: #333
-					color: #fff
-				&.has-child
-					width: 80%
-				&.more
-					float: right
-					width: 20%
-					padding: $pad $pad-sm
-					text-align: center
-			span a
-				&.has-child
-					width: 80%
-					background: $blue
-					color: $white
+			&.off-left
+				left: -1*$nav-width
+			> li:nth-child(n+8)
+				display: block
+			> li
+				> ul 
+					display: block
+					position: fixed
+					top: 0
+					left: 0
+					width: $nav-width
+					height: 100%
+					padding-top: 0
+					background: $color-nav-bg
 			ul
 				position: fixed
-				left: -1*$nav-width
+				left: 0
 				top: 0
 				overflow-y: scroll
 				width: $nav-width
 				height: 100%
+				max-height: 9999px
+				padding: 0
 				background: $color-nav-bg
-				transition: left .8s ease-in-out
-				&.active
-					left: 0
-				&.off-left
-					left: -1*$nav-width
-				> li:nth-child(n+8)
-					display: block
-				> li
-					> ul 
-						display: block
-						position: fixed
-						top: 0
-						left: 0
-						width: $nav-width
-						height: 100%
-						padding-top: 0
-						background: $color-nav-bg
-				ul
-					position: fixed
-					left: 0
+				&.dip
+					position: absolute
 					top: 0
-					overflow-y: scroll
-					width: $nav-width
-					height: 100%
-					max-height: 9999px
-					padding: 0
-					background: $color-nav-bg
-					&.dip
-						position: absolute
-						top: 0
-						left: -1*$nav-width
-						display: none
-						height: 0
-					li a
-						width: 100%
-						margin: 0
-						padding: $pad
-						@include font-size(1)
-						color: $white
-						&:hover, &:focus, &:active 
-							background: #333
-	#util-nav, #sidebar
+					left: -1*$nav-width
+					display: none
+					height: 0
+				li a
+					width: 100%
+					margin: 0
+					padding: $pad
+					@include font-size(1)
+					color: $white
+					&:hover, &:focus, &:active 
+						background: #333
+		> ul > li ul
+			overflow-y: scroll
+	#sidebar #quicklinks 
+		border: none
+		ul
+			position: relative
+			left: 0
+	#util-nav, #sidebar ul#subnav, #sidebar h3
 		display: none
+
+
 #vcuIdentityWrapper, #rufio, #wrapper, #footer
 	@extend %transition-margin-left
 	&.active-nav
@@ -168,17 +185,30 @@ nav li
 
 @include mq($babybear)
 	$nav-width: 100%
-	#rufio
-		nav
-			ul
+	a
+		&.menu, &.quicklinks
+			position: absolute
+			top: 0
+			border-radius: 0
+		&.menu
+			left: 0
+		&.quicklinks
+			right: 0
+	#rufio nav, #sidebar #quicklinks
+		left: -1*$nav-width
+		width: $nav-width
+		ul
+			left: -1*$nav-width
+			width: $nav-width
+			&.off-left
 				left: -1*$nav-width
+			> li > ul
 				width: $nav-width
-				&.off-left
-					left: -1*$nav-width
-				> li > ul
-					width: $nav-width
-				ul
-					width: $nav-width
+			ul
+				width: $nav-width
+	#sidebar #quicklinks
+		ul
+			left: 0
 	#vcuIdentityWrapper, #rufio, #wrapper, #footer
 		&.active-nav
 			margin-left: 0

@@ -1,16 +1,17 @@
 @include mq($mamabear)
   #rufio .wrapper
-    .right
-      margin-top: $pad
+    #search
+      display: none
 @include mq($babybear)
   #rufio
     .wrapper
       position: relative
+      width: 100%
       height: auto
       box-sizing: border-box
       h1
         width: 217px
-        margin: $pad auto 0
+        margin: $pad auto $pad-sm
         a
           display: block
           float: none
