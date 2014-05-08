@@ -3,7 +3,7 @@ node_modules
 validation-report.json
 validation-status.json
 npm-debug.log
-lib
+build/js/lib
 assets
 bower_components
 t4
