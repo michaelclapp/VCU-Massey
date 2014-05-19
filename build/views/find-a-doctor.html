@@ -1,50 +1,71 @@
-@@include('header.html') 
-@@include('vcuIdentityHeader.html') 
-@@include('mainNav.html') 
-  
+@@include('header.html')
+@@include('vcuIdentityHeader.html')
+@@include('mainNav.html')
+
   <div id="wrapper" class="clearfix">
     <div id="container" class="clearfix"><!-- start content container -->
       <div id="content">
         <div class="gutter">
-        
-          @@include('breadcrumbNav.html') 
-        
-          <h2 class="title">Staff</h2>
 
-        <div class="module-sm well">
-          <label for="filterSearch">Search by name:</label>
-          <input type="text" id="filterSearch" placeholder="Search" class="search-box">
+          @@include('breadcrumbNav.html')
+
+          <h2 class="title">Find a Doctor</h2>
+
+        <div class="module-sm form__new">
+          <div>
+            <label for="filterSearch">Search by name:</label>
+            <input type="text" id="filterSearch" placeholder="Search" class="search-box">
+          </div>
+          <div>
+            <label for="officeSearch">Search by office:</label>
+            <select name="Office Search" id="officeSearch">
+                <option value="all"></option>
+                <option value="communication">Communication</option>
+                <option value="internal medicine">Internal Medicine</option>
+            </select>
+          </div>
+          <div>
+            <label for="specialtySearch">Search by specialty:</label>
+            <select name="Specialty Search" id="specialtySearch">
+                <option value="all"></option>
+                <option value="Bone Cancer">Bone Cancer</option>
+                <option value="Breast Cancer">Breast Cancer</option>
+                <option value="Oral Cancer">Oral Cancer</option>
+            </select>
+          </div>
         </div>
-          
 
-        
+
+
+
+
 
         <div id="filterList">
 
-          <div class="module-sm profile">
+          <div class="module-sm profile" data-office="communication" data-personel="staff" data-specialty="Oral Cancer">
             <div class="photo">
               <img src="">
             </div>
             <div class="info">
                 <p><strong>Sam Yerkes</strong><br>
                   Webmaster &amp; user interface developer<br>
-                  
-                  
+
+
                   (804) 628-1911<br>
                   <a href="mailto:syerkes@vcu.edu">syerkes@vcu.edu</a><br>
                   1000 E Marshall Street, Suite 408 <br>
                   </p>
             </div>
           </div>
-          <div class="module-sm profile">
+          <div class="module-sm profile" data-office="communication" data-personel="staff" data-specialty="Breast Cancer">
             <div class="photo">
               <img src="">
             </div>
             <div class="info">
                 <p><strong>John Wallace</strong><br>
                   Senior communications specialist<br>
-                  
-                  
+
+
                   (804) 628-1550<br>
                   <a href="mailto:wallacej@vcu.edu">wallacej@vcu.edu</a><br>
                   1000 E. Marshall Street, Suite 408<br>
@@ -52,7 +73,7 @@
             </div>
           </div>
 
-          <div class="module-sm profile">
+          <div class="module-sm profile" data-office="internal medicine" data-personel="physician" data-specialty="Bone Cancer">
             <div class="photo">
               <img src="http://www.massey.vcu.edu/media/massey-cancer-center/content-assets/images/headshots/physicians/Ginder_Gordon.jpg" />
             </div>
@@ -73,5 +94,5 @@
 
     </div><!--end #container-->
   </div><!--end #wrapper-->
-@@include('footerContent.html') 
-@@include('footer.html') 
+@@include('footerContent.html')
+@@include('footer.html')

@@ -192,9 +192,10 @@ module.exports = function(grunt) {
           'build/js/components/_documentClasses.js',
           'build/js/components/_tabs.js',
           'build/js/components/_thumbnailPics.js',
-          'build/js/components/_cancerNav.js', 
-          'build/js/components/_filterContent.js', 
-          'build/js/components/_fitvids.js', 
+          'build/js/components/_cancerNav.js',
+          'build/js/components/_filterContent.js',
+          'build/js/components/_docSearch.js', 
+          'build/js/components/_fitvids.js',
           'build/js/components/_flexslider.js',
           'build/js/components/_triggers.js'
         ],

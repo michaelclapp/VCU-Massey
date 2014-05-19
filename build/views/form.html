@@ -1,17 +1,17 @@
-@@include('header.html') 
-@@include('vcuIdentityHeader.html') 
-@@include('mainNav.html') 
-  
+@@include('header.html')
+@@include('vcuIdentityHeader.html')
+@@include('mainNav.html')
+
   <div id="wrapper" class="clearfix">
     <div id="container" class="clearfix"><!-- start content container -->
       <div id="content">
         <div class="gutter">
-        
+
           @@include('breadcrumbNav.html')
-        
+
           <h2 class="title">Form Example</h2>
 
-          <form method="post" action="http://myforms.vcu.edu/posts" class="new module">
+          <form method="post" action="http://myforms.vcu.edu/posts" class="form__new module">
               <input type="hidden" name="HTTP_REFERER" value="http://dept.vcu.edu/ask.html" />
               <input type="hidden" name="timestamp" value="on" />
               <span style="display: none;">
@@ -28,7 +28,7 @@
                 <label for="name">Last Name <span>*</span></label>
                 <input type="text" name="name" id="name" placeholder="Last Name" />
               </div>
-            
+
               <div>
                  <fieldset>
                     <legend>Radio Button Choice</legend>
@@ -38,10 +38,10 @@
 
                         <label for="radio-choice-2">Choice 2</label>
                         <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
-                    </div>       
-                  </fieldset> 
+                    </div>
+                  </fieldset>
               </div>
-              
+
 
               <div>
                 <label for="select-choice">Select Dropdown Choice:</label>
@@ -78,7 +78,7 @@
               <div>
                 <input name="submit" type="submit" value="Submit" />
               </div>
-            </form>  
+            </form>
 
 
 
@@ -89,5 +89,5 @@
 
     </div><!--end #container-->
   </div><!--end #wrapper-->
-@@include('footerContent.html') 
-@@include('footer.html') 
+@@include('footerContent.html')
+@@include('footer.html')
