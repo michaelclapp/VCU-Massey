@@ -1,19 +1,22 @@
-$(document).ready(function() {
-    $("#officeSearch").on('change', function(){
-        //alert('woah, HOLD UP');
-        var selectedOffice = $(this).val();
-        var person = $('#filterList .profile').not('.out');
-        var allPersons = $('#filterList .profile');
-        var allPersonsOffice = $('#filterList .profile').data('office');
-        var allPersonsOut = $('#filterList .profile.out');
+$(document).ready(function () {
+    var onChange = function () {
 
-        if (this.value == 'all'){
-            $(allPersons).removeClass('out').fadeIn(500);
+        var selectedOffice = $('#officeSearch').val();
+        var selectedSpecialty = $('#specialtySearch').val();
+        var filter = "#filterList .profile";
+        var allPersons = $(filter);
+        if (selectedOffice != "all")
+        {
+            filter += '[data-office="' + selectedOffice + '"]'
         }
-        else {
-            var elems = $('.profile[data-office="' + this.value +'"]');
-            $(allPersons).not(elems).addClass('out').fadeOut(500);
-            elems.removeClass('out').fadeIn(500);
+        if (selectedSpecialty != "all")
+        {
+            filter += '[data-specialty="' + selectedSpecialty + '"]'
         }
-    });
+        var $matching = allPersons.filter(filter);
+        $(allPersons).not($matching).removeClass('out').fadeOut(500);
+        $matching.removeClass('out').fadeIn(500);
+    }
+
+    $("#officeSearch, #specialtySearch").on('change', onChange );
 });

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var person = $("#filterList .profile");
+    var person = $('#filterList .profile').not('.out');
 
     $("#filterSearch").keyup(function(){
 
