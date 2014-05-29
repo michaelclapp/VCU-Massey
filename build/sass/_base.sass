@@ -50,6 +50,31 @@ body
 	img
 		@extend %responsive-t4
 
+.alert, .success, .danger, .info
+	border: none
+	h3
+		border-bottom: none !important
+.alert
+	border-left: $pad-sm/2 solid #f0ad4e
+	background: #fcf8f2
+	h3
+		color: #f0ad4e !important
+.success
+	border-left: $pad-sm/2 solid #3c763d
+	background: lighten(#dff0d8, 5%)
+	h3
+		color: #3c763d !important
+.danger
+	border-left: $pad-sm/2 solid #d9534f
+	background: #FDF7F6
+	h3
+		color: #d9534f !important
+.info
+	border-left: $pad-sm/2 solid #31708f
+	background: lighten(#d9edf7, 5%)
+	h3
+		color: #31708f !important
+
 /*Grid*/
 .grid
 	&:after

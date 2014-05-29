@@ -1,10 +1,12 @@
-var App = angular.module('App', []);
+(function() {
+    var App = angular.module('App', []);
 
-App.controller('directory', function($scope, $http) {
-  $http.get('../data/directory.json')
-       .then(function(res){
-          $scope.persons = res.data;                
-        });
-   $scope.quantity = 20;
-   $scope.order = 'nameLast';
-});
+    App.controller('directory', function() {
+        this.person = persons;
+    });
+    
+    var persons = {
+        nameFirst: 'Sam',
+        nameLast: 'Yerkes'
+    }
+})

@@ -47,7 +47,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           't4/js/global.js' : ['assets/js/global.js'],
-          't4/js/global-flexy.js' : ['assets/js/global-flexy.js']
+          't4/js/global-flexy.js' : ['assets/js/global-flexy.js'],
+          't4/js/app.js' : ['assets/js/app.js']
         }
       }
     },
@@ -194,7 +195,7 @@ module.exports = function(grunt) {
           'build/js/components/_thumbnailPics.js',
           'build/js/components/_cancerNav.js',
           'build/js/components/_filterContent.js',
-          'build/js/components/_docSearch.js', 
+          'build/js/components/_docSearch.js',
           'build/js/components/_fitvids.js',
           'build/js/components/_flexslider.js',
           'build/js/components/_triggers.js'
