@@ -16,6 +16,12 @@
 	@else if $type == left
 		border-left: $thickness+px $color-border $style
 
+@mixin alert($alert-status, $alert-status-bg)
+	border-left: $pad-sm/2 solid $alert-status
+	background: $alert-status-bg
+	h3
+		color: $alert-status !important
+
 @mixin mq($size)
 	@media screen and (max-width: $size)
 		@content
