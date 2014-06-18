@@ -64,6 +64,12 @@ module.exports = function(grunt) {
         src: '*',
         dest: 't4/css/',
         expand: true
+      },
+      t4Imgs: {
+        cwd: 'assets/imgs/',
+        src: '*/**',
+        dest: 't4/imgs/',
+        expand: true
       }
     },
     replace: {
@@ -71,12 +77,7 @@ module.exports = function(grunt) {
         src: ['t4/css/*.css'],
         overwrite: true,
         replacements: []
-      },
-      t4html: {
-        src: ['t4/views/*.html'],
-        overwrite: true,
-        replacements: []
-      },
+      }
     },
     validation: {
       files: {
@@ -169,7 +170,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'build/imgs/',
-          src: ['**/*.{png,jpg,gif}'],
+          src: ['**/*.{png,jpg,gif,svg}'],
           dest: 'assets/imgs/'
         }]
       }
@@ -268,10 +269,10 @@ grunt.registerTask('replace-t4', function() {
 });
 
 //Build the initial directories
-grunt.registerTask('build', ['bower', 'sass', 'concat', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 't4', 'uglify', 'cmq', 'cssmin', 'watch']);
+grunt.registerTask('build', ['bower', 'sass', 'concat', 'imagemin', 'copy:bower',  'includereplace', 'sails-linker', 'uglify', 'cmq', 'cssmin', 't4', 'watch']);
 
 //Builds T4 directory
-grunt.registerTask('t4', ['replace-t4']);
+grunt.registerTask('t4', ['replace-t4', 'copy:t4Imgs']);
 
 // Default task
 grunt.registerTask('default', ['watch']);
