@@ -1,0 +1,58 @@
+@@include('header.html')
+@@include('vcuIdentityHeader.html')
+@@include('mainNav.html')
+
+  <div id="wrapper" class="clearfix">
+    <div id="container" class="clearfix"><!-- start content container -->
+      <div id="content">
+        <div class="gutter">
+
+          @@include('breadcrumbNav.html')
+
+          <h2 class="title">Popup</h2>
+
+        <script>
+            function run_my_code($) {
+                // jquery-dependent code here
+                //alert("Script loaded and executed.");
+                var midtown = $.cookie('midtown');
+                if(midtown != 'true') {
+                    $('#modal').addClass('hello');
+                }
+                $.cookie('midtown', 'true', { expires: 7 });
+            }
+            var t = null;
+            function jquery_ready() {
+                if (window.jQuery) {
+                    run_my_code(window.jQuery);
+                } else {
+                    t = window.setTimeout(jquery_ready, 100);
+                }
+            }
+            t = window.setTimeout(jquery_ready, 100);
+        </script>
+
+        <div id="modal" class="overlay">
+            <div class="wrapper modal">
+                  <div class="module">
+                        <div class="modal-header">
+                            <div class="controls">
+                                <a href="#" role="button" class="popup-close"><i class="fa fa-times fa-2x"></i></a>
+                            </div>
+                            <h4>Title of popup</h4>
+                        </div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorem laudantium optio itaque, alias inventore in praesentium? Ducimus laborum, consequatur, voluptates dolore, minus, cumque eos soluta modi porro eum quis quisquam assumenda a? Nam nisi eius dolorem, perspiciatis sed recusandae!</p>
+                  </div>
+            </div>
+        </div>
+
+
+        </div><!--end .gutter-->
+      </div><!--end #content-->
+
+      @@include('sidebar.html')
+
+    </div><!--end #container-->
+  </div><!--end #wrapper-->
+@@include('footerContent.html')
+@@include('footer.html')

@@ -188,6 +188,7 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
+          'build/js/components/_cookie.js',
           'build/js/components/_nav.js',
           'build/js/components/_picturefill.js',
           'build/js/components/_documentClasses.js',
@@ -197,6 +198,7 @@ module.exports = function(grunt) {
           'build/js/components/_filterContent.js',
           'build/js/components/_docSearch.js',
           'build/js/components/_fitvids.js',
+          'build/js/components/_modal.js',
           'build/js/components/_flexslider.js',
           'build/js/components/_triggers.js'
         ],

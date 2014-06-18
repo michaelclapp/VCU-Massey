@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
-    /*var tlp = $('nav ul > li');
+    /* => Commented out because it is now included as part of /js/flexy/_flexyNav.js
+
+
+    var tlp = $('nav ul > li');
     var tlpSpan = $('nav ul > li span')
-    
+
     $(tlp).mouseover(function() {
       $(this).children('ul').addClass('dip');
     });
