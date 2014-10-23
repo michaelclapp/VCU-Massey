@@ -245,6 +245,9 @@ ul#util-nav
       color: #404040
       // IE6
       _display: inline
+    .fa   
+      font-size: 25px
+      color: #57585b
     &.nav-alert
       background: none
     a
@@ -254,27 +257,30 @@ ul#util-nav
       padding-top: 0
       text:
         decoration: none
-        indent: -9999px
-      &.facebook-link
-        background: url('../imgs/layout/util-nav-icons.png') 0 0 no-repeat
+      &.facebook-link i
+        background: transparent
         &:hover, &:visited, &:active
-          background: url('../imgs/layout/util-nav-icons.png') 0 -30px no-repeat
-      &.twitter-link
-        background: url('../imgs/layout/util-nav-icons.png') -30px 0 no-repeat
+          color: #3C599F
+      &.twitter-link i
+        background: transparent
         &:hover, &:visited, &:active
-          background: url('../imgs/layout/util-nav-icons.png') -30px -30px no-repeat
-      &.youtube-link
-        background: url('../imgs/layout/util-nav-icons.png') -60px 0 no-repeat
+          color: #32CCFE
+      &.youtube-link i
+        background: transparent
         &:hover, &:visited, &:active
-          background: url('../imgs/layout/util-nav-icons.png') -60px -30px no-repeat
-      &.rss-link
-        background: url('../imgs/layout/util-nav-icons.png') -90px 0 no-repeat
+          color: #C52F30
+      &.instagram-link i
+        background: transparent
         &:hover, &:visited, &:active
-          background: url('../imgs/layout/util-nav-icons.png') -90px -30px no-repeat
-      &.email-link
-        background: url('../imgs/layout/util-nav-icons.png') -120px 0 no-repeat
+          color: #A1755C    
+      &.rss-link i
+        background: transparent
         &:hover, &:visited, &:active
-          background: url('../imgs/layout/util-nav-icons.png') -120px -30px no-repeat
+          color: #E98200
+      &.email-link i
+        background: transparent
+        &:hover, &:visited, &:active
+          color: #F8B801
 
 //breadcrumbs nav
 #breadcrumb-nav
