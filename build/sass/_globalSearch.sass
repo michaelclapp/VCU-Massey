@@ -9,11 +9,14 @@
 		@extend %nospace
 		p.g
 			box-sizing: border-box
-			padding: $pad $pad 0
-			border: 1px solid $color-module-border
-			background: $color-module-bg
+			// padding: $pad $pad 0
+			// border: 1px solid $color-module-border
+			// background: $color-module-bg
 			td.s
 				background: none
+		p.g > a
+			color: $blue
+			font-size: 16px
 	table td
 		border: none !important
 		@include font-size(1)
@@ -21,3 +24,5 @@
 		@include font-size(1)
 	#bottom-navigation
 		@extend .pagination
+	#bottom-navigation td
+		float: left
