@@ -9,14 +9,25 @@
 		@extend %nospace
 		p.g
 			box-sizing: border-box
-			// padding: $pad $pad 0
-			// border: 1px solid $color-module-border
-			// background: $color-module-bg
 			td.s
 				background: none
 		p.g > a
 			color: $blue
 			font-size: 16px
+			padding: $pad-sm
+			border-bottom: 1px solid $color-module-border
+			background: $color-module-bg
+			display: block
+			&:hover
+				background: #eee
+	h2.title
+		color: #f30
+		font-size: 1.667em
+		font-weight: bold
+		line-height: 2.5em
+		margin: 30px 0
+	.title ~ table
+		display: none
 	table td
 		border: none !important
 		@include font-size(1)
@@ -26,3 +37,4 @@
 		@extend .pagination
 	#bottom-navigation td
 		float: left
+		padding: 2px
