@@ -141,6 +141,31 @@ a
 		font-weight: bold
 	dd
 		margin-left: $pad-sm
+	blockquote
+		font-family: Georgia, serif
+		font-size: 16px
+		font-style: italic
+		margin: 1em auto
+		padding: .25em 40px
+		line-height: 1.45
+		position: relative
+		color: #444
+		width: 85%
+	blockquote:before
+		display: block
+		content: "\201C"
+		font-size: 80px
+		position: absolute
+		left: -10px
+		top: -20px
+		color: #7a7a7a
+	blockquote cite
+		color: #999
+		font-size: 14px
+		display: block
+		margin-top: 5px
+	blockquote cite:before
+		content: "\2014 \2009"
 	.column1, .column2
 		float: left
 		width: 250px
