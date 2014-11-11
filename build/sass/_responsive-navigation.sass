@@ -9,6 +9,7 @@ nav li
 #rufio nav > ul li a
 	@include font-size(.9)
 
+
 @include mq($mamabear)
 	a
 		&.menu, &.quicklinks, &.more, &.back, &.close
@@ -22,7 +23,8 @@ nav li
 			margin: 0
 			color: $white
 			text-align: center
-			@include font-size(1)
+			font-size: 12px
+			line-height: 24px
 			background: #57585b
 			box-sizing: border-box
 			box-shadow: none
@@ -49,7 +51,7 @@ nav li
 		min-height: 100%
 		margin: 0
 		background: $color-nav-bg
-		transition: left .8s ease-in-out
+		transition: left .4s ease-in-out
 		&.active
 			left: 0
 		a, ul, li 
@@ -79,6 +81,8 @@ nav li
 			background: #333
 			color: $color-body
 			a
+				.fa-2x
+					font-size: 1.4em !important
 				&.back, &.close
 					float: left
 					width: 50%
@@ -123,7 +127,7 @@ nav li
 			width: $nav-width
 			height: 100%
 			background: $color-nav-bg
-			transition: left .8s ease-in-out
+			transition: left .4s ease-in-out
 			&.active
 				left: 0
 			&.off-left

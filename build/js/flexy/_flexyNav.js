@@ -46,11 +46,11 @@ $(document).ready(function() {
 
   $('#rufio nav li:has(ul)').children('span').children('a').addClass('has-child');
 
-  $('#rufio nav ul ul').prepend('<div class="menuControls"><a class="back pull-left" href="#"><i class="fa fa-chevron-left fa-2x"></i></a><a href="#" class="close pull-right"><i class="fa fa-times-circle-o fa-2x"></i></a></div>');
+  $('#rufio nav ul ul').prepend('<div class="menuControls"><a class="back pull-left" href="#"><i class="fa fa-chevron-left fa-2x"></i></a><a href="#" class="close pull-right"><i class="fa fa-times fa-2x"></i></a></div>');
 
-  $('#sidebar #quicklinks').prepend('<div class="menuControls"><a href="#" class="close pull-right"><i class="fa fa-times-circle-o fa-2x"></i></a></div>');
+  $('#sidebar #quicklinks').prepend('<div class="menuControls"><a href="#" class="close pull-right"><i class="fa fa-times fa-2x"></i></a></div>');
 
-  $('#rufio nav > ul').prepend('<div class="menuControls"><a href="#" class="close pull-right"><i class="fa fa-times-circle-o fa-2x"></i></a></div>');
+  $('#rufio nav > ul').prepend('<div class="menuControls"><a href="#" class="close pull-right"><i class="fa fa-times fa-2x"></i></a></div>');
 
   $('a.more').on('click', function(e) {
     e.preventDefault();

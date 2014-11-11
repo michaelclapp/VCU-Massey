@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    
+    // Add active class to first tab
+
     $('#tabs').children('li').first().children('a').addClass('active')
         .next().addClass('is-open');
 
