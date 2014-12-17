@@ -1,0 +1,89 @@
+/*----------------------------------------------------------*
+* Full month view calendar
+/*----------------------------------------------------------*/
+
+body
+  padding: 0
+  margin: 0
+
+.tblDyn
+  text-align: center
+  line-height: 16px
+  font-family: Verdana, Arial, Helvetica, sans-serif
+  a
+    text-decoration: none
+  .whitetext
+    color: #FFFFFF
+    font-size: 12px
+    font-weight: bold
+    border: none
+  .upperleft
+    font-size: 10px
+    text-align: left
+    vertical-align: top
+    .tblDyn
+      border-right: 1px solid #ccc
+      border-left: 1px solid #ccc
+  .upperleft a
+    color: #333
+    text-decoration: none
+    font-size: 9px
+    font-weight: normal
+    font-family: Verdana
+  .upperleft a:hover
+    color: #30659b
+  .barLink
+    color: #fff
+    font-size: 12px
+    ont-weight: bold
+  .barLink a
+    color: #febe10
+  .barLink a:hover
+    color: #fff
+
+.upperleft > td
+  border: 0px solid #ccc
+
+.tblDyn .tblDyn .upperleft > td
+  border: 1px solid #ccc
+
+.tblDyn, .tblDynBgTop, .tblDynBgBtm
+  width: 100%
+  border: none
+
+.tblDynBgTop, .tblDynBgBtm
+  background-color: #57585A
+
+.tblDynBgTop
+  border-top-left-radius: 3px
+  border-top-right-radius: 3px
+
+.tblDynBgBtm
+  border-bottom-left-radius: 3px
+  border-bottom-right-radius: 3px
+  padding-left: 10px
+
+.tblDyn tr:nth-child(2) td
+  background: none repeat scroll 0 0 #eee
+
+.tblDyn .tblDyn .upperleft > td:nth-child(2n+1)
+  background: none repeat scroll 0 0 #fafafa
+
+.tblDyn .tblDyn .upperleft > td:nth-child(2n)
+  background: none repeat scroll 0 0 #fff
+
+.tblDyn .tblDyn .upperleft > td
+  border: 1px solid #ccc
+  color: #30659b
+
+.mlink0, .mlink1, .mlink2
+  color: #EEE
+
+.mlink0 a
+  color: #FB1
+
+.mlink1 a, .mlink2 a
+  color: #EEE
+
+.mlink0 a:hover, .mlink1 a:hover, .mlink2 a:hover
+  color: #fda

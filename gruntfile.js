@@ -38,6 +38,7 @@ module.exports = function(grunt) {
         files: {
           'assets/css/global-flexy.css': 'build/sass/global-flexy.sass',
           'assets/css/global.css': 'build/sass/global.sass',
+          'assets/css/calendar.css': 'build/sass/calendar.sass',
           'assets/css/ie.css': 'build/sass/ie.sass',
           'assets/css/print.css': 'build/sass/print.sass'
         }
@@ -96,6 +97,7 @@ module.exports = function(grunt) {
         files: {
           't4/css/global.css': ['t4/css/global.css'],
           't4/css/global-flexy.css': ['t4/css/global-flexy.css'],
+          't4/css/calendar.css': ['t4/css/calendar.css'],
           't4/css/ie.css': ['t4/css/ie.css']
         }
       }
@@ -201,6 +203,7 @@ module.exports = function(grunt) {
           'build/js/components/_fitvids.js',
           'build/js/components/_modal.js',
           'build/js/components/_flexslider.js',
+          'build/js/components/_iframeResizer.js',
           'build/js/components/_triggers.js'
         ],
         dest: 'assets/js/global.js',
