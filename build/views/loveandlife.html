@@ -1,0 +1,80 @@
+@@include('header.html') 
+@@include('vcuIdentityHeader.html') 
+@@include('mainNav.html') 
+  
+  <div id="wrapper" class="clearfix">
+    <div id="container" class="clearfix"><!-- start content container -->
+      <div id="content" class="full-width">
+        <div class="gutter">
+        
+          @@include('breadcrumbNav.html')
+        
+          <h2 class="title"></h2>
+
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="../imgs/interactive/1.jpg" alt="interactive" />
+              </li>
+              <li>
+                <img src="../imgs/interactive/2.jpg" alt="interactive" />
+              </li>
+              <li>
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/lqUI5qAqVHI" frameborder="0" allowfullscreen></iframe>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="lalTitleArea">
+              <h1>Life and love after cancer</h1>
+              <h2>A collection of stories of survivorship and hope</h2>
+              <hr />
+          </div>
+
+          <div class="grid lalContent">
+            <div class="col-2">
+              <i class="fa fa-info-circle fa-5x"></i>
+              <h5>HOW ARE YOU LOVING LIFE AFTER CANCER?</h5>
+
+              <p>Five years after VCU Massey Cancer Center helped her defeat cancer, Iva Petrosino is embracing a second chance at life. She found love with Joe and married him, and they are now discovering just how sweet life can be with their new daughter Lucianna. If you are a cancer survivor—and that includes every cancer patient from the moment of diagnosis—we want to know how you are loving life after cancer? Please share your story with us.</p>
+
+            </div>
+            <div class="col-2">
+              <i class="fa fa-comment fa-5x"></i>
+              <h5>SHARE YOUR STORY</h5>
+              <form method="post" action="http://myforms.vcu.edu/posts" class="form__new module">
+              <input type="hidden" name="HTTP_REFERER" value="http://dept.vcu.edu/ask.html" />
+              <input type="hidden" name="timestamp" value="on" />
+              <span style="display: none;">
+                <textarea name="{comment}"></textarea>
+              </span>
+
+              <div>
+                <label for="textarea">Textarea:</label>
+                <textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="Please be brief ..."></textarea>
+              </div>
+
+              <div>
+                <label for="name">Name <span>*</span></label>
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+
+              <div>
+                <input name="submit" type="submit" value="Submit" />
+              </div>
+            </form>
+
+            </div>
+
+          </div>
+
+                  <div style="clear: both"></div>
+
+        </div><!--end .gutter-->
+      </div><!--end #content-->
+
+    </div><!--end #container-->
+  </div><!--end #wrapper-->
+@@include('footerContent.html') 
+@@include('footer.html')  

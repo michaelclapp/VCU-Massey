@@ -25,6 +25,9 @@ body
 	&.full-width
 		width: 100%
 		padding: 25px
+	.lalTitleArea
+		text-align: center
+		padding-bottom: 20px
 #sidebar
 	position: relative
 	overflow: hidden
@@ -77,6 +80,13 @@ body
 		content: ""
 		display: table
 		clear: both
+	&.lalContent
+		.fa
+			float: left
+			padding: 0 20px 0 0
+		p
+			float: left
+			margin-top: 20px !important
 .cancer
 	[class*='col-'], .title
 		padding-left: $pad
@@ -95,7 +105,8 @@ body
 .col-1-3
 	.module-image
 		width: 100%
-
+.col-2
+	width: 50%
 .clearfix:after
 	display: block
 	visibility: hidden
