@@ -36,40 +36,75 @@
             <div class="col-2">
               <i class="fa fa-info-circle fa-5x"></i>
               <h5>HOW ARE YOU LOVING LIFE AFTER CANCER?</h5>
+              <img class="babybear-hide" src="../imgs/interactive/iva.jpg" alt="iva" />
 
               <p>Five years after VCU Massey Cancer Center helped her defeat cancer, Iva Petrosino is embracing a second chance at life. She found love with Joe and married him, and they are now discovering just how sweet life can be with their new daughter Lucianna. If you are a cancer survivor—and that includes every cancer patient from the moment of diagnosis—we want to know how you are loving life after cancer? Please share your story with us.</p>
 
             </div>
             <div class="col-2">
-              <i class="fa fa-comment fa-5x"></i>
-              <h5>SHARE YOUR STORY</h5>
-              <form method="post" action="http://myforms.vcu.edu/posts" class="form__new module">
-              <input type="hidden" name="HTTP_REFERER" value="http://dept.vcu.edu/ask.html" />
-              <input type="hidden" name="timestamp" value="on" />
-              <span style="display: none;">
-                <textarea name="{comment}"></textarea>
-              </span>
-
-              <div>
-                <label for="textarea">Textarea:</label>
-                <textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="Please be brief ..."></textarea>
-              </div>
-
-              <div>
-                <label for="name">Name <span>*</span></label>
-                <input type="text" name="name" id="name" placeholder="Name" />
-              </div>
-
-              <div>
-                <input name="submit" type="submit" value="Submit" />
-              </div>
-            </form>
-
+            <i class="fa fa-comment fa-5x"></i>
+            <h5>SHARE YOUR STORY</h5><form action="https://www.vcu.edu/cgi-bin/mailto" name="loveAndLife" method="post" onsubmit="chkform_appointment(); return false" class="form__new module" id="loveAndLife">
+              <input type="hidden" name="to" value="mlclapp@vcu.edu">
+              <input type="hidden" name="from">
+              <input type="hidden" name="subject" value="Love and Life contact form">
+              <input type="hidden" name="redirect" value="http://www.massey.vcu.edu/successful-submission/">
+              <input type="hidden" value="name, story" name="required">
+              
+              <p><span>Required fields*</span></p>
+              
+              <!-- navigation object : Massey Form --><div>
+              <label for="story">Share your story<span>*</span></label>
+              <textarea id="textarea" name="story" rows="8" cols="40"></textarea>
+            </div><div>
+              <label for="name">Name</label>
+              <input type="text" placeholder="" id="name" name="name">
+            </div><div>
+              <label for="email">Email</label>
+              <input type="text" placeholder="" id="email" name="email">
             </div>
+              
+              <div>
+                <input type="submit" onclick="ga('send', 'event', 'form', 'submit', 'Love and Life contact form');" value="Submit" name="submit">
+              </div>
+            </form> </div>
 
           </div>
 
-                  <div style="clear: both"></div>
+
+<div style="clear: both"></div>
+<i class="fa fa-comments fa-5x pull-left"></i>
+<h5>SHARED STORIES</h5>
+<hr class="border" />
+<div class="lal-story-slide">
+        <div>
+          <img class="col-1-3 babybear-hide" src="../imgs/interactive/monica-austin-cox.jpg" alt="story 1">
+          <div class="story col-2-3">
+            <p>I was diagnosed with non-invasive bladder cancer at the age of 30. Prior to being diagnosed, I had never heard of this type of cancer. This journey has been very rocky and I’m truly thankful that my gynecologist followed up and referred me to the urologist. I decided early that I was going to fight. I am a SURVIVOR! My strong faith in God, a loving and supportive husband, and family and friends all keep me going</p>
+            <p>I continue to stay abreast of bladder cancer via BCAN in addition to being an organizer for the annual Walk for Bladder Cancer. The advice I would give women about bladder cancer is to not ignore any aches, pains, or feelings that something is not right within your body. Be attentive and aggressive with your medical care and know that you do not have to face this journey alone. My goal is to increase awareness about bladder cancer in my community. I got involved and became an advocate for the Bladder Cancer Advocacy Network (BCAN), the only national organization devoted to advancing bladder cancer research, increasing public awareness, and providing support to those affected by this type of cancer. I am also a walk organizer for the annual Walk for Bladder Cancer held in May, featured in the Women & Bladder Cancer series by BCAN, participated in the Grassroots Advocacy on Capital Hill, and I just completed training for the Speaker's Bureau with BCAN. My annual check-up is December 2014, which will be a milestone for me...5 years cancer free!!</p>
+            <p>-Monica Austin-Cox</p>
+        </div>
+      </div>
+       <div>
+          <img class="col-1-3 babybear-hide" src="../imgs/interactive/monica-austin-cox.jpg" alt="story 1">
+          <div class="story col-2-3">
+            <p>I was diagnosed with non-invasive bladder cancer at the age of 30. Prior to being diagnosed, I had never heard of this type of cancer. This journey has been very rocky and I’m truly thankful that my gynecologist followed up and referred me to the urologist. I decided early that I was going to fight. I am a SURVIVOR! My strong faith in God, a loving and supportive husband, and family and friends all keep me going</p>
+            <p>I continue to stay abreast of bladder cancer via BCAN in addition to being an organizer for the annual Walk for Bladder Cancer. The advice I would give women about bladder cancer is to not ignore any aches, pains, or feelings that something is not right within your body. Be attentive and aggressive with your medical care and know that you do not have to face this journey alone. My goal is to increase awareness about bladder cancer in my community. I got involved and became an advocate for the Bladder Cancer Advocacy Network (BCAN), the only national organization devoted to advancing bladder cancer research, increasing public awareness, and providing support to those affected by this type of cancer. I am also a walk organizer for the annual Walk for Bladder Cancer held in May, featured in the Women & Bladder Cancer series by BCAN, participated in the Grassroots Advocacy on Capital Hill, and I just completed training for the Speaker's Bureau with BCAN. My annual check-up is December 2014, which will be a milestone for me...5 years cancer free!!</p>
+            <p>-Monica Austin-Cox</p>
+        </div>
+      </div>
+       <div>
+          <img class="col-1-3 babybear-hide" src="../imgs/interactive/monica-austin-cox.jpg" alt="story 1">
+          <div class="story col-2-3">
+            <p>I was diagnosed with non-invasive bladder cancer at the age of 30. Prior to being diagnosed, I had never heard of this type of cancer. This journey has been very rocky and I’m truly thankful that my gynecologist followed up and referred me to the urologist. I decided early that I was going to fight. I am a SURVIVOR! My strong faith in God, a loving and supportive husband, and family and friends all keep me going</p>
+            <p>I continue to stay abreast of bladder cancer via BCAN in addition to being an organizer for the annual Walk for Bladder Cancer. The advice I would give women about bladder cancer is to not ignore any aches, pains, or feelings that something is not right within your body. Be attentive and aggressive with your medical care and know that you do not have to face this journey alone. My goal is to increase awareness about bladder cancer in my community. I got involved and became an advocate for the Bladder Cancer Advocacy Network (BCAN), the only national organization devoted to advancing bladder cancer research, increasing public awareness, and providing support to those affected by this type of cancer. I am also a walk organizer for the annual Walk for Bladder Cancer held in May, featured in the Women & Bladder Cancer series by BCAN, participated in the Grassroots Advocacy on Capital Hill, and I just completed training for the Speaker's Bureau with BCAN. My annual check-up is December 2014, which will be a milestone for me...5 years cancer free!!</p>
+            <p>-Monica Austin-Cox</p>
+        </div>
+      </div>
+    </div>
+
+<h1>&nbsp;</h1>
+
+
 
         </div><!--end .gutter-->
       </div><!--end #content-->

@@ -204,6 +204,7 @@ module.exports = function(grunt) {
           'build/js/components/_modal.js',
           'build/js/components/_flexslider.js',
           'build/js/components/_iframeResizer.js',
+          'build/js/components/_slick.js',
           'build/js/components/_triggers.js'
         ],
         dest: 'assets/js/global.js',
