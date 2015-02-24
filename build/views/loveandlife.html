@@ -43,12 +43,13 @@
             </div>
             <div class="col-2">
             <i class="fa fa-comment fa-5x"></i>
-            <h5>SHARE YOUR STORY</h5><form action="https://www.vcu.edu/cgi-bin/mailto" name="loveAndLife" method="post" onsubmit="chkform_appointment(); return false" class="form__new module" id="loveAndLife">
+            <h5>SHARE YOUR STORY</h5>
+            <form action="https://www.vcu.edu/cgi-bin/mailto" name="loveAndLife" method="post" onsubmit="chkform_appointment(); return false" class="form__new module" id="loveAndLife">
               <input type="hidden" name="to" value="mlclapp@vcu.edu">
               <input type="hidden" name="from">
               <input type="hidden" name="subject" value="Love and Life contact form">
               <input type="hidden" name="redirect" value="http://www.massey.vcu.edu/successful-submission/">
-              <input type="hidden" value="name, story" name="required">
+              <input type="hidden" value="story, name" name="required">
               
               <p><span>Required fields*</span></p>
               
@@ -56,13 +57,26 @@
               <label for="story">Share your story<span>*</span></label>
               <textarea id="textarea" name="story" rows="8" cols="40"></textarea>
             </div><div>
-              <label for="name">Name</label>
+              <label for="name">Name<span>*</span></label>
               <input type="text" placeholder="" id="name" name="name">
             </div><div>
-              <label for="email">Email</label>
+              <label for="email">Email<span>*</span></label>
               <input type="text" placeholder="" id="email" name="email">
             </div>
-              
+
+            <div>
+                 <fieldset>
+                    <legend>Would you like to include a photo with your story?</legend>
+                    <div class="radio-set">
+                        <label for="radio-choice-1">Yes</label>
+                        <input type="radio" name="imageRadioButtons" id="yes" value="yes" />
+
+                        <label for="radio-choice-2">No</label>
+                        <input type="radio" name="imageRadioButtons" id="no" value="no" />
+                    </div>
+                  </fieldset>
+              </div>
+              <p id="lalFormMessage">We would love to include a photo with your story. Unfortunately, we are not able to accept photo files on this webpage. But we will follow up with you to request that you send us a photo by email. You can also feel free to email your photo to <a href="mailto:askmassey@vcu.edu">askmasssey@vcu.edu</a> along with your name and "Life&amp;Love" entered in the subject line. Thank you"</p>
               <div>
                 <input type="submit" onclick="ga('send', 'event', 'form', 'submit', 'Love and Life contact form');" value="Submit" name="submit">
               </div>
@@ -111,5 +125,7 @@
 
     </div><!--end #container-->
   </div><!--end #wrapper-->
+
+
 @@include('footerContent.html') 
 @@include('footer.html')  

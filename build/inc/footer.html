@@ -25,11 +25,37 @@
   <script>var ___socket___ = io.connect('http://172.31.2.192:3000');</script>
   <script src='//172.31.2.192:3001/client/browser-sync-client.0.7.0.js'></script>
 
-<script type="text/javascript">
+  <script type="text/javascript">
         $(document).ready(function(){
             $('.lal-story-slide').slick();
         });
-    </script>
+  </script>
+
+  <script type="text/javascript">
+
+jQuery( document ).ready(function( $ ) {
+    $('input:radio[name="imageRadioButtons"]').change(function() {
+        if (this.value == 'yes') {
+            $('#lalFormMessage').animate({
+          opacity: 'show',
+          height: 'show'
+        }, "400");
+            $('label[for="email"] span').show();
+            $('#loveAndLife input[name="required"]').val( "story, name, email" );
+        }
+        else {
+            $('#lalFormMessage, label[for="email"] span').animate({
+          opacity: 'hide',
+          height: 'hide'
+        }, "400");   
+            $('label[for="email"] span').hide(); 
+            $('#loveAndLife input[name="required"]').val( "story, name" );
+        }
+
+    });
+});
+</script>
+
 
 </body>
 </html>
