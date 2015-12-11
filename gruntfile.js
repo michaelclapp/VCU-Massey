@@ -191,6 +191,7 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
+          'build/js/components/_accordion.js',
           'build/js/components/_cookie.js',
           'build/js/components/_nav.js',
           'build/js/components/_picturefill.js',
