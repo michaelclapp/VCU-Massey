@@ -1,4 +1,5 @@
 #home-news
+  padding-top: 15px
   img
     margin: 0
   a
@@ -13,8 +14,8 @@
   height: auto
   min-height: 290px
   margin-right: 2%
-  border: 1px solid #cccccc
-  border-radius: 12px
+  border: 1px solid #eee
+  border-radius: 0
   ul
     float: left
     margin: 0 !important
@@ -23,7 +24,7 @@
       float: left
       width: 100%
       margin: 0
-      padding: 0
+      padding: 0 0 10px
       background: none !important
       a
         float: left
@@ -35,8 +36,8 @@
         font-weight: normal
         &:hover, &:focus
           border: 0
-          background: #f8b800
-          color: #000000
+          background: transparent
+          text-decoration: underline
       img
         float: left
         width: 30%
@@ -56,21 +57,23 @@
       border: none
       background: none
 [id*='col-'] h3
-  width: 228px
-  height: 59px
+  width: auto
+  height: auto
   margin: 0 0 $pad-sm !important
-  border: none !important
-  background: url('../imgs/layout/home-news.png') no-repeat left top
-  text-indent: -9999px
+  border-bottom: 5px solid #369
+  background: #eee
+  text-indent: none
+  text-align: center
+  padding: 20px 0
 #col-a
   p a
-    color: red
+    color: #369
 #col-b
   h3
     background-position: 0 -59px
 #col-c
   margin-right: 0
-  background: #666666
+  background: #fff
   h3
     background-position: 0 -118px
   .news-date
@@ -82,6 +85,7 @@
     background: url('../imgs/layout/icon-calendar-bg.gif') 0 0 no-repeat
     text-align: center
     font-size: 11px
+    margin-right: 5px
     span
       float: left
       width: 40px
@@ -95,16 +99,16 @@
   ul li a
     width: 70%
     border: 0
-    color: $white
+    color: #666
   p a
     display: block
     float: left
     width: 100%
     margin: 0 0 10px 0
     border: 0
-    color: $color-vcu-identity
+    color: #369
     &:hover, &:focus
-      color: $white !important
+      color: #666
 #sidebar
   ul#intro-nav
     margin-top: $pad*2
@@ -133,3 +137,36 @@
         display: block
         margin-top: $pad-sm
         text-align: right
+
+#action-btns li
+  display: inline-block
+  padding: 20px 5px
+  width: 24.7%
+  text-align: center
+  box-sizing: border-box
+  &:hover
+    opacity: .85
+  &.make-appointment
+    background: #67c6b4
+  &.find-physician
+    background: #60b6d4
+  &.patient-portal
+    background: #b2bb1c
+  &.clinical-trial
+    background: #ffba00
+  a
+    font-weight: normal
+    font-size: 13px
+    color: #fff
+    &:hover
+      background: transparent
+      border: none
+      padding: none  
+  @media (max-width: 950px)
+    width: 100% 
+
+
+#content.home
+  width: 100%
+  padding: 25px
+

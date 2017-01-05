@@ -16,9 +16,9 @@ a
       float: left
       width: 100%
       //max-width: 960px
-      height: 40px
+      height: 50px
       margin: 0 auto
-      background: $gray2
+      background: #eee
       color: $color-nav-text
       @include font-size(1.1666667) //14px/21px
       font:
@@ -28,7 +28,7 @@ a
       > li
         &:hover, &:focus, &:active
           a
-            background: $nav-gold
+            background: #ddd
         ul
           display: none
           position: relative
@@ -38,7 +38,7 @@ a
           height: auto
           padding-top: $pad-sm
           border-top: none
-          background: $gold
+          background: #ddd
         &:hover > ul
           display: block
       > li
@@ -47,11 +47,11 @@ a
     li
       position: relative
       float: left 
-      width: 14.2857%
+      width: 16.66%
       @extend %nospace
       color: $white
       &:hover, &:focus
-        background: $nav-gold
+        background: #ddd
         color: $nav-gray
         a
           color: $nav-gray
@@ -61,10 +61,12 @@ a
         top: 0
         right: 0
         width: 1px
-        height: 32px
+        height: 50px
         background: url('../imgs/layout/nav-bar.png')
+        background-repeat: no-repeat
+        background-position-y: 40% 
         content: ""
-      &:last-child:after, &:nth-child(n+7):after
+      &:last-child:after
         background: none
       &:last-of-type > ul
         float: right
@@ -77,21 +79,23 @@ a
     a
       display: table-cell
       width: 14.2857%
-      height: 39px
+      height: 50px
+      padding-bottom: 0
       border-bottom: 0
-      color: $white
+      color: $nav-gray
       font-weight: 100
       letter-spacing: 1px
       text-align: center
       vertical-align: middle
+      @include font-size(1)
       &:hover, &:focus
-        background: $nav-gold
+        background: #ddd
         color: $nav-gray
       &.more
         display: none
     span
       display: block
-      background: $nav-blue
+      background: #ddd
       /*&.dip
         display: block
         background: $nav-gold !important*/
@@ -128,8 +132,9 @@ a
           color: $black
           text-align: left
           &:hover, &:focus
-            color: $white
-            background: darken($nav-gold, 10%)
+            color: $nav-gray
+            background: transparent
+            text-decoration: underline
 
 #rufio nav
   ul ul ul, ul ul ul ul, ul ul ul ul ul
@@ -171,7 +176,7 @@ a
       &:hover
         background: $gray-bg-lite
       &.current
-        color: $text-red
+        color: #555
         font-weight: bold
 /*-- Sam's hot fix for indented 4th level nav --*/
 #sidebar ul#subnav li span.currentbranch0 a
@@ -235,24 +240,24 @@ ul#util-nav
   li
     display: block
     float: left
-    height: 25px
+    height: 35px
     margin-right: .25em
     list-style: none
     a
       display: block
       float: left
-      margin-right: .25em
+      margin-right: 1em
       color: #404040
       // IE6
       _display: inline
     .fa   
-      font-size: 25px
-      color: #57585b
+      font-size: 35px
+      color: #aaa
     &.nav-alert
       background: none
     a
-      width: 25px
-      height: 25px
+      width: 35px
+      height: 35px
       border: 0
       padding-top: 0
       text:

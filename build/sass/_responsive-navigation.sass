@@ -1,16 +1,16 @@
 $nav-width: 350px
 
-nav li
-	&:nth-child(n+7):after
-		background: url('../imgs/layout/nav-bar.png') !important
-	&:nth-child(n+8):after
-		background: none !important
-
-#rufio nav > ul li a
-	@include font-size(.9)
+// nav li
+// 	&:nth-child(n+7):after
+// 		background: url('../imgs/layout/nav-bar.png') !important
+// 	&:nth-child(n+8):after
+// 		background: none !important
 
 
 @include mq($mamabear)
+	#rufio nav > ul li a
+		@include font-size(.9)
+
 	a
 		&.menu, &.quicklinks, &.more, &.back, &.close
 			display: block !important
@@ -19,7 +19,7 @@ nav li
 	a
 		&.menu, &.quicklinks
 			float: left
-			width: 50%
+			width: 100%
 			margin: 0
 			color: $white
 			text-align: center
@@ -80,6 +80,7 @@ nav li
 			border-bottom: 1px solid #4f4f4f
 			background: #333
 			color: $color-body
+			margin-top: 65px
 			a
 				.fa-2x
 					font-size: 1.4em !important

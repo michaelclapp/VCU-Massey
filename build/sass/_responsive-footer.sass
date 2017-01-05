@@ -3,7 +3,7 @@
 		.wrapper 
 			width: 95%
 		.footer-col
-			width: 33%
+			width: 50%
 			margin: 0
 			border-left: 5px solid transparent
 			border-right: 5px solid transparent
@@ -13,6 +13,8 @@
 				width: 285px
 				margin: 0
 				column-count: 1
+			&:nth-child(3)
+				clear: left
 @include mq($babybear)
 	#footer
 		padding: $pad-sm 0
@@ -32,3 +34,5 @@
 			width: 100%
 		.links
 			text-align: left
+		.ncicc-link
+			float: left

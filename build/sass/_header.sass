@@ -23,6 +23,7 @@
   h1
     display: inline-block
     margin: 1.5em 0 .5em
+    float: left
   h1 a
     float: left
     width: 217px
@@ -34,66 +35,55 @@
       text-decoration: none
 .svg #rufio h1 a
   background: url('../imgs/layout/massey.svg') no-repeat
-.ncicc-link
-  float: right
-  width: 229px
-  height: 95px
-  margin: 5px 0 0
-  background: url('../imgs/layout/ncicc.png') no-repeat 0 0
-  background-size: 229px !important
-  text-indent: -9999px
-  &:hover, &:focus, &:active
-    border: 0
-    background: url('../imgs/layout/ncicc.png') no-repeat 0 0
-.svg
-  .ncicc-link
-    background: url('../imgs/layout/ncicc2015.svg') no-repeat 0 0
-    &:hover, &:focus, &:active
-      border: 0
-      background: url('../imgs/layout/ncicc2015.svg') no-repeat 0 0
+
 #header-links
   position: absolute
-  left: 50%
-  width: 175px
-  margin: -10px 0 0 -80px
+  right: 20px
+  bottom: 70px
   ul#util-nav
     float: left
     margin: 0 auto
 
 //SEARCH
 #search
-  float: right
+  position: absolute
+  right: 25px
+  bottom: 125px
+  width: 221px
+  height: 30px
+  border: 1px solid #ddds
+
 form#sitesearch
   display: block
   position: relative
   float: left
   @extend %nospace
-  background: transparent url('../imgs/layout/search-bg.gif') 0 0 no-repeat
+  background: none
   label
     display: none
   input.field
     float: left
     color: $gray-bg
     width: 145px
-    height: 20px
-    margin: 3px 0 0 0
+    height: 30px
+    margin: 0
     padding: 0 4px 0 22px
     border: 0
-    background: none
+    background: #eee
     font: normal 11px Verdana, Helvetica, sans-serif
     voice-family: "\"}\""
     voice-family: inherit
 #search_btn
   overflow: hidden
-  width: 46px
-  height: 26px
-  margin: 0 0 0 10px
+  width: 50px
+  height: 30px
+  margin: 0
   padding: 0
   border: 0
   background: transparent url('../imgs/layout/search-btn.gif') 0 0 no-repeat
   &:hover
-    background-position: 0 -26px
+    background-position: 0
     cursor: pointer
   &:active, &:focus
-    background-position: 0 -26px
+    background-position: 0
     cursor: pointer

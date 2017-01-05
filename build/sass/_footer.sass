@@ -32,7 +32,7 @@ $color-border: lighten($nav-gray, 30%)
 		box-sizing: border-box
 	.footer-col
 		float: left
-		width: 33%
+		width: 25%
 		padding: $pad
 		//background-color: $nav-gray
 		//border-left: 5px solid transparent
@@ -50,7 +50,7 @@ $color-border: lighten($nav-gray, 30%)
 			margin: 0 0 10px 0
 			padding: ($pad-sm/2) 0
 			border-bottom: 1px solid $border-color
-			color: $text-red
+			color: #369
 			@include font-size(1.3333) //16/24px
 			font-weight: bold
 			text-align: left
@@ -90,3 +90,22 @@ $color-border: lighten($nav-gray, 30%)
 		&.t4Edit-page
 			&:hover, &:focus
 				background: url('../imgs/layout/pencil.gif') no-repeat
+
+	.ncicc-link
+		float: right
+		width: 230px
+		height: 92px
+		background: url('../imgs/layout/NCI-gray-2016.png') no-repeat 0 0
+		background-size: 230px !important
+		text-indent: -9999px
+		text-align: left
+		&:hover, &:focus, &:active
+			border: 0
+			background: url('../imgs/layout/ncicc.png') no-repeat 0 0
+.svg
+	#footer
+		.ncicc-link
+			background: url('../imgs/layout/NCI-gray-2016.png') no-repeat 0 0
+			&:hover, &:focus, &:active
+				border: 0
+			background: url('../imgs/layout/NCI-gray-2016.png') no-repeat 0 0

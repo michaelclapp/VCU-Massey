@@ -42,7 +42,7 @@
           {"from":"../fonts/fontawesome-webfont.ttf?v=4.0.3" , "to":"<t4 type='media' id='61569' formatter='path/*'/>?v=4.0.3"},
           {"from":"../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular" , "to":"<t4 type='media' id='61568' formatter='path/*'/>?v=4.0.3#fontawesomeregular"},
           {"from":"../imgs/layout/ncicc.png" , "to":"<t4 type='media' id='67900' formatter='path/*'/>"},
-          {"from":"../imgs/layout/ncicc2015.svg" , "to":"<t4 type='media' id='172172' formatter='path/*'/>"},
+          {"from":"../imgs/layout/NCI-gray-2016.png" , "to":"<t4 type='media' id='232035' formatter='path/*'/>"},
           {"from":"../imgs/layout/masseyFooter.svg" , "to":"<t4 type='media' id='68683' formatter='path/*'/>"},
           {"from":"../imgs/layout/masseyFooter.png" , "to":"<t4 type='media' id='68679' formatter='path/*'/>"}
 ]
