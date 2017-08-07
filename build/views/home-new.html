@@ -49,6 +49,81 @@
         </div>
 
 
+
+        <div class="col-2 spotlight">
+          <h4>Spotlight</h4>
+          <a href="#"><img src="../imgs/interactive/spotlight-pancreatic.jpg" alt="spotlight image"></a>
+          <p>Massey's new program for pancreatic cancer is first of its kind in the region.&nbsp;<a href="#">More &rarr;</a></p>
+          
+        </div>
+        
+          <div class="col-2 cancer-types">
+          <h4 class="">Cancer types</h4>
+          <h2 class="text-muted">Search for your cancer type</h2>
+
+          <span>
+            <div class="cancer-types-select">
+              <select class="" id="cancer-types">
+                <option>Cancer types ...</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Amyloidosis</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gastrointestinal/">Anal cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/prostate-genitourinary/">Bladder cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/pancreatic-cancer/">Bile duct cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Blood disorders</option>
+                <option value="http://www.massey.vcu.edu/cancer/bone/">Bone cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/brain-neurological/">Brain tumors</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/breast/">Breast cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/brain-neurological/">Central nervous system tumors</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gynecological/">Cervical cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gastrointestinal/">Colon cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gynecological/">Endometrial cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/head-neck/">Esophageal cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gynecological/">Fallopian tube cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/pancreatic-cancer/">Gallbladder cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/head-neck/">Head and neck cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Hematology</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/prostate-genitourinary/">Kidney cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Leukemia</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gastrointestinal/">Liver cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/chest-tumors/">Lung cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Lymphoma</option>
+                <option value="http://www.massey.vcu.edu/cancer/skin-cancer-types/">Melanoma</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/chest-tumors/">Mesothelioma</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Multiple myeloma</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Myelodysplastic syndrome</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/hematological/">Myeloproliferative disorder</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/head-neck/">Oral cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gynecological/">Ovarian cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/pancreatic-cancer/">Pancreatic cancer</option>
+                <option value="http://www.chrichmond.org/Services/Hematology-and-Oncology.htm">Pediatric cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/prostate-genitourinary/">Penile cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/prostate-genitourinary/">Prostate cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gastrointestinal/">Rectal cancer</option>
+                <option value="http://www.massey.vcu.edu/cancer/bone/">Sarcoma</option>
+                <option value="http://www.massey.vcu.edu/cancer/skin-cancer-types/">Skin cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/brain-neurological/">Spinal tumors</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gastrointestinal/">Stomach cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/prostate-genitourinary/">Testicular cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/head-neck/">Throat cancer</option>
+                <option value="http://www.massey.vcu.edu/cancer/thyroid-tumors/">Thyroid cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gynecological/">Uterine cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gynecological/">Vaginal cancer</option>
+                <option value="http://www.massey.vcu.edu/patient-care/treatment/gynecological/">Vulvar cancer</option>
+              </select>
+            </div>
+          </span>
+          <p>At Massey, our patients are treated by multidisciplinary teams focused on specific cancer types. That means not one expert, but an entire team of experts from multiple disciplines subspecialized in your type of cancer is working together to help you with your cancer care. With this collaborative approach, you’re getting more experience and more insight in the evaluation of your diagnosis, highly coordinated care that ensures the ideal combination and sequence of treatment, and a care plan customized to you. Learn more about your treatment options at Massey by selecting your cancer type from the drop down list above.</p>
+          </div>
+          <script>
+              document.getElementById("cancer-types").onchange = function() {
+                  if (this.selectedIndex!==0) {
+                      window.location.href = this.value;
+                  }        
+              };
+          </script>
+          <!-- onChange="window.location.href=(this.options[this.selectedIndex].value)" -->
+
+          <div style="clear: both;"></div>
           <div id="home-news">
             <div id="links-columns"><!-- area expands vertically for more news entries -->
               <div id="col-a">

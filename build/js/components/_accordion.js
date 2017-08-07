@@ -9,3 +9,23 @@ $(document).ready(function($) {
 
   });
 });
+
+// Staff bio toggle 
+  
+$(document).ready(function() {
+
+  $('.bio-link').click(function(e){
+   e.preventDefault();
+
+  $(this).closest('div').find('.bio').slideToggle("slow");
+  });
+
+  $('.staff .bio').each(function() {
+    if ($(this).text().length > 20){
+      $(this).parents('div.staff').find('.bio-link').show();
+    }else{
+      $(this).parents('div.staff').find('.bio-link').hide();
+    }
+  });
+
+});

@@ -56,12 +56,14 @@ a
 		text-transform: uppercase
 		@include font-size(1)
 		background-image: linear-gradient(lighten($nav-gold, 30%), $nav-gold)
-		box-shadow: $gray-bg 1px 1px $pad-sm
+		box-shadow: $gray-bg 1px 1px 3px
 		&:hover, &:focus
 			padding: $pad-sm
 			border: none
 			background: linear-gradient(lighten($nav-blue, 30%), $nav-blue)
 			color: $white
+	&.btn-inline
+		display: inline-block
 %linkIconsAfter
 	display: inline-block
 	position: relative
