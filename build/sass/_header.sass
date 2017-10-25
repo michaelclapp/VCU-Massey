@@ -87,3 +87,28 @@ form#sitesearch
     cursor: pointer
 input#searchField:focus
   outline: 1px solid #ccc
+a.skip-links-item
+  font-size: 14px
+  text-decoration: underline
+  position: absolute
+  left: 15px
+  top: -100px
+  z-index: 10000
+  height: auto
+  margin: 0 auto
+  padding: 10px 15px !important
+  background-color: transparent
+  color: #ffba00 !important
+  outline: none
+  transition: top .2s,background-color .2s
+  border: 0 !important
+  &:active, &:focus
+    top: 0
+    background-color: #272727
+#skip-links
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  margin-left: 0
+  list-style: outside none
