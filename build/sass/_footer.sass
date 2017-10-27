@@ -65,14 +65,14 @@ $color-border: lighten($nav-gray, 30%)
 				break-inside: avoid-column
 				-webkit-column-break-inside: avoid
 	.social, .links
-		float: left
-		width: 50%
+		float: none
+		width: 100%
 		padding: $pad-sm
 		box-sizing: border-box
 	.social li
 		display: inline
 	.links
-		text-align: right
+		text-align: center
 	#signature
 		float: left
 		width: 100%
@@ -91,13 +91,12 @@ $color-border: lighten($nav-gray, 30%)
 				background: url('../imgs/layout/pencil.gif') no-repeat
 
 	.ncicc-link
-		float: right
+		display: inline-block
 		width: 230px
 		height: 92px
 		background: url('../imgs/layout/NCI-gray-2016.png') no-repeat 0 0
 		background-size: 230px !important
 		text-indent: -9999px
-		text-align: left
 		&:hover, &:focus, &:active
 			border: 0
 			background: url('../imgs/layout/ncicc.png') no-repeat 0 0
