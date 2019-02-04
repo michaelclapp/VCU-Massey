@@ -53,6 +53,7 @@ a
 		background: $gold-bg
 		color: $color-body
 		text-align: center
+		text-decoration: none !important
 		text-transform: uppercase
 		@include font-size(1)
 		background-image: linear-gradient(lighten($nav-gold, 30%), $nav-gold)
@@ -93,9 +94,10 @@ a
 				color: $color-link-hover !important
 				text-decoration: underline
 		&.title
-			color: #ffba00
+			color: #555
 	h3
 		@include border(bottom, 1, solid)
+		text-decoration: none !important
 	h3, h4
 		@include font-size(1.3334) // 16px/24px
 	h5
@@ -197,7 +199,7 @@ a
 		label, legend, input, fieldset, .radio-set
 			box-sizing: border-box
 			float: left
-		label, legend
+		label, legend, div.label
 			width: 35%
 			padding-top: $pad-sm
 			padding-right: $pad-sm
@@ -234,7 +236,8 @@ a
 			&:hover, &:focus, :active
 				background: $gold
 		span
-			color: $red
+			color: #e00000
+			font-weight: bold
 		.checkbox-set
 			.check
 				width: 100%

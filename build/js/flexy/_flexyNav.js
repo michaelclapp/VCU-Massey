@@ -70,4 +70,13 @@ $(document).ready(function() {
     $('#rufio nav ul').addClass('off-left');
   });
 
+// For accessibility - tabbing though submenus 
+  $('#rufio nav>ul>li>a').focus(function() {
+    $('.multilevel-linkul-0').removeClass('active');
+    $(this).next('ul').addClass('active');
+  });
+  $('.slides a, #breadcrumb-nav a').focus(function() {
+    $('.multilevel-linkul-0').removeClass('active');
+  });
+
 });

@@ -5,10 +5,10 @@
  */
 
 (function ($) {
-	$('#content .flexslider.inPage ul.slides li img').each(function() {
-		var imageCaption = $(this).attr('alt');
-		$(this).after('<div class="caption">' + imageCaption + '</div>');
-	});
+  $('#content .flexslider.inPage ul.slides li img').each(function() {
+    var imageCaption = $(this).attr('alt');
+    $(this).after('<div class="caption">' + imageCaption + '</div>');
+  });
   //FlexSlider: Object Instance
   $.flexslider = function(el, options) {
     var slider = $(el);
@@ -297,7 +297,7 @@
       },
       directionNav: {
         setup: function() {
-          var directionNavScaffold = $('<ul class="' + namespace + 'direction-nav"><li><a class="' + namespace + 'prev" href="#">' + slider.vars.prevText + '</a></li><li><a class="' + namespace + 'next" href="#">' + slider.vars.nextText + '</a></li></ul>');
+          var directionNavScaffold = $('<ul class="' + namespace + 'direction-nav"><li tabindex="0"><a class="' + namespace + 'prev" href="#">' + slider.vars.prevText + '</a></li><li tabindex="0"><a class="' + namespace + 'next" href="#">' + slider.vars.nextText + '</a></li></ul>');
 
           // CONTROLSCONTAINER:
           if (slider.controlsContainer) {
@@ -1054,7 +1054,7 @@
     // Usability features
     pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
     pauseOnHover: false,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
-    pauseInvisible: true,   		//{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
+    pauseInvisible: true,       //{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
     useCSS: true,                   //{NEW} Boolean: Slider will use CSS3 transitions if available
     touch: true,                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
     video: false,                   //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches

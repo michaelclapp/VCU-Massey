@@ -1,0 +1,12 @@
+@media screen and (max-width: 1199px){
+.support-box{height: 544px;}
+a#btn-1484214606906 {
+    margin-top: 15px;
+}
+}
+@media screen and (max-width: 991px){
+.support-box{height: 553px;}
+a#btn-1484214606906 {
+    margin-top: 65px;
+}
+}
