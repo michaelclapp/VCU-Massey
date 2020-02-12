@@ -30,10 +30,18 @@ a
 	width: 100%
 	text-align: center
 	@include font-size(1)
-	a
+	a,span
+		background: #eeeeee
+		padding: 5px 10px
+		border: 1px solid #dddddd
+		border-radius: 3px
+		text-decoration: none
+		margin: 0 3px
+		line-height: 3
 		&:hover, &:focus
-			color: $text-red
-			background: none
+			color: #444
+			background: #dddddd
+			padding: 5px 10px
 .blog-meta, .blog-share
 	float: left
 	width: 45%
